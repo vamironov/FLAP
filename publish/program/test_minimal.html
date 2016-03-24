@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <meta name="description" content="Fortran command Line Arguments Parser for poor people">
+    
+    <meta name="author" content="Chris MacMackin" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>test_minimal &ndash; FLAP</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">FLAP </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+                
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+				
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+								
+            <li><a href="../lists/types.html">Derived Types</a></li>
+				
+				
+            <li><a href="../lists/programs.html">Programs</a></li>
+				
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>test_minimal 
+    <small>Program</small>
+    
+    </h1>
+	 
+<div class="row">
+<div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+    <li><i class="fa fa-code"></i><a href="../src/test_minimal.f90"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li><a href='../sourcefile/test_minimal.f90.html'>test_minimal.f90</a></li>
+  
+     <li class="active">test_minimal</li>
+  </ol>
+</div>
+</div>
+</div>
+    
+  </div>
+  
+  <div class="row">
+    <div class="col-lg-3">
+    
+<div id="sidebar">
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars">Variables</a></h3></div>
+    <div id="vars" class="panel-collapse collapse">
+      <div class="list-group">
+        
+        <a class="list-group-item" href="../program/test_minimal.html#variable-cli%7E4">cli</a>
+        
+        <a class="list-group-item" href="../program/test_minimal.html#variable-string%7E7">string</a>
+        
+        <a class="list-group-item" href="../program/test_minimal.html#variable-error%7E30">error</a>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+    <div class="list-group">
+      <a class="list-group-item" href="../program/test_minimal.html#src">test_minimal</a>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allprogs">All Programs</a></h3></div>
+    <div id="allprogs" class="panel-collapse collapse">
+        <div class="list-group">
+          
+          <a class="list-group-item" href="../program/test_basic.html">test_basic</a>
+          
+          <a class="list-group-item" href="../program/test_choices_logical.html">test_choices_logical</a>
+          
+          <a class="list-group-item" href="../program/test_driver.html">Test_Driver</a>
+          
+          <a class="list-group-item" href="../program/test_hidden.html">test_hidden</a>
+          
+          <a class="list-group-item" href="../program/test_minimal.html">test_minimal</a>
+          
+          <a class="list-group-item" href="../program/test_nested.html">test_nested</a>
+          
+          <a class="list-group-item" href="../program/test_string.html">test_string</a>
+          
+        </div>
+    </div>
+  </div>
+  
+</div>
+
+    </div>
+    
+    <div class="col-lg-9" id='text'>
+    
+  
+    <ul class="list-inline">
+      <li><h4>Uses:</h4></li>
+      
+      <li><a href='../module/ir_precision.html'>IR_Precision</a></li>
+      
+      <li><a href='../module/flap.html'>flap</a></li>
+      
+    </ul>
+  
+
+    
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: program~~test_minimal~~UsesGraph Pages: 1 -->
+<svg id="programtest_minimalUsesGraph" width="641pt" height="123pt"
+ viewBox="0.00 0.00 641.00 123.29" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~test_minimal~~UsesGraph" class="graph" transform="scale(0.553541 0.553541) rotate(0) translate(4 218.725)">
+<title>program~~test_minimal~~UsesGraph</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-218.725 1155,-218.725 1155,5 -4,5"/>
+<!-- program~test_minimal -->
+<g id="node1" class="node"><title>program~test_minimal</title>
+<polygon fill="none" stroke="black" points="1149,-52 1077,-52 1077,-26 1149,-26 1149,-52"/>
+<text text-anchor="middle" x="1113" y="-36.55" font-family="Helvetica,sans-Serif" font-size="10.50">test_minimal</text>
+</g>
+<!-- module~ir_precision -->
+<g id="node2" class="node"><title>module~ir_precision</title>
+<a xlink:href="../module/ir_precision.html" xlink:title="IR_Precision">
+<polygon fill="#337ab7" stroke="#337ab7" points="197,-133 125,-133 125,-107 197,-107 197,-133"/>
+<text text-anchor="middle" x="161" y="-117.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">IR_Precision</text>
+</a>
+</g>
+<!-- module~ir_precision&#45;&gt;program~test_minimal -->
+<g id="edge44" class="edge"><title>module~ir_precision&#45;&gt;program~test_minimal</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M174.204,-106.888C188.253,-93.3619 211.513,-72.1605 234,-57 249.328,-46.6661 253.839,-44.8721 271,-38"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M271,-38C360.583,-2.12693 507.045,-7.10543e-15 649,-0 649,-0 649,-0 869,-0 938.287,-0 1017.27,-15.5236 1066.13,-26.983"/>
+<polygon fill="black" stroke="black" points="1065.55,-30.4419 1076.09,-29.3595 1067.18,-23.6332 1065.55,-30.4419"/>
+</g>
+<!-- module~flap_command_line_argument_t -->
+<g id="node6" class="node"><title>module~flap_command_line_argument_t</title>
+<a xlink:href="../module/flap_command_line_argument_t.html" xlink:title="flap_command_line_argument_t">
+<polygon fill="#337ab7" stroke="#337ab7" points="510,-133 344,-133 344,-107 510,-107 510,-133"/>
+<text text-anchor="middle" x="427" y="-117.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flap_command_line_argument_t</text>
+</a>
+</g>
+<!-- module~ir_precision&#45;&gt;module~flap_command_line_argument_t -->
+<g id="edge12" class="edge"><title>module~ir_precision&#45;&gt;module~flap_command_line_argument_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M197.706,-123.24C219.229,-124.337 246.849,-124.354 271,-120"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M271,-120C291.157,-116.366 313.018,-114.879 333.818,-114.587"/>
+<polygon fill="black" stroke="black" points="333.949,-118.087 343.932,-114.536 333.914,-111.087 333.949,-118.087"/>
+</g>
+<!-- module~flap_command_line_arguments_group_t -->
+<g id="node7" class="node"><title>module~flap_command_line_arguments_group_t</title>
+<a xlink:href="../module/flap_command_line_arguments_group_t.html" xlink:title="flap_command_line_arguments_group_t">
+<polygon fill="#337ab7" stroke="#337ab7" points="751,-212 547,-212 547,-186 751,-186 751,-212"/>
+<text text-anchor="middle" x="649" y="-196.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flap_command_line_arguments_group_t</text>
+</a>
+</g>
+<!-- module~ir_precision&#45;&gt;module~flap_command_line_arguments_group_t -->
+<g id="edge20" class="edge"><title>module~ir_precision&#45;&gt;module~flap_command_line_arguments_group_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M171.396,-133.277C189.087,-154.413 227.399,-194.138 271,-202"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M271,-202C359.08,-217.881 460.589,-215.991 536.223,-210.756"/>
+<polygon fill="black" stroke="black" points="536.529,-214.243 546.251,-210.032 536.025,-207.261 536.529,-214.243"/>
+</g>
+<!-- module~flap_command_line_interface_t -->
+<g id="node8" class="node"><title>module~flap_command_line_interface_t</title>
+<a xlink:href="../module/flap_command_line_interface_t.html" xlink:title="flap_command_line_interface_t">
+<polygon fill="#337ab7" stroke="#337ab7" points="950,-92 788,-92 788,-66 950,-66 950,-92"/>
+<text text-anchor="middle" x="869" y="-76.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flap_command_line_interface_t</text>
+</a>
+</g>
+<!-- module~ir_precision&#45;&gt;module~flap_command_line_interface_t -->
+<g id="edge28" class="edge"><title>module~ir_precision&#45;&gt;module~flap_command_line_interface_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M271,-38C335.364,-12.2254 357.667,-38.2222 427,-38"/>
+</g>
+<!-- module~flap_object_t -->
+<g id="node9" class="node"><title>module~flap_object_t</title>
+<a xlink:href="../module/flap_object_t.html" xlink:title="flap_object_t">
+<polygon fill="#337ab7" stroke="#337ab7" points="307,-174 235,-174 235,-148 307,-148 307,-174"/>
+<text text-anchor="middle" x="271" y="-158.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flap_object_t</text>
+</a>
+</g>
+<!-- module~ir_precision&#45;&gt;module~flap_object_t -->
+<g id="edge6" class="edge"><title>module~ir_precision&#45;&gt;module~flap_object_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M196.107,-133.085C205.732,-136.673 216.296,-140.61 226.378,-144.368"/>
+<polygon fill="black" stroke="black" points="225.256,-147.685 235.849,-147.898 227.701,-141.126 225.256,-147.685"/>
+</g>
+<!-- module~flap_utils_m -->
+<g id="node10" class="node"><title>module~flap_utils_m</title>
+<a xlink:href="../module/flap_utils_m.html" xlink:title="flap_utils_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="306,-92 236,-92 236,-66 306,-66 306,-92"/>
+<text text-anchor="middle" x="271" y="-76.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flap_utils_m</text>
+</a>
+</g>
+<!-- module~ir_precision&#45;&gt;module~flap_utils_m -->
+<g id="edge8" class="edge"><title>module~ir_precision&#45;&gt;module~flap_utils_m</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M196.107,-106.915C205.732,-103.327 216.296,-99.3896 226.378,-95.632"/>
+<polygon fill="black" stroke="black" points="227.701,-98.8739 235.849,-92.1017 225.256,-92.3147 227.701,-98.8739"/>
+</g>
+<!-- module~flap -->
+<g id="node3" class="node"><title>module~flap</title>
+<a xlink:href="../module/flap.html" xlink:title="flap">
+<polygon fill="#337ab7" stroke="#337ab7" points="1040,-92 986,-92 986,-66 1040,-66 1040,-92"/>
+<text text-anchor="middle" x="1013" y="-76.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flap</text>
+</a>
+</g>
+<!-- module~flap&#45;&gt;program~test_minimal -->
+<g id="edge46" class="edge"><title>module~flap&#45;&gt;program~test_minimal</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M1040.06,-68.1754C1049.54,-64.3846 1060.42,-60.0322 1070.84,-55.8659"/>
+<polygon fill="black" stroke="black" points="1072.23,-59.0771 1080.22,-52.1135 1069.63,-52.5778 1072.23,-59.0771"/>
+</g>
+<!-- iso_fortran_env -->
+<g id="node4" class="node"><title>iso_fortran_env</title>
+<a xlink:href="https://gcc.gnu.org/onlinedocs/gfortran/ISO_005fFORTRAN_005fENV.html" xlink:title="iso_fortran_env">
+<polygon fill="#337ab7" stroke="#337ab7" points="87,-133 1,-133 1,-107 87,-107 87,-133"/>
+<text text-anchor="middle" x="44" y="-117.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iso_fortran_env</text>
+</a>
+</g>
+<!-- iso_fortran_env&#45;&gt;module~ir_precision -->
+<g id="edge2" class="edge"><title>iso_fortran_env&#45;&gt;module~ir_precision</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M87.5665,-120C96.2522,-120 105.409,-120 114.198,-120"/>
+<polygon fill="black" stroke="black" points="114.297,-123.5 124.296,-120 114.296,-116.5 114.297,-123.5"/>
+</g>
+<!-- iso_fortran_env&#45;&gt;module~flap_command_line_argument_t -->
+<g id="edge10" class="edge"><title>iso_fortran_env&#45;&gt;module~flap_command_line_argument_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M54.589,-133.031C73.3279,-154.633 114.745,-196.081 161,-202"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M161,-202C203.509,-207.439 198.466,-162.957 234,-139 249.328,-128.666 252.807,-123.28 271,-120"/>
+</g>
+<!-- iso_fortran_env&#45;&gt;module~flap_command_line_arguments_group_t -->
+<g id="edge18" class="edge"><title>iso_fortran_env&#45;&gt;module~flap_command_line_arguments_group_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M161,-202C209.494,-208.205 223.222,-191.637 271,-202"/>
+</g>
+<!-- iso_fortran_env&#45;&gt;module~flap_command_line_interface_t -->
+<g id="edge34" class="edge"><title>iso_fortran_env&#45;&gt;module~flap_command_line_interface_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M62.528,-106.865C95.2491,-84.5648 166.232,-40.1481 234,-24 317.661,-4.06472 340.997,-38.2756 427,-38"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M427,-38C549.585,-34.8589 690.541,-51.462 779.673,-64.4786"/>
+<polygon fill="black" stroke="black" points="779.339,-67.9672 789.743,-65.9663 780.362,-61.0424 779.339,-67.9672"/>
+</g>
+<!-- iso_fortran_env&#45;&gt;module~flap_object_t -->
+<g id="edge4" class="edge"><title>iso_fortran_env&#45;&gt;module~flap_object_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M161,-202C190.363,-205.757 221.818,-192.052 243.538,-179.491"/>
+<polygon fill="black" stroke="black" points="245.478,-182.408 252.216,-174.231 241.85,-176.421 245.478,-182.408"/>
+</g>
+<!-- module~flap_command_line_argument_t&#45;&gt;module~flap -->
+<g id="edge38" class="edge"><title>module~flap_command_line_argument_t&#45;&gt;module~flap</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M649,-120C746.672,-115.459 773.742,-142.055 869,-120"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M869,-120C905.024,-111.659 914.496,-111.332 950,-101 958.648,-98.4834 967.853,-95.4664 976.48,-92.485"/>
+<polygon fill="black" stroke="black" points="977.644,-95.7858 985.914,-89.1627 975.319,-89.1833 977.644,-95.7858"/>
+</g>
+<!-- module~flap_command_line_argument_t&#45;&gt;module~flap_command_line_arguments_group_t -->
+<g id="edge24" class="edge"><title>module~flap_command_line_argument_t&#45;&gt;module~flap_command_line_arguments_group_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M468.493,-133.106C481.792,-137.412 496.554,-142.3 510,-147 542.277,-158.281 578.441,-171.84 605.79,-182.283"/>
+<polygon fill="black" stroke="black" points="604.853,-185.672 615.443,-185.98 607.356,-179.135 604.853,-185.672"/>
+</g>
+<!-- module~flap_command_line_argument_t&#45;&gt;module~flap_command_line_interface_t -->
+<g id="edge30" class="edge"><title>module~flap_command_line_argument_t&#45;&gt;module~flap_command_line_interface_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M510.062,-121.827C551.779,-122.28 603.089,-122.134 649,-120"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M649,-120C704.448,-117.422 766.529,-104.952 810.568,-94.4333"/>
+<polygon fill="black" stroke="black" points="811.628,-97.7777 820.519,-92.0165 809.976,-90.9755 811.628,-97.7777"/>
+</g>
+<!-- module~flap_command_line_arguments_group_t&#45;&gt;module~flap -->
+<g id="edge40" class="edge"><title>module~flap_command_line_arguments_group_t&#45;&gt;module~flap</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M705.359,-185.984C720.644,-181.979 737.085,-177.231 752,-172 805.698,-153.168 813.562,-132.835 869,-120"/>
+</g>
+<!-- module~flap_command_line_arguments_group_t&#45;&gt;module~flap_command_line_interface_t -->
+<g id="edge32" class="edge"><title>module~flap_command_line_arguments_group_t&#45;&gt;module~flap_command_line_interface_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M727.081,-185.964C736.02,-182.376 744.575,-177.809 752,-172 778.316,-151.411 762.371,-127.438 788,-106 792.335,-102.374 797.175,-99.2292 802.274,-96.5027"/>
+<polygon fill="black" stroke="black" points="804.148,-99.487 811.678,-92.0331 801.143,-93.1647 804.148,-99.487"/>
+</g>
+<!-- module~flap_command_line_interface_t&#45;&gt;module~flap -->
+<g id="edge42" class="edge"><title>module~flap_command_line_interface_t&#45;&gt;module~flap</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M950.258,-79C959.03,-79 967.616,-79 975.482,-79"/>
+<polygon fill="black" stroke="black" points="975.714,-82.5001 985.714,-79 975.714,-75.5001 975.714,-82.5001"/>
+</g>
+<!-- module~flap_object_t&#45;&gt;module~flap_command_line_argument_t -->
+<g id="edge14" class="edge"><title>module~flap_object_t&#45;&gt;module~flap_command_line_argument_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M307.575,-151.387C325.453,-146.689 347.42,-140.915 367.619,-135.607"/>
+<polygon fill="black" stroke="black" points="368.585,-138.972 377.367,-133.045 366.806,-132.202 368.585,-138.972"/>
+</g>
+<!-- module~flap_object_t&#45;&gt;module~flap_command_line_arguments_group_t -->
+<g id="edge22" class="edge"><title>module~flap_object_t&#45;&gt;module~flap_command_line_arguments_group_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M427,-161C481.191,-163.133 541.826,-174.108 586.016,-183.719"/>
+<polygon fill="black" stroke="black" points="585.512,-187.192 596.032,-185.936 587.024,-180.358 585.512,-187.192"/>
+</g>
+<!-- module~flap_object_t&#45;&gt;module~flap_command_line_interface_t -->
+<g id="edge36" class="edge"><title>module~flap_object_t&#45;&gt;module~flap_command_line_interface_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M307.579,-160.188C339.204,-159.681 386.136,-159.392 427,-161"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M427,-161C571.83,-166.7 616.97,-186.679 752,-134 770.884,-126.633 770.129,-115.564 788,-106 795.327,-102.079 803.329,-98.5801 811.36,-95.507"/>
+<polygon fill="black" stroke="black" points="812.556,-98.7966 820.762,-92.0951 810.168,-92.2165 812.556,-98.7966"/>
+</g>
+<!-- module~flap_utils_m&#45;&gt;module~flap_command_line_argument_t -->
+<g id="edge16" class="edge"><title>module~flap_utils_m&#45;&gt;module~flap_command_line_argument_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M306.009,-88.2012C324.156,-92.9705 346.818,-98.9265 367.607,-104.39"/>
+<polygon fill="black" stroke="black" points="366.756,-107.785 377.317,-106.942 368.535,-101.015 366.756,-107.785"/>
+</g>
+<!-- module~flap_utils_m&#45;&gt;module~flap_command_line_interface_t -->
+<g id="edge26" class="edge"><title>module~flap_utils_m&#45;&gt;module~flap_command_line_interface_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M301.749,-65.9756C332.77,-54.0236 382.335,-38.1432 427,-38"/>
+</g>
+</g>
+</svg>
+</div>
+                <script>var panprogramtest_minimalUsesGraph = svgPanZoom('#programtest_minimalUsesGraph', {
+                    zoomEnabled: true,
+                    controlIconsEnabled: true,
+                    fit: true,
+                    center: true,});
+                    </script>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+Nodes of different colours represent the following:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph1" class="graph" transform="scale(0.817602 0.817602) rotate(0) translate(4 30)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-30 781,-30 781,5 -4,5"/>
+<!-- Module -->
+<g id="node1" class="node"><title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-26 2.13163e-14,-26 0,-1.24345e-14 54,-3.55271e-15 54,-26"/>
+<text text-anchor="middle" x="27" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node"><title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-26 72,-26 72,-1.24345e-14 138,-3.55271e-15 138,-26"/>
+<text text-anchor="middle" x="105" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Type -->
+<g id="node3" class="node"><title>Type</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="210,-26 156,-26 156,-1.24345e-14 210,-3.55271e-15 210,-26"/>
+<text text-anchor="middle" x="183" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
+</g>
+<!-- Subroutine -->
+<g id="node4" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="292,-26 228,-26 228,-1.24345e-14 292,-3.55271e-15 292,-26"/>
+<text text-anchor="middle" x="260" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node5" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="364,-26 310,-26 310,-1.24345e-14 364,-3.55271e-15 364,-26"/>
+<text text-anchor="middle" x="337" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node6" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="436,-26 382,-26 382,-1.24345e-14 436,-3.55271e-15 436,-26"/>
+<text text-anchor="middle" x="409" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node7" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="590,-26 454,-26 454,-1.24345e-14 590,-3.55271e-15 590,-26"/>
+<text text-anchor="middle" x="522" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node8" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="662,-26 608,-26 608,-1.24345e-14 662,-3.55271e-15 662,-26"/>
+<text text-anchor="middle" x="635" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node9" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="776,-26 680,-26 680,-1.24345e-14 776,-3.55271e-15 776,-26"/>
+<text text-anchor="middle" x="728" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<h5>Module Graph</h5>
+<p>Solid arrows point from a parent (sub)module to the submodule which is
+descended from it. Dashed arrows point from a module being used to the
+module using it.</p>
+<h5>Type Graph</h5>
+<p>Solid arrows point from one derived type to another which extends
+(inherits from) it. Dashed arrows point from a derived type to another
+type containing it as a components, with a label listing the name(s) of
+said component(s).</p>
+<h5>Call Graph</h5>
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+    <br><br>
+    <p>A testing program for FLAP, Fortran command Line Arguments Parser for poor people</p>
+<h3 id="compile"><a class="toclink" href="#compile">Compile</a></h3>
+<p>See <a href="https://github.com/szaghi/FLAP/wiki/Download-compile">compile instructions</a>.</p>
+<h3 id="usage-compile"><a class="toclink" href="#usage-compile">Usage Compile</a></h3>
+<p>See <a href="https://github.com/szaghi/FLAP/wiki/Testing-Programs">usage instructions</a>.</p>
+<p></p><div class="alert alert-info" role="alert"><h4>Note</h4>The minimal steps for using a FLAP CLI are:
++ <code>init</code> the CLI;
++ <code>add</code> at least one CLA to the CLI;
++ <code>get</code> the CLAs defined into the CLI;</div>
+<p>Note that <code>get</code> automatically calls <code>parse</code> method beacuse it is not explicitely called.</p>
+    
+    <br>
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cli%7E4"></span>type(<a href='../type/command_line_interface.html'>command_line_interface</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>cli</strong></td><td></td><td></td><td><p>Command Line Interface (CLI).</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string%7E7"></span>character(len=99)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>string</strong></td><td></td><td></td><td><p>String value.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-error%7E30"></span>integer(kind=I4P)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>error</strong></td><td></td><td></td><td><p>Error trapping flag.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+
+    
+    
+    
+    <section>
+    <h2 id="src">Source Code</h2>
+    <div class="highlight"><pre><span></span><span class="k">program </span><span class="n">test_minimal</span>
+<span class="c">!&lt; A testing program for FLAP, Fortran command Line Arguments Parser for poor people</span>
+<span class="c">!&lt;</span>
+<span class="c">!&lt;### Compile</span>
+<span class="c">!&lt; See [compile instructions](https://github.com/szaghi/FLAP/wiki/Download-compile).</span>
+<span class="c">!&lt;</span>
+<span class="c">!&lt;###Usage Compile</span>
+<span class="c">!&lt; See [usage instructions](https://github.com/szaghi/FLAP/wiki/Testing-Programs).</span>
+<span class="c">!&lt;</span>
+<span class="c">!&lt; @note The minimal steps for using a FLAP CLI are:</span>
+<span class="c">!&lt;+ `init` the CLI;</span>
+<span class="c">!&lt;+ `add` at least one CLA to the CLI;</span>
+<span class="c">!&lt;+ `get` the CLAs defined into the CLI;</span>
+<span class="c">!&lt;</span>
+<span class="c">!&lt;Note that `get` automatically calls `parse` method beacuse it is not explicitely called.</span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="k">use </span><span class="n">IR_Precision</span>
+<span class="k">use </span><span class="n">flap</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">command_line_interface</span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="k">implicit none</span>
+<span class="k">type</span><span class="p">(</span><span class="n">command_line_interface</span><span class="p">)</span> <span class="kd">::</span> <span class="n">cli</span>    <span class="c">!&lt; Command Line Interface (CLI).</span>
+<span class="kt">character</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">string</span> <span class="c">!&lt; String value.</span>
+<span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                 <span class="kd">::</span> <span class="n">error</span>  <span class="c">!&lt; Error trapping flag.</span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="k">call </span><span class="n">cli</span><span class="p">%</span><span class="n">init</span><span class="p">(</span><span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;minimal FLAP example&#39;</span><span class="p">)</span>
+<span class="k">call </span><span class="n">cli</span><span class="p">%</span><span class="n">add</span><span class="p">(</span><span class="n">switch</span><span class="o">=</span><span class="s1">&#39;--string&#39;</span><span class="p">,</span> <span class="n">switch_ab</span><span class="o">=</span><span class="s1">&#39;-s&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;a string&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="p">.</span><span class="n">true</span><span class="p">.,</span> <span class="n">act</span><span class="o">=</span><span class="s1">&#39;store&#39;</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">error</span><span class="p">)</span> <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="o">/=</span><span class="mi">0</span><span class="p">)</span> <span class="k">stop</span>
+<span class="k">call </span><span class="n">cli</span><span class="p">%</span><span class="n">get</span><span class="p">(</span><span class="n">switch</span><span class="o">=</span><span class="s1">&#39;-s&#39;</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="n">string</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">error</span><span class="p">)</span> <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="o">/=</span><span class="mi">0</span><span class="p">)</span> <span class="k">stop</span>
+<span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="n">cli</span><span class="p">%</span><span class="n">progname</span><span class="o">//</span><span class="s1">&#39; has been called with the following argument:&#39;</span>
+<span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;String = &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">string</span><span class="p">))</span>
+<span class="k">stop</span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="n">endprogram</span> <span class="n">test_minimal</span>
+</pre></div>
+
+    </section>
+    
+    
+    </div>
+  </div>
+
+    <hr>
+    <footer>
+        <div class="row">
+        <div class="col-md-4">&copy; 2016 </div>
+	<div class="col-md-4"><span class="text-center"> FLAP was developed by Stefano Zaghi</span></div>
+        <div class="col-md-4"><span class="pull-right">Documentation generated by <a href="https://github.com/cmacmackin/ford">FORD</a></span></div>
+        </div>
+        <br>
+    </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

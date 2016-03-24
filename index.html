@@ -108,7 +108,7 @@
 		  
           <h1>FLAP</h1>
           <p><a name="top"></a></p>
-<h1 id="flap"><a href="https://gitter.im/szaghi/FLAP?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img alt="Join the chat at https://gitter.im/szaghi/FLAP" src="https://badges.gitter.im/Join%20Chat.svg"></a><a class="toclink" href="#flap">FLAP <a href=""><img alt="GitHub tag" src="https://img.shields.io/github/tag/szaghi/FLAP.svg"></a> </a></h1>
+<h1 id="flap"><a class="toclink" href="#flap">FLAP <a href=""><img alt="GitHub tag" src="https://img.shields.io/github/tag/szaghi/FLAP.svg"></a> <a href="https://gitter.im/szaghi/FLAP?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img alt="Join the chat at https://gitter.im/szaghi/FLAP" src="https://badges.gitter.im/Join%20Chat.svg"></a></a></h1>
 <p><a href=""><img alt="License" src="https://img.shields.io/badge/license-GNU%20GeneraL%20Public%20License%20v3,%20GPLv3-blue.svg"></a>
 <a href=""><img alt="License" src="https://img.shields.io/badge/license-BSD2-red.svg"></a>
 <a href=""><img alt="License" src="https://img.shields.io/badge/license-BSD3-red.svg"></a>
@@ -198,7 +198,7 @@
 <p>Besides this README file the FLAP documentation is contained into its own <a href="https://github.com/szaghi/FLAP/wiki">wiki</a>. Detailed documentation of the API is contained into the <a href="http://szaghi.github.io/FLAP/index.html">GitHub Pages</a> that can also be created locally by means of <a href="https://github.com/cmacmackin/ford">ford tool</a>.</p>
 <h3 id="a-taste-of-flap"><a class="toclink" href="#a-taste-of-flap">A Taste of FLAP</a></h3>
 <p>Running the provided test program, <code>test_basic -h</code>, a taste of FLAP is served:</p>
-<div class="codehilite"><pre>usage:  test_basic [value] --string value [--integer value] [--real value] [--boolean] [--boolean_val value] [--integer_list value#1 value#2 value#3] [--help] [--version]
+<div class="codehilite"><pre><span></span>usage:  test_basic [value] --string value [--integer value] [--real value] [--boolean] [--boolean_val value] [--integer_list value#1 value#2 value#3] [--help] [--version]
 
 Toy program for testing FLAP
 
@@ -242,7 +242,7 @@ Examples:
 
 
 <p>Not so bad for just a very few statements as the following:</p>
-<div class="codehilite"><pre><span class="c">! initializing Command Line Interface</span>
+<div class="codehilite"><pre><span></span><span class="c">! initializing Command Line Interface</span>
 <span class="k">call </span><span class="n">cli</span><span class="p">%</span><span class="n">init</span><span class="p">(</span><span class="n">progname</span>    <span class="o">=</span> <span class="s1">&#39;test_basic&#39;</span><span class="p">,</span>                                           <span class="p">&amp;</span>
               <span class="n">version</span>     <span class="o">=</span> <span class="s1">&#39;v2.1.5&#39;</span><span class="p">,</span>                                               <span class="p">&amp;</span>
               <span class="n">authors</span>     <span class="o">=</span> <span class="s1">&#39;Stefano Zaghi&#39;</span><span class="p">,</span>                                        <span class="p">&amp;</span>
@@ -275,7 +275,7 @@ Examples:
 <p>For a practical example of FLAP usage see <a href="https://github.com/szaghi/OFF/blob/testing/src/POG.f90">POG</a> source file at line <code>85</code>.</p>
 <h4 id="nested-subcommands"><a class="toclink" href="#nested-subcommands">Nested (sub)commands</a></h4>
 <p>FLAP fully supports nested (sub)commands or groups of command line arguments. For example a fake <code>git</code> toy remake can be coded as</p>
-<div class="codehilite"><pre><span class="c">! initializing Command Line Interface</span>
+<div class="codehilite"><pre><span></span><span class="c">! initializing Command Line Interface</span>
 <span class="k">call </span><span class="n">cli</span><span class="p">%</span><span class="n">init</span><span class="p">(</span><span class="n">progname</span>    <span class="o">=</span> <span class="s1">&#39;test_nested&#39;</span><span class="p">,</span>                                      <span class="p">&amp;</span>
               <span class="n">version</span>     <span class="o">=</span> <span class="s1">&#39;v2.1.5&#39;</span><span class="p">,</span>                                           <span class="p">&amp;</span>
               <span class="n">authors</span>     <span class="o">=</span> <span class="s1">&#39;Stefano Zaghi&#39;</span><span class="p">,</span>                                    <span class="p">&amp;</span>
@@ -321,12 +321,12 @@ Examples:
 
 
 <p>that when invoked without arguments prompts:</p>
-<div class="codehilite"><pre>cowardly you are doing nothing... try at least <span class="s2">&quot;-h&quot;</span> option!
+<div class="codehilite"><pre><span></span>cowardly you are doing nothing... try at least <span class="s2">&quot;-h&quot;</span> option!
 </pre></div>
 
 
 <p>and invoked with <code>-h</code> option gives:</p>
-<div class="codehilite"><pre>usage: test_nested  <span class="o">[</span>--authors<span class="o">]</span> <span class="o">[</span>--help<span class="o">]</span> <span class="o">[</span>--version<span class="o">]</span> <span class="o">{</span>init,commit,tag<span class="o">}</span> ...
+<div class="codehilite"><pre><span></span>usage: test_nested  <span class="o">[</span>--authors<span class="o">]</span> <span class="o">[</span>--help<span class="o">]</span> <span class="o">[</span>--version<span class="o">]</span> <span class="o">{</span>init,commit,tag<span class="o">}</span> ...
 
 Toy program <span class="k">for</span> testing FLAP with nested commands
 
@@ -335,7 +335,7 @@ Optional switches:
           default value .false.
           Print authors names
    --help, -h
-          Print this <span class="nb">help </span>message
+          Print this <span class="nb">help</span> message
    --version, -v
           Print version
 
@@ -347,7 +347,7 @@ Commands:
   tag
           fake tag current commit
 
-For more detailed commands <span class="nb">help </span>try:
+For more detailed commands <span class="nb">help</span> try:
   test_nested init -h,--help
   test_nested commit -h,--help
   test_nested tag -h,--help
@@ -402,7 +402,35 @@ Examples:
               <ul>
                 
                   
-                    <li><a href='./sourcefile/data_type_command_line_interface.f90.html'>Data_Type_Command_Line_Interface.F90</a></li>
+                    <li><a href='./sourcefile/flap.f90.html'>flap.f90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/flap_command_line_argument_t.f90.html'>flap_command_line_argument_t.F90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/flap_command_line_arguments_group_t.f90.html'>flap_command_line_arguments_group_t.f90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/flap_command_line_interface_t.f90.html'>flap_command_line_interface_t.F90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/flap_object_t.f90.html'>flap_object_t.f90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/flap_utils_m.f90.html'>flap_utils_m.f90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/ir_precision.f90.html'>IR_Precision.F90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/test_all.f90.html'>test_all.f90</a></li>
                   
                 
                   
@@ -414,11 +442,13 @@ Examples:
                   
                 
                   
-                    <li><a href='./sourcefile/test_nested.f90.html'>test_nested.f90</a></li>
+                    <li><a href="./lists/files.html"><em>All source files&hellip;</em></a></li>
                   
                 
                   
-                    <li><a href='./sourcefile/test_string.f90.html'>test_string.f90</a></li>
+                
+                  
+                
                   
                 
               </ul>
@@ -429,7 +459,31 @@ Examples:
               <ul>
                 
                   
-                    <li><a href='./module/data_type_command_line_interface.html'>Data_Type_Command_Line_Interface</a></li>
+                    <li><a href='./module/flap.html'>flap</a></li>
+                  
+                
+                  
+                    <li><a href='./module/flap_command_line_argument_t.html'>flap_command_line_argument_t</a></li>
+                  
+                
+                  
+                    <li><a href='./module/flap_command_line_arguments_group_t.html'>flap_command_line_arguments_group_t</a></li>
+                  
+                
+                  
+                    <li><a href='./module/flap_command_line_interface_t.html'>flap_command_line_interface_t</a></li>
+                  
+                
+                  
+                    <li><a href='./module/flap_object_t.html'>flap_object_t</a></li>
+                  
+                
+                  
+                    <li><a href='./module/flap_utils_m.html'>flap_utils_m</a></li>
+                  
+                
+                  
+                    <li><a href='./module/ir_precision.html'>IR_Precision</a></li>
                   
                 
               </ul>
@@ -445,7 +499,7 @@ Examples:
                   
                 
                   
-                    <li><a href='./proc/add_cla_clasg.html'>add_cla_clasg</a></li>
+                    <li><a href='./proc/add%7E2.html'>add</a></li>
                   
                 
                   
@@ -453,35 +507,235 @@ Examples:
                   
                 
                   
-                    <li><a href='./proc/assign_cla.html'>assign_cla</a></li>
-                  
-                
-                  
-                    <li><a href='./proc/assign_clasg.html'>assign_clasg</a></li>
-                  
-                
-                  
-                    <li><a href='./proc/assign_cli.html'>assign_cli</a></li>
-                  
-                
-                  
                     <li><a href='./proc/assign_object.html'>assign_object</a></li>
                   
                 
                   
-                    <li><a href='./proc/called_group.html'>called_group</a></li>
+                    <li><a href='./proc/bctoi_i1p.html'>bctoi_I1P</a></li>
                   
                 
                   
-                    <li><a href='./proc/check.html'>check</a></li>
+                    <li><a href='./proc/bctoi_i2p.html'>bctoi_I2P</a></li>
                   
                 
                   
-                    <li><a href='./proc/check_choices_cla.html'>check_choices_cla</a></li>
+                    <li><a href='./proc/bctoi_i4p.html'>bctoi_I4P</a></li>
+                  
+                
+                  
+                    <li><a href='./proc/bctoi_i8p.html'>bctoi_I8P</a></li>
+                  
+                
+                  
+                    <li><a href='./interface/bcton.html'>bcton</a></li>
+                  
+                
+                  
+                    <li><a href='./proc/bctor_r4p.html'>bctor_R4P</a></li>
                   
                 
                   
                     <li><a href="./lists/procedures.html"><em>All procedures&hellip;</em></a></li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
                   
                 
                   
@@ -609,19 +863,19 @@ Examples:
               <ul>
                 
                   
-                    <li><a href='./type/type_command_line_argument.html'>Type_Command_Line_Argument</a></li>
+                    <li><a href='./type/command_line_argument.html'>command_line_argument</a></li>
                   
                 
                   
-                    <li><a href='./type/type_command_line_arguments_group.html'>Type_Command_Line_Arguments_Group</a></li>
+                    <li><a href='./type/command_line_arguments_group.html'>command_line_arguments_group</a></li>
                   
                 
                   
-                    <li><a href='./type/type_command_line_interface.html'>Type_Command_Line_Interface</a></li>
+                    <li><a href='./type/command_line_interface.html'>command_line_interface</a></li>
                   
                 
                   
-                    <li><a href='./type/type_object.html'>Type_Object</a></li>
+                    <li><a href='./type/object.html'>object</a></li>
                   
                 
               </ul>
@@ -632,8 +886,9 @@ Examples:
     <hr>
     <footer>
         <div class="row">
-        <div class="col-md-6">&copy; 2015 FLAP was written by Stefano Zaghi. </div>
-        <div class="col-md-6"><span class="pull-right">Documentation generated by <a href="https://github.com/cmacmackin/ford">FORD</a>.</span></div>
+        <div class="col-md-4">&copy; 2016 </div>
+	<div class="col-md-4"><span class="text-center"> FLAP was developed by Stefano Zaghi</span></div>
+        <div class="col-md-4"><span class="pull-right">Documentation generated by <a href="https://github.com/cmacmackin/ford">FORD</a></span></div>
         </div>
         <br>
     </footer>

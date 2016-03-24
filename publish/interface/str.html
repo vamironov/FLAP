@@ -1,0 +1,2982 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <meta name="description" content="Fortran command Line Arguments Parser for poor people">
+    
+    <meta name="author" content="Chris MacMackin" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>str &ndash; FLAP</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">FLAP </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+                
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+				
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+								
+            <li><a href="../lists/types.html">Derived Types</a></li>
+				
+				
+            <li><a href="../lists/programs.html">Programs</a></li>
+				
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>str
+	 <small>Interface</small>
+    
+    </h1>
+	 
+<div class="row">
+<div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+    <li><i class="fa fa-code"></i><a href="../src/IR_Precision.F90"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li><a href='../sourcefile/ir_precision.f90.html'>IR_Precision.F90</a></li>
+  
+     <li><a href='../module/ir_precision.html'>IR_Precision</a></li>
+  
+     <li class="active">str</li>
+  </ol>
+</div>
+</div>
+</div>
+    
+  </div>
+  
+  <div class="row">
+    <div class="col-lg-3">
+    
+<div id="sidebar">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#modprocs">Module Procedures</a></h3></div>
+    <div id="modprocs" class="panel-collapse collapse">
+        <div class="list-group">
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-strf_r8p">strf_R8P</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-str_r8p">str_R8P</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-strf_r4p">strf_R4P</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-str_r4p">str_R4P</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-strf_i8p">strf_I8P</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-str_i8p">str_I8P</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-strf_i4p">strf_I4P</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-str_i4p">str_I4P</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-strf_i2p">strf_I2P</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-str_i2p">str_I2P</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-strf_i1p">strf_I1P</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-str_i1p">str_I1P</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-str_bol">str_bol</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-str_a_r8p">str_a_R8P</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-str_a_r4p">str_a_R4P</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-str_a_i8p">str_a_I8P</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-str_a_i4p">str_a_I4P</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-str_a_i2p">str_a_I2P</a>
+          
+          <a class="list-group-item" href="../interface/str.html#moduleprocedure-str_a_i1p">str_a_I1P</a>
+          
+        </div>
+    </div>
+  </div>
+  
+  
+  <hr>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allprocs">All Procedures</a></h3></div>
+    <div id="allprocs" class="panel-collapse collapse">
+        <div class="list-group">
+          
+          <a class="list-group-item" href="../proc/add.html">add</a>
+          
+          <a class="list-group-item" href="../proc/add%7E2.html">add</a>
+          
+          <a class="list-group-item" href="../proc/add_group.html">add_group</a>
+          
+          <a class="list-group-item" href="../proc/assign_object.html">assign_object</a>
+          
+          <a class="list-group-item" href="../proc/bctoi_i1p.html">bctoi_I1P</a>
+          
+          <a class="list-group-item" href="../proc/bctoi_i2p.html">bctoi_I2P</a>
+          
+          <a class="list-group-item" href="../proc/bctoi_i4p.html">bctoi_I4P</a>
+          
+          <a class="list-group-item" href="../proc/bctoi_i8p.html">bctoi_I8P</a>
+          
+          <a class="list-group-item" href="../interface/bcton.html">bcton</a>
+          
+          <a class="list-group-item" href="../proc/bctor_r4p.html">bctor_R4P</a>
+          
+          <a class="list-group-item" href="../proc/bctor_r8p.html">bctor_R8P</a>
+          
+          <a class="list-group-item" href="../interface/bit_size.html">bit_size</a>
+          
+          <a class="list-group-item" href="../proc/bit_size_chr.html">bit_size_chr</a>
+          
+          <a class="list-group-item" href="../proc/bit_size_r16p.html">bit_size_R16P</a>
+          
+          <a class="list-group-item" href="../proc/bit_size_r4p.html">bit_size_R4P</a>
+          
+          <a class="list-group-item" href="../proc/bit_size_r8p.html">bit_size_R8P</a>
+          
+          <a class="list-group-item" href="../interface/bstr.html">bstr</a>
+          
+          <a class="list-group-item" href="../proc/bstr_i1p.html">bstr_I1P</a>
+          
+          <a class="list-group-item" href="../proc/bstr_i2p.html">bstr_I2P</a>
+          
+          <a class="list-group-item" href="../proc/bstr_i4p.html">bstr_I4P</a>
+          
+          <a class="list-group-item" href="../proc/bstr_i8p.html">bstr_I8P</a>
+          
+          <a class="list-group-item" href="../proc/bstr_r16p.html">bstr_R16P</a>
+          
+          <a class="list-group-item" href="../proc/bstr_r4p.html">bstr_R4P</a>
+          
+          <a class="list-group-item" href="../proc/bstr_r8p.html">bstr_R8P</a>
+          
+          <a class="list-group-item" href="../interface/byte_size.html">byte_size</a>
+          
+          <a class="list-group-item" href="../proc/byte_size_chr.html">byte_size_chr</a>
+          
+          <a class="list-group-item" href="../proc/byte_size_i1p.html">byte_size_I1P</a>
+          
+          <a class="list-group-item" href="../proc/byte_size_i2p.html">byte_size_I2P</a>
+          
+          <a class="list-group-item" href="../proc/byte_size_i4p.html">byte_size_I4P</a>
+          
+          <a class="list-group-item" href="../proc/byte_size_i8p.html">byte_size_I8P</a>
+          
+          <a class="list-group-item" href="../proc/byte_size_r16p.html">byte_size_R16P</a>
+          
+          <a class="list-group-item" href="../proc/byte_size_r4p.html">byte_size_R4P</a>
+          
+          <a class="list-group-item" href="../proc/byte_size_r8p.html">byte_size_R8P</a>
+          
+          <a class="list-group-item" href="../proc/check.html">check</a>
+          
+          <a class="list-group-item" href="../proc/check%7E2.html">check</a>
+          
+          <a class="list-group-item" href="../proc/check%7E3.html">check</a>
+          
+          <a class="list-group-item" href="../proc/check_action_consistency.html">check_action_consistency</a>
+          
+          <a class="list-group-item" href="../proc/check_choices.html">check_choices</a>
+          
+          <a class="list-group-item" href="../proc/check_endian.html">check_endian</a>
+          
+          <a class="list-group-item" href="../proc/check_envvar_consistency.html">check_envvar_consistency</a>
+          
+          <a class="list-group-item" href="../proc/check_list_size.html">check_list_size</a>
+          
+          <a class="list-group-item" href="../proc/check_m_exclude_consistency.html">check_m_exclude_consistency</a>
+          
+          <a class="list-group-item" href="../proc/check_m_exclusive.html">check_m_exclusive</a>
+          
+          <a class="list-group-item" href="../proc/check_m_exclusive%7E2.html">check_m_exclusive</a>
+          
+          <a class="list-group-item" href="../proc/check_named_consistency.html">check_named_consistency</a>
+          
+          <a class="list-group-item" href="../proc/check_optional_consistency.html">check_optional_consistency</a>
+          
+          <a class="list-group-item" href="../proc/check_positional_consistency.html">check_positional_consistency</a>
+          
+          <a class="list-group-item" href="../proc/cla_assign_cla.html">cla_assign_cla</a>
+          
+          <a class="list-group-item" href="../proc/clasg_assign_clasg.html">clasg_assign_clasg</a>
+          
+          <a class="list-group-item" href="../proc/cli_assign_cli.html">cli_assign_cli</a>
+          
+          <a class="list-group-item" href="../interface/count.html">count</a>
+          
+          <a class="list-group-item" href="../proc/count_substring.html">count_substring</a>
+          
+          <a class="list-group-item" href="../proc/ctoi_i1p.html">ctoi_I1P</a>
+          
+          <a class="list-group-item" href="../proc/ctoi_i2p.html">ctoi_I2P</a>
+          
+          <a class="list-group-item" href="../proc/ctoi_i4p.html">ctoi_I4P</a>
+          
+          <a class="list-group-item" href="../proc/ctoi_i8p.html">ctoi_I8P</a>
+          
+          <a class="list-group-item" href="../interface/cton.html">cton</a>
+          
+          <a class="list-group-item" href="../proc/ctor_r16p.html">ctor_R16P</a>
+          
+          <a class="list-group-item" href="../proc/ctor_r4p.html">ctor_R4P</a>
+          
+          <a class="list-group-item" href="../proc/ctor_r8p.html">ctor_R8P</a>
+          
+          <a class="list-group-item" href="../interface/digit.html">digit</a>
+          
+          <a class="list-group-item" href="../proc/digit_i1.html">digit_I1</a>
+          
+          <a class="list-group-item" href="../proc/digit_i2.html">digit_I2</a>
+          
+          <a class="list-group-item" href="../proc/digit_i4.html">digit_I4</a>
+          
+          <a class="list-group-item" href="../proc/digit_i8.html">digit_I8</a>
+          
+          <a class="list-group-item" href="../proc/errored.html">errored</a>
+          
+          <a class="list-group-item" href="../proc/errored%7E2.html">errored</a>
+          
+          <a class="list-group-item" href="../proc/errored%7E3.html">errored</a>
+          
+          <a class="list-group-item" href="../proc/finalize.html">finalize</a>
+          
+          <a class="list-group-item" href="../proc/finalize%7E2.html">finalize</a>
+          
+          <a class="list-group-item" href="../proc/finalize%7E3.html">finalize</a>
+          
+          <a class="list-group-item" href="../proc/free.html">free</a>
+          
+          <a class="list-group-item" href="../proc/free%7E2.html">free</a>
+          
+          <a class="list-group-item" href="../proc/free%7E3.html">free</a>
+          
+          <a class="list-group-item" href="../proc/free_object.html">free_object</a>
+          
+          <a class="list-group-item" href="../proc/get_args_from_invocation.html">get_args_from_invocation</a>
+          
+          <a class="list-group-item" href="../proc/get_args_from_string.html">get_args_from_string</a>
+          
+          <a class="list-group-item" href="../proc/get_cla.html">get_cla</a>
+          
+          <a class="list-group-item" href="../proc/get_cla%7E2.html">get_cla</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_from_buffer.html">get_cla_from_buffer</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list.html">get_cla_list</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list%7E2.html">get_cla_list</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_from_buffer.html">get_cla_list_from_buffer</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_char.html">get_cla_list_varying_char</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_char%7E2.html">get_cla_list_varying_char</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_i1p.html">get_cla_list_varying_I1P</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_i1p%7E2.html">get_cla_list_varying_I1P</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_i2p.html">get_cla_list_varying_I2P</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_i2p%7E2.html">get_cla_list_varying_I2P</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_i4p.html">get_cla_list_varying_I4P</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_i4p%7E2.html">get_cla_list_varying_I4P</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_i8p.html">get_cla_list_varying_I8P</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_i8p%7E2.html">get_cla_list_varying_I8P</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_logical.html">get_cla_list_varying_logical</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_logical%7E2.html">get_cla_list_varying_logical</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_r16p.html">get_cla_list_varying_R16P</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_r16p%7E2.html">get_cla_list_varying_R16P</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_r4p.html">get_cla_list_varying_R4P</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_r4p%7E2.html">get_cla_list_varying_R4P</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_r8p.html">get_cla_list_varying_R8P</a>
+          
+          <a class="list-group-item" href="../proc/get_cla_list_varying_r8p%7E2.html">get_cla_list_varying_R8P</a>
+          
+          <a class="list-group-item" href="../proc/get_clasg_indexes.html">get_clasg_indexes</a>
+          
+          <a class="list-group-item" href="../proc/init.html">init</a>
+          
+          <a class="list-group-item" href="../proc/ir_init.html">IR_init</a>
+          
+          <a class="list-group-item" href="../proc/ir_print.html">IR_Print</a>
+          
+          <a class="list-group-item" href="../proc/is_called_group.html">is_called_group</a>
+          
+          <a class="list-group-item" href="../proc/is_defined.html">is_defined</a>
+          
+          <a class="list-group-item" href="../proc/is_defined%7E2.html">is_defined</a>
+          
+          <a class="list-group-item" href="../proc/is_defined_group.html">is_defined_group</a>
+          
+          <a class="list-group-item" href="../proc/is_little_endian.html">is_little_endian</a>
+          
+          <a class="list-group-item" href="../proc/is_parsed.html">is_parsed</a>
+          
+          <a class="list-group-item" href="../proc/is_passed.html">is_passed</a>
+          
+          <a class="list-group-item" href="../proc/is_passed%7E2.html">is_passed</a>
+          
+          <a class="list-group-item" href="../proc/is_required_passed.html">is_required_passed</a>
+          
+          <a class="list-group-item" href="../proc/is_required_passed%7E2.html">is_required_passed</a>
+          
+          <a class="list-group-item" href="../proc/parse.html">parse</a>
+          
+          <a class="list-group-item" href="../proc/parse%7E2.html">parse</a>
+          
+          <a class="list-group-item" href="../proc/print_error_message.html">print_error_message</a>
+          
+          <a class="list-group-item" href="../proc/print_usage.html">print_usage</a>
+          
+          <a class="list-group-item" href="../proc/print_version.html">print_version</a>
+          
+          <a class="list-group-item" href="../proc/raise_error_m_exclude.html">raise_error_m_exclude</a>
+          
+          <a class="list-group-item" href="../proc/raise_error_m_exclude%7E2.html">raise_error_m_exclude</a>
+          
+          <a class="list-group-item" href="../proc/raise_error_nargs_insufficient.html">raise_error_nargs_insufficient</a>
+          
+          <a class="list-group-item" href="../proc/raise_error_switch_unknown.html">raise_error_switch_unknown</a>
+          
+          <a class="list-group-item" href="../proc/raise_error_value_missing.html">raise_error_value_missing</a>
+          
+          <a class="list-group-item" href="../proc/replace.html">replace</a>
+          
+          <a class="list-group-item" href="../proc/replace_all.html">replace_all</a>
+          
+          <a class="list-group-item" href="../proc/sanitize_defaults.html">sanitize_defaults</a>
+          
+          <a class="list-group-item" href="../proc/sanitize_defaults%7E2.html">sanitize_defaults</a>
+          
+          <a class="list-group-item" href="../proc/save_man_page.html">save_man_page</a>
+          
+          <a class="list-group-item" href="../proc/set_mutually_exclusive_groups.html">set_mutually_exclusive_groups</a>
+          
+          <a class="list-group-item" href="../proc/signature.html">signature</a>
+          
+          <a class="list-group-item" href="../proc/signature%7E2.html">signature</a>
+          
+          <a class="list-group-item" href="../proc/signature%7E3.html">signature</a>
+          
+          <a class="list-group-item" href="../interface/str.html">str</a>
+          
+          <a class="list-group-item" href="../proc/str_a_i1p.html">str_a_I1P</a>
+          
+          <a class="list-group-item" href="../proc/str_a_i2p.html">str_a_I2P</a>
+          
+          <a class="list-group-item" href="../proc/str_a_i4p.html">str_a_I4P</a>
+          
+          <a class="list-group-item" href="../proc/str_a_i8p.html">str_a_I8P</a>
+          
+          <a class="list-group-item" href="../proc/str_a_r16p.html">str_a_R16P</a>
+          
+          <a class="list-group-item" href="../proc/str_a_r4p.html">str_a_R4P</a>
+          
+          <a class="list-group-item" href="../proc/str_a_r8p.html">str_a_R8P</a>
+          
+          <a class="list-group-item" href="../proc/str_bol.html">str_bol</a>
+          
+          <a class="list-group-item" href="../proc/str_i1p.html">str_I1P</a>
+          
+          <a class="list-group-item" href="../proc/str_i2p.html">str_I2P</a>
+          
+          <a class="list-group-item" href="../proc/str_i4p.html">str_I4P</a>
+          
+          <a class="list-group-item" href="../proc/str_i8p.html">str_I8P</a>
+          
+          <a class="list-group-item" href="../proc/str_r16p.html">str_R16P</a>
+          
+          <a class="list-group-item" href="../proc/str_r4p.html">str_R4P</a>
+          
+          <a class="list-group-item" href="../proc/str_r8p.html">str_R8P</a>
+          
+          <a class="list-group-item" href="../proc/strf_i1p.html">strf_I1P</a>
+          
+          <a class="list-group-item" href="../proc/strf_i2p.html">strf_I2P</a>
+          
+          <a class="list-group-item" href="../proc/strf_i4p.html">strf_I4P</a>
+          
+          <a class="list-group-item" href="../proc/strf_i8p.html">strf_I8P</a>
+          
+          <a class="list-group-item" href="../proc/strf_r16p.html">strf_R16P</a>
+          
+          <a class="list-group-item" href="../proc/strf_r4p.html">strf_R4P</a>
+          
+          <a class="list-group-item" href="../proc/strf_r8p.html">strf_R8P</a>
+          
+          <a class="list-group-item" href="../interface/strz.html">strz</a>
+          
+          <a class="list-group-item" href="../proc/strz_i1p.html">strz_I1P</a>
+          
+          <a class="list-group-item" href="../proc/strz_i2p.html">strz_I2P</a>
+          
+          <a class="list-group-item" href="../proc/strz_i4p.html">strz_I4P</a>
+          
+          <a class="list-group-item" href="../proc/strz_i8p.html">strz_I8P</a>
+          
+          <a class="list-group-item" href="../proc/tokenize.html">tokenize</a>
+          
+          <a class="list-group-item" href="../proc/unique.html">unique</a>
+          
+          <a class="list-group-item" href="../proc/upper_case.html">upper_case</a>
+          
+          <a class="list-group-item" href="../proc/usage.html">usage</a>
+          
+          <a class="list-group-item" href="../proc/usage%7E2.html">usage</a>
+          
+          <a class="list-group-item" href="../proc/usage%7E3.html">usage</a>
+          
+          <a class="list-group-item" href="../proc/wstrip.html">wstrip</a>
+          
+        </div>
+    </div>
+  </div>
+  
+</div>
+
+    </div>
+    
+    <div class="col-lg-9" id='text'>
+    <h2>public interface str</h2>
+	 <p>Procedure for converting number, real and integer, to string (number to string type casting).</p>
+     
+     <h3>Calls</h3>
+     
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: interface~~str~~CallsGraph Pages: 1 -->
+<svg id="interfacestrCallsGraph" width="252pt" height="760pt"
+ viewBox="0.00 0.00 252.00 760.24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="interface~~str~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 756.24)">
+<title>interface~~str~~CallsGraph</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-756.24 249,-756.24 249,5 -4,5"/>
+<!-- interface~str -->
+<g id="node1" class="node"><title>interface~str</title>
+<polygon fill="none" stroke="black" points="54,-390.91 2.13163e-14,-390.91 0,-364.91 54,-364.91 54,-390.91"/>
+<text text-anchor="middle" x="27" y="-375.46" font-family="Helvetica,sans-Serif" font-size="10.50">str</text>
+</g>
+<!-- proc~str_a_i2p -->
+<g id="node2" class="node"><title>proc~str_a_i2p</title>
+<a xlink:href="../proc/str_a_i2p.html" xlink:title="str_a_I2P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="151,-686.91 93,-686.91 93,-660.91 151,-660.91 151,-686.91"/>
+<text text-anchor="middle" x="122" y="-671.46" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">str_a_I2P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~str_a_i2p -->
+<g id="edge14" class="edge"><title>interface~str&#45;&gt;proc~str_a_i2p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M28.729,-390.987C35.3194,-439.386 60.011,-607.816 90,-651.91 90.4265,-652.537 90.8774,-653.151 91.3496,-653.753"/>
+<polygon fill="black" stroke="black" points="88.903,-656.256 98.4499,-660.851 93.8518,-651.306 88.903,-656.256"/>
+</g>
+<!-- proc~strf_r8p -->
+<g id="node3" class="node"><title>proc~strf_r8p</title>
+<a xlink:href="../proc/strf_r8p.html" xlink:title="strf_R8P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="149,-730.91 95,-730.91 95,-704.91 149,-704.91 149,-730.91"/>
+<text text-anchor="middle" x="122" y="-715.46" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">strf_R8P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~strf_r8p -->
+<g id="edge16" class="edge"><title>interface~str&#45;&gt;proc~strf_r8p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M28.2936,-391.203C33.7006,-444.714 55.8116,-643.959 90,-695.91 90.3359,-696.42 90.6881,-696.922 91.055,-697.415"/>
+<polygon fill="black" stroke="black" points="88.5763,-699.887 98.0412,-704.648 93.6111,-695.024 88.5763,-699.887"/>
+</g>
+<!-- proc~str_a_i1p -->
+<g id="node4" class="node"><title>proc~str_a_i1p</title>
+<a xlink:href="../proc/str_a_i1p.html" xlink:title="str_a_I1P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="151,-642.91 93,-642.91 93,-616.91 151,-616.91 151,-642.91"/>
+<text text-anchor="middle" x="122" y="-627.46" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">str_a_I1P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~str_a_i1p -->
+<g id="edge18" class="edge"><title>interface~str&#45;&gt;proc~str_a_i1p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M27.5068,-390.921C29.553,-428.193 39.7494,-537.213 90,-607.91 90.4394,-608.528 90.902,-609.134 91.3849,-609.729"/>
+<polygon fill="black" stroke="black" points="88.9775,-612.27 98.5707,-616.767 93.8756,-607.269 88.9775,-612.27"/>
+</g>
+<!-- proc~str_i8p -->
+<g id="node5" class="node"><title>proc~str_i8p</title>
+<a xlink:href="../proc/str_i8p.html" xlink:title="str_I8P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="244,-199.91 190,-199.91 190,-173.91 244,-173.91 244,-199.91"/>
+<text text-anchor="middle" x="217" y="-184.46" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">str_I8P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~str_i8p -->
+<g id="edge20" class="edge"><title>interface~str&#45;&gt;proc~str_i8p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M29.2745,-364.777C36.4427,-325.08 59.8836,-207.724 90,-185.91 115.651,-167.33 152.503,-169.916 179.909,-175.765"/>
+<polygon fill="black" stroke="black" points="179.37,-179.234 189.907,-178.129 180.98,-172.422 179.37,-179.234"/>
+</g>
+<!-- proc~strf_i8p -->
+<g id="node6" class="node"><title>proc~strf_i8p</title>
+<a xlink:href="../proc/strf_i8p.html" xlink:title="strf_I8P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="149,-598.91 95,-598.91 95,-572.91 149,-572.91 149,-598.91"/>
+<text text-anchor="middle" x="122" y="-583.46" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">strf_I8P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~strf_i8p -->
+<g id="edge22" class="edge"><title>interface~str&#45;&gt;proc~strf_i8p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M29.1431,-391.281C34.7076,-422.853 51.9143,-503.531 90,-558.91 91.6605,-561.324 93.5915,-563.648 95.6667,-565.849"/>
+<polygon fill="black" stroke="black" points="93.4064,-568.528 103.094,-572.818 98.1961,-563.423 93.4064,-568.528"/>
+</g>
+<!-- proc~str_i4p -->
+<g id="node7" class="node"><title>proc~str_i4p</title>
+<a xlink:href="../proc/str_i4p.html" xlink:title="str_I4P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="244,-473.91 190,-473.91 190,-447.91 244,-447.91 244,-473.91"/>
+<text text-anchor="middle" x="217" y="-458.46" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">str_I4P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~str_i4p -->
+<g id="edge24" class="edge"><title>interface~str&#45;&gt;proc~str_i4p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M54.2224,-389.802C87.3785,-404.286 143.518,-428.81 180.425,-444.932"/>
+<polygon fill="black" stroke="black" points="179.263,-448.244 189.828,-449.04 182.065,-441.829 179.263,-448.244"/>
+</g>
+<!-- proc~str_a_r4p -->
+<g id="node8" class="node"><title>proc~str_a_r4p</title>
+<a xlink:href="../proc/str_a_r4p.html" xlink:title="str_a_R4P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="153,-390.91 91,-390.91 91,-364.91 153,-364.91 153,-390.91"/>
+<text text-anchor="middle" x="122" y="-375.46" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">str_a_R4P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~str_a_r4p -->
+<g id="edge26" class="edge"><title>interface~str&#45;&gt;proc~str_a_r4p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M54.2232,-377.91C62.3413,-377.91 71.4321,-377.91 80.2542,-377.91"/>
+<polygon fill="black" stroke="black" points="80.4128,-381.41 90.4128,-377.91 80.4127,-374.41 80.4128,-381.41"/>
+</g>
+<!-- proc~strf_r4p -->
+<g id="node9" class="node"><title>proc~strf_r4p</title>
+<a xlink:href="../proc/strf_r4p.html" xlink:title="strf_R4P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="149,-472.91 95,-472.91 95,-446.91 149,-446.91 149,-472.91"/>
+<text text-anchor="middle" x="122" y="-457.46" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">strf_R4P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~strf_r4p -->
+<g id="edge28" class="edge"><title>interface~str&#45;&gt;proc~strf_r4p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M41.9587,-391.094C54.6848,-402.281 73.4737,-418.726 90,-432.91 92.7304,-435.253 95.6012,-437.7 98.4562,-440.122"/>
+<polygon fill="black" stroke="black" points="96.4339,-442.996 106.33,-446.779 100.953,-437.65 96.4339,-442.996"/>
+</g>
+<!-- proc~str_a_i4p -->
+<g id="node10" class="node"><title>proc~str_a_i4p</title>
+<a xlink:href="../proc/str_a_i4p.html" xlink:title="str_a_I4P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="151,-516.91 93,-516.91 93,-490.91 151,-490.91 151,-516.91"/>
+<text text-anchor="middle" x="122" y="-501.46" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">str_a_I4P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~str_a_i4p -->
+<g id="edge30" class="edge"><title>interface~str&#45;&gt;proc~str_a_i4p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M32.6637,-390.918C42.2294,-411.845 63.1922,-453.511 90,-481.91 90.7636,-482.719 91.5617,-483.515 92.3867,-484.296"/>
+<polygon fill="black" stroke="black" points="90.4012,-487.197 100.332,-490.89 94.8716,-481.81 90.4012,-487.197"/>
+</g>
+<!-- proc~str_i2p -->
+<g id="node11" class="node"><title>proc~str_i2p</title>
+<a xlink:href="../proc/str_i2p.html" xlink:title="str_I2P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="244,-728.91 190,-728.91 190,-702.91 244,-702.91 244,-728.91"/>
+<text text-anchor="middle" x="217" y="-713.46" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">str_I2P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~str_i2p -->
+<g id="edge32" class="edge"><title>interface~str&#45;&gt;proc~str_i2p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M27.1376,-390.91C28.0635,-450.173 35.1976,-693.821 90,-739.91 117.155,-762.747 159.217,-748.216 187.411,-733.766"/>
+<polygon fill="black" stroke="black" points="189.256,-736.748 196.399,-728.923 185.936,-730.586 189.256,-736.748"/>
+</g>
+<!-- proc~strf_i2p -->
+<g id="node12" class="node"><title>proc~strf_i2p</title>
+<a xlink:href="../proc/strf_i2p.html" xlink:title="strf_I2P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="149,-346.91 95,-346.91 95,-320.91 149,-320.91 149,-346.91"/>
+<text text-anchor="middle" x="122" y="-331.46" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">strf_I2P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~strf_i2p -->
+<g id="edge34" class="edge"><title>interface~str&#45;&gt;proc~strf_i2p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M54.2232,-365.301C63.9621,-360.791 75.1011,-355.631 85.4965,-350.817"/>
+<polygon fill="black" stroke="black" points="87.1698,-353.899 94.7728,-346.52 84.2279,-347.547 87.1698,-353.899"/>
+</g>
+<!-- proc~strf_i1p -->
+<g id="node13" class="node"><title>proc~strf_i1p</title>
+<a xlink:href="../proc/strf_i1p.html" xlink:title="strf_I1P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="149,-302.91 95,-302.91 95,-276.91 149,-276.91 149,-302.91"/>
+<text text-anchor="middle" x="122" y="-287.46" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">strf_I1P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~strf_i1p -->
+<g id="edge36" class="edge"><title>interface~str&#45;&gt;proc~strf_i1p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M38.1195,-364.736C50.1771,-350.831 70.343,-328.651 90,-311.91 91.1228,-310.954 92.2873,-310 93.4783,-309.056"/>
+<polygon fill="black" stroke="black" points="95.6359,-311.813 101.559,-303.029 91.4507,-306.202 95.6359,-311.813"/>
+</g>
+<!-- proc~str_i1p -->
+<g id="node14" class="node"><title>proc~str_i1p</title>
+<a xlink:href="../proc/str_i1p.html" xlink:title="str_I1P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="244,-599.91 190,-599.91 190,-573.91 244,-573.91 244,-599.91"/>
+<text text-anchor="middle" x="217" y="-584.46" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">str_I1P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~str_i1p -->
+<g id="edge38" class="edge"><title>interface~str&#45;&gt;proc~str_i1p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M29.3534,-391.103C35.003,-419.262 51.7985,-485.936 90,-525.91 103.209,-539.732 147.644,-559.42 180.243,-572.655"/>
+<polygon fill="black" stroke="black" points="179.348,-576.067 189.932,-576.542 181.954,-569.571 179.348,-576.067"/>
+</g>
+<!-- proc~str_r4p -->
+<g id="node15" class="node"><title>proc~str_r4p</title>
+<a xlink:href="../proc/str_r4p.html" xlink:title="str_R4P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="244,-325.91 190,-325.91 190,-299.91 244,-299.91 244,-325.91"/>
+<text text-anchor="middle" x="217" y="-310.46" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">str_R4P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~str_r4p -->
+<g id="edge40" class="edge"><title>interface~str&#45;&gt;proc~str_r4p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M29.9894,-364.696C36.2841,-340.38 53.4433,-289.101 90,-267.91 114.609,-253.645 126.912,-259.229 154,-267.91 169.656,-272.927 184.733,-283.422 196.21,-293.016"/>
+<polygon fill="black" stroke="black" points="194.063,-295.788 203.889,-299.751 198.679,-290.525 194.063,-295.788"/>
+</g>
+<!-- proc~str_a_r8p -->
+<g id="node16" class="node"><title>proc~str_a_r8p</title>
+<a xlink:href="../proc/str_a_r8p.html" xlink:title="str_a_R8P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="153,-50.9098 91,-50.9098 91,-24.9098 153,-24.9098 153,-50.9098"/>
+<text text-anchor="middle" x="122" y="-35.4598" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">str_a_R8P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~str_a_r8p -->
+<g id="edge42" class="edge"><title>interface~str&#45;&gt;proc~str_a_r8p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M28.2936,-364.616C33.7006,-311.106 55.8116,-111.86 90,-59.9098 90.3359,-59.3994 90.6881,-58.8976 91.055,-58.4044"/>
+<polygon fill="black" stroke="black" points="93.6111,-60.796 98.0412,-51.1718 88.5763,-55.9328 93.6111,-60.796"/>
+</g>
+<!-- proc~strf_i4p -->
+<g id="node17" class="node"><title>proc~strf_i4p</title>
+<a xlink:href="../proc/strf_i4p.html" xlink:title="strf_I4P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="149,-138.91 95,-138.91 95,-112.91 149,-112.91 149,-138.91"/>
+<text text-anchor="middle" x="122" y="-123.46" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">strf_I4P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~strf_i4p -->
+<g id="edge44" class="edge"><title>interface~str&#45;&gt;proc~strf_i4p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M27.9772,-364.893C31.234,-328.559 44.2541,-224.048 90,-152.91 91.4448,-150.663 93.1343,-148.505 94.9684,-146.456"/>
+<polygon fill="black" stroke="black" points="97.7824,-148.604 102.547,-139.142 92.9213,-143.568 97.7824,-148.604"/>
+</g>
+<!-- proc~str_bol -->
+<g id="node18" class="node"><title>proc~str_bol</title>
+<a xlink:href="../proc/str_bol.html" xlink:title="str_bol">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="149,-94.9098 95,-94.9098 95,-68.9098 149,-68.9098 149,-94.9098"/>
+<text text-anchor="middle" x="122" y="-79.4598" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">str_bol</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~str_bol -->
+<g id="edge46" class="edge"><title>interface~str&#45;&gt;proc~str_bol</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M28.729,-364.833C35.3194,-316.434 60.011,-148.004 90,-103.91 90.4265,-103.283 90.8774,-102.668 91.3496,-102.066"/>
+<polygon fill="black" stroke="black" points="93.8518,-104.514 98.4499,-94.9688 88.903,-99.5631 93.8518,-104.514"/>
+</g>
+<!-- proc~str_a_i8p -->
+<g id="node19" class="node"><title>proc~str_a_i8p</title>
+<a xlink:href="../proc/str_a_i8p.html" xlink:title="str_a_I8P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="151,-220.91 93,-220.91 93,-194.91 151,-194.91 151,-220.91"/>
+<text text-anchor="middle" x="122" y="-205.46" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">str_a_I8P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~str_a_i8p -->
+<g id="edge48" class="edge"><title>interface~str&#45;&gt;proc~str_a_i8p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M30.6273,-364.636C38.341,-338.065 58.3033,-277.264 90,-234.91 91.7966,-232.509 93.845,-230.181 96.0175,-227.965"/>
+<polygon fill="black" stroke="black" points="98.6966,-230.256 103.696,-220.915 93.9625,-225.1 98.6966,-230.256"/>
+</g>
+<!-- proc~str_r8p -->
+<g id="node20" class="node"><title>proc~str_r8p</title>
+<a xlink:href="../proc/str_r8p.html" xlink:title="str_R8P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="244,-30.9098 190,-30.9098 190,-4.90981 244,-4.90981 244,-30.9098"/>
+<text text-anchor="middle" x="217" y="-15.4598" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">str_R8P</text>
+</a>
+</g>
+<!-- interface~str&#45;&gt;proc~str_r8p -->
+<g id="edge50" class="edge"><title>interface~str&#45;&gt;proc~str_r8p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M27.1376,-364.909C28.0635,-305.647 35.1976,-61.9985 90,-15.9098 114.5,4.69461 152.053,1.28726 179.977,-5.52469"/>
+<polygon fill="black" stroke="black" points="179.222,-8.94575 189.787,-8.15023 181.032,-2.18374 179.222,-8.94575"/>
+</g>
+<!-- proc~str_a_i2p&#45;&gt;proc~str_i2p -->
+<g id="edge2" class="edge"><title>proc~str_a_i2p&#45;&gt;proc~str_i2p</title>
+<path fill="none" stroke="black" d="M151.019,-686.739C160.268,-690.828 170.625,-695.407 180.342,-699.703"/>
+<polygon fill="black" stroke="black" points="179.219,-703.034 189.781,-703.876 182.05,-696.631 179.219,-703.034"/>
+</g>
+<!-- proc~str_a_i1p&#45;&gt;proc~str_i1p -->
+<g id="edge4" class="edge"><title>proc~str_a_i1p&#45;&gt;proc~str_i1p</title>
+<path fill="none" stroke="black" d="M150.761,-616.892C160.197,-612.621 170.807,-607.818 180.726,-603.329"/>
+<polygon fill="black" stroke="black" points="182.295,-606.461 189.962,-599.148 179.408,-600.083 182.295,-606.461"/>
+</g>
+<!-- proc~str_a_r4p&#45;&gt;proc~str_r4p -->
+<g id="edge6" class="edge"><title>proc~str_a_r4p&#45;&gt;proc~str_r4p</title>
+<path fill="none" stroke="black" d="M141.225,-364.756C155.003,-355.329 173.771,-342.488 189.182,-331.944"/>
+<polygon fill="black" stroke="black" points="191.527,-334.579 197.804,-326.044 187.574,-328.802 191.527,-334.579"/>
+</g>
+<!-- proc~str_a_i4p&#45;&gt;proc~str_i4p -->
+<g id="edge8" class="edge"><title>proc~str_a_i4p&#45;&gt;proc~str_i4p</title>
+<path fill="none" stroke="black" d="M150.761,-490.892C160.197,-486.621 170.807,-481.818 180.726,-477.329"/>
+<polygon fill="black" stroke="black" points="182.295,-480.461 189.962,-473.148 179.408,-474.083 182.295,-480.461"/>
+</g>
+<!-- proc~str_a_r8p&#45;&gt;proc~str_r8p -->
+<g id="edge10" class="edge"><title>proc~str_a_r8p&#45;&gt;proc~str_r8p</title>
+<path fill="none" stroke="black" d="M153.634,-31.2501C162.091,-29.4696 171.306,-27.5295 180.024,-25.6942"/>
+<polygon fill="black" stroke="black" points="180.889,-29.0889 189.954,-23.6038 179.447,-22.2391 180.889,-29.0889"/>
+</g>
+<!-- proc~str_a_i8p&#45;&gt;proc~str_i8p -->
+<g id="edge12" class="edge"><title>proc~str_a_i8p&#45;&gt;proc~str_i8p</title>
+<path fill="none" stroke="black" d="M151.019,-201.495C160.076,-199.493 170.194,-197.256 179.734,-195.148"/>
+<polygon fill="black" stroke="black" points="180.772,-198.503 189.781,-192.927 179.261,-191.668 180.772,-198.503"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+Nodes of different colours represent the following:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph1" class="graph" transform="scale(0.817602 0.817602) rotate(0) translate(4 30)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-30 781,-30 781,5 -4,5"/>
+<!-- Module -->
+<g id="node1" class="node"><title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-26 2.13163e-14,-26 0,-1.24345e-14 54,-3.55271e-15 54,-26"/>
+<text text-anchor="middle" x="27" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node"><title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-26 72,-26 72,-1.24345e-14 138,-3.55271e-15 138,-26"/>
+<text text-anchor="middle" x="105" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Type -->
+<g id="node3" class="node"><title>Type</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="210,-26 156,-26 156,-1.24345e-14 210,-3.55271e-15 210,-26"/>
+<text text-anchor="middle" x="183" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
+</g>
+<!-- Subroutine -->
+<g id="node4" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="292,-26 228,-26 228,-1.24345e-14 292,-3.55271e-15 292,-26"/>
+<text text-anchor="middle" x="260" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node5" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="364,-26 310,-26 310,-1.24345e-14 364,-3.55271e-15 364,-26"/>
+<text text-anchor="middle" x="337" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node6" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="436,-26 382,-26 382,-1.24345e-14 436,-3.55271e-15 436,-26"/>
+<text text-anchor="middle" x="409" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node7" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="590,-26 454,-26 454,-1.24345e-14 590,-3.55271e-15 590,-26"/>
+<text text-anchor="middle" x="522" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node8" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="662,-26 608,-26 608,-1.24345e-14 662,-3.55271e-15 662,-26"/>
+<text text-anchor="middle" x="635" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node9" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="776,-26 680,-26 680,-1.24345e-14 776,-3.55271e-15 776,-26"/>
+<text text-anchor="middle" x="728" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<h5>Module Graph</h5>
+<p>Solid arrows point from a parent (sub)module to the submodule which is
+descended from it. Dashed arrows point from a module being used to the
+module using it.</p>
+<h5>Type Graph</h5>
+<p>Solid arrows point from one derived type to another which extends
+(inherits from) it. Dashed arrows point from a derived type to another
+type containing it as a components, with a label listing the name(s) of
+said component(s).</p>
+<h5>Call Graph</h5>
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+     
+     
+     <h3>Called By</h3>
+     
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: interface~~str~~CalledByGraph Pages: 1 -->
+<svg id="interfacestrCalledByGraph" width="400pt" height="732pt"
+ viewBox="0.00 0.00 400.00 732.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="interface~~str~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 728)">
+<title>interface~~str~~CalledByGraph</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-728 397,-728 397,5 -4,5"/>
+<!-- interface~str -->
+<g id="node1" class="node"><title>interface~str</title>
+<polygon fill="none" stroke="black" points="392,-378 338,-378 338,-352 392,-352 392,-378"/>
+<text text-anchor="middle" x="365" y="-362.55" font-family="Helvetica,sans-Serif" font-size="10.50">str</text>
+</g>
+<!-- proc~errored -->
+<g id="node2" class="node"><title>proc~errored</title>
+<a xlink:href="../proc/errored.html" xlink:title="errored">
+<polygon fill="#d9534f" stroke="#d9534f" points="275,-724 221,-724 221,-698 275,-698 275,-724"/>
+<text text-anchor="middle" x="248" y="-708.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">errored</text>
+</a>
+</g>
+<!-- proc~errored&#45;&gt;interface~str -->
+<g id="edge16" class="edge"><title>proc~errored&#45;&gt;interface~str</title>
+<path fill="none" stroke="black" d="M275.237,-703.038C285.047,-698.87 295.33,-692.754 302,-684 337.817,-636.989 357.19,-453.473 363.057,-388.201"/>
+<polygon fill="black" stroke="black" points="366.555,-388.377 363.94,-378.11 359.582,-387.766 366.555,-388.377"/>
+</g>
+<!-- proc~bctoi_i8p -->
+<g id="node3" class="node"><title>proc~bctoi_i8p</title>
+<a xlink:href="../proc/bctoi_i8p.html" xlink:title="bctoi_I8P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="276,-642 220,-642 220,-616 276,-616 276,-642"/>
+<text text-anchor="middle" x="248" y="-626.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">bctoi_I8P</text>
+</a>
+</g>
+<!-- proc~bctoi_i8p&#45;&gt;interface~str -->
+<g id="edge18" class="edge"><title>proc~bctoi_i8p&#45;&gt;interface~str</title>
+<path fill="none" stroke="black" d="M276.568,-622.832C285.825,-619.537 295.397,-614.539 302,-607 330.901,-574.002 353.43,-442.308 361.639,-388.295"/>
+<polygon fill="black" stroke="black" points="365.117,-388.702 363.129,-378.295 358.193,-387.67 365.117,-388.702"/>
+</g>
+<!-- program~test_choices_logical -->
+<g id="node4" class="node"><title>program~test_choices_logical</title>
+<a xlink:href="../program/test_choices_logical.html" xlink:title="test_choices_logical">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="302,-378 194,-378 194,-352 302,-352 302,-378"/>
+<text text-anchor="middle" x="248" y="-362.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_choices_logical</text>
+</a>
+</g>
+<!-- program~test_choices_logical&#45;&gt;interface~str -->
+<g id="edge20" class="edge"><title>program~test_choices_logical&#45;&gt;interface~str</title>
+<path fill="none" stroke="black" d="M302.048,-365C310.805,-365 319.695,-365 327.929,-365"/>
+<polygon fill="black" stroke="black" points="327.947,-368.5 337.947,-365 327.947,-361.5 327.947,-368.5"/>
+</g>
+<!-- program~test_hidden -->
+<g id="node5" class="node"><title>program~test_hidden</title>
+<a xlink:href="../program/test_hidden.html" xlink:title="test_hidden">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="282,-334 214,-334 214,-308 282,-308 282,-334"/>
+<text text-anchor="middle" x="248" y="-318.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_hidden</text>
+</a>
+</g>
+<!-- program~test_hidden&#45;&gt;interface~str -->
+<g id="edge22" class="edge"><title>program~test_hidden&#45;&gt;interface~str</title>
+<path fill="none" stroke="black" d="M282.156,-333.845C296.514,-339.245 313.254,-345.54 327.913,-351.053"/>
+<polygon fill="black" stroke="black" points="327.082,-354.479 337.674,-354.723 329.546,-347.927 327.082,-354.479"/>
+</g>
+<!-- proc~signature -->
+<g id="node6" class="node"><title>proc~signature</title>
+<a xlink:href="../proc/signature.html" xlink:title="signature">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="276,-290 220,-290 220,-264 276,-264 276,-290"/>
+<text text-anchor="middle" x="248" y="-274.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">signature</text>
+</a>
+</g>
+<!-- proc~signature&#45;&gt;interface~str -->
+<g id="edge24" class="edge"><title>proc~signature&#45;&gt;interface~str</title>
+<path fill="none" stroke="black" d="M276.612,-286.065C285.162,-289.443 294.302,-293.759 302,-299 320.17,-311.371 337.152,-329.723 348.896,-343.937"/>
+<polygon fill="black" stroke="black" points="346.183,-346.148 355.175,-351.751 351.639,-341.763 346.183,-346.148"/>
+</g>
+<!-- proc~bctoi_i1p -->
+<g id="node7" class="node"><title>proc~bctoi_i1p</title>
+<a xlink:href="../proc/bctoi_i1p.html" xlink:title="bctoi_I1P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="276,-598 220,-598 220,-572 276,-572 276,-598"/>
+<text text-anchor="middle" x="248" y="-582.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">bctoi_I1P</text>
+</a>
+</g>
+<!-- proc~bctoi_i1p&#45;&gt;interface~str -->
+<g id="edge26" class="edge"><title>proc~bctoi_i1p&#45;&gt;interface~str</title>
+<path fill="none" stroke="black" d="M276.624,-578.53C285.775,-575.218 295.267,-570.286 302,-563 348.311,-512.887 360.58,-428.729 363.83,-388.198"/>
+<polygon fill="black" stroke="black" points="367.322,-388.426 364.515,-378.209 360.338,-387.946 367.322,-388.426"/>
+</g>
+<!-- proc~bctoi_i4p -->
+<g id="node8" class="node"><title>proc~bctoi_i4p</title>
+<a xlink:href="../proc/bctoi_i4p.html" xlink:title="bctoi_I4P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="276,-554 220,-554 220,-528 276,-528 276,-554"/>
+<text text-anchor="middle" x="248" y="-538.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">bctoi_I4P</text>
+</a>
+</g>
+<!-- proc~bctoi_i4p&#45;&gt;interface~str -->
+<g id="edge28" class="edge"><title>proc~bctoi_i4p&#45;&gt;interface~str</title>
+<path fill="none" stroke="black" d="M276.576,-534.112C285.616,-530.777 295.052,-525.938 302,-519 338.73,-482.323 354.936,-421.263 361.334,-388.118"/>
+<polygon fill="black" stroke="black" points="364.824,-388.484 363.144,-378.023 357.934,-387.249 364.824,-388.484"/>
+</g>
+<!-- proc~usage -->
+<g id="node9" class="node"><title>proc~usage</title>
+<a xlink:href="../proc/usage.html" xlink:title="usage">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="275,-246 221,-246 221,-220 275,-220 275,-246"/>
+<text text-anchor="middle" x="248" y="-230.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">usage</text>
+</a>
+</g>
+<!-- proc~usage&#45;&gt;interface~str -->
+<g id="edge30" class="edge"><title>proc~usage&#45;&gt;interface~str</title>
+<path fill="none" stroke="black" d="M275.231,-240.126C284.475,-243.519 294.381,-248.334 302,-255 329.391,-278.965 347.684,-317.871 357.202,-342.414"/>
+<polygon fill="black" stroke="black" points="353.987,-343.809 360.746,-351.968 360.55,-341.375 353.987,-343.809"/>
+</g>
+<!-- proc~bctor_r4p -->
+<g id="node10" class="node"><title>proc~bctor_r4p</title>
+<a xlink:href="../proc/bctor_r4p.html" xlink:title="bctor_R4P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="279,-510 217,-510 217,-484 279,-484 279,-510"/>
+<text text-anchor="middle" x="248" y="-494.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">bctor_R4P</text>
+</a>
+</g>
+<!-- proc~bctor_r4p&#45;&gt;interface~str -->
+<g id="edge32" class="edge"><title>proc~bctor_r4p&#45;&gt;interface~str</title>
+<path fill="none" stroke="black" d="M279.707,-488.134C287.586,-484.893 295.6,-480.599 302,-475 329.391,-451.035 347.684,-412.129 357.202,-387.586"/>
+<polygon fill="black" stroke="black" points="360.55,-388.625 360.746,-378.032 353.987,-386.191 360.55,-388.625"/>
+</g>
+<!-- program~test_nested -->
+<g id="node11" class="node"><title>program~test_nested</title>
+<a xlink:href="../program/test_nested.html" xlink:title="test_nested">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="282,-202 214,-202 214,-176 282,-176 282,-202"/>
+<text text-anchor="middle" x="248" y="-186.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_nested</text>
+</a>
+</g>
+<!-- program~test_nested&#45;&gt;interface~str -->
+<g id="edge34" class="edge"><title>program~test_nested&#45;&gt;interface~str</title>
+<path fill="none" stroke="black" d="M282.193,-198.148C289.401,-201.307 296.484,-205.492 302,-211 338.73,-247.677 354.936,-308.737 361.334,-341.882"/>
+<polygon fill="black" stroke="black" points="357.934,-342.751 363.144,-351.977 364.824,-341.516 357.934,-342.751"/>
+</g>
+<!-- proc~check_choices -->
+<g id="node12" class="node"><title>proc~check_choices</title>
+<a xlink:href="../proc/check_choices.html" xlink:title="check_choices">
+<polygon fill="#d9534f" stroke="#d9534f" points="289,-158 207,-158 207,-132 289,-132 289,-158"/>
+<text text-anchor="middle" x="248" y="-142.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">check_choices</text>
+</a>
+</g>
+<!-- proc~check_choices&#45;&gt;interface~str -->
+<g id="edge36" class="edge"><title>proc~check_choices&#45;&gt;interface~str</title>
+<path fill="none" stroke="black" d="M289.146,-157.128C293.91,-159.808 298.359,-163.06 302,-167 348.311,-217.113 360.58,-301.271 363.83,-341.802"/>
+<polygon fill="black" stroke="black" points="360.338,-342.054 364.515,-351.791 367.322,-341.574 360.338,-342.054"/>
+</g>
+<!-- program~test_basic -->
+<g id="node13" class="node"><title>program~test_basic</title>
+<a xlink:href="../program/test_basic.html" xlink:title="test_basic">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="278,-114 218,-114 218,-88 278,-88 278,-114"/>
+<text text-anchor="middle" x="248" y="-98.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_basic</text>
+</a>
+</g>
+<!-- program~test_basic&#45;&gt;interface~str -->
+<g id="edge38" class="edge"><title>program~test_basic&#45;&gt;interface~str</title>
+<path fill="none" stroke="black" d="M278.535,-107.892C287.164,-111.182 295.864,-115.994 302,-123 330.901,-155.998 353.43,-287.692 361.639,-341.705"/>
+<polygon fill="black" stroke="black" points="358.193,-342.33 363.129,-351.705 365.117,-341.298 358.193,-342.33"/>
+</g>
+<!-- program~test_driver -->
+<g id="node14" class="node"><title>program~test_driver</title>
+<a xlink:href="../program/test_driver.html" xlink:title="Test_Driver">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="68,-618 3.55271e-14,-618 0,-592 68,-592 68,-618"/>
+<text text-anchor="middle" x="34" y="-602.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Test_Driver</text>
+</a>
+</g>
+<!-- program~test_driver&#45;&gt;interface~str -->
+<g id="edge40" class="edge"><title>program~test_driver&#45;&gt;interface~str</title>
+<path fill="none" stroke="black" d="M54.459,-618.034C103.166,-647.248 227.486,-710.886 302,-651 343.124,-617.949 358.975,-450.518 363.503,-388.313"/>
+<polygon fill="black" stroke="black" points="366.997,-388.517 364.199,-378.298 360.014,-388.031 366.997,-388.517"/>
+</g>
+<!-- interface~bcton -->
+<g id="node19" class="node"><title>interface~bcton</title>
+<a xlink:href="../interface/bcton.html" xlink:title="bcton">
+<polygon fill="#a7506f" stroke="#a7506f" points="158,-554 104,-554 104,-528 158,-528 158,-554"/>
+<text text-anchor="middle" x="131" y="-538.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">bcton</text>
+</a>
+</g>
+<!-- program~test_driver&#45;&gt;interface~bcton -->
+<g id="edge2" class="edge"><title>program~test_driver&#45;&gt;interface~bcton</title>
+<path fill="none" stroke="black" d="M54.0985,-591.739C68.1076,-582.496 86.998,-570.032 102.55,-559.771"/>
+<polygon fill="black" stroke="black" points="104.84,-562.454 111.259,-554.025 100.985,-556.611 104.84,-562.454"/>
+</g>
+<!-- program~test_string -->
+<g id="node15" class="node"><title>program~test_string</title>
+<a xlink:href="../program/test_string.html" xlink:title="test_string">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="279,-70 217,-70 217,-44 279,-44 279,-70"/>
+<text text-anchor="middle" x="248" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_string</text>
+</a>
+</g>
+<!-- program~test_string&#45;&gt;interface~str -->
+<g id="edge42" class="edge"><title>program~test_string&#45;&gt;interface~str</title>
+<path fill="none" stroke="black" d="M279.263,-63.9673C287.711,-67.2466 296.128,-72.0338 302,-79 335.856,-119.165 356.103,-280.831 362.653,-341.681"/>
+<polygon fill="black" stroke="black" points="359.192,-342.238 363.716,-351.818 366.154,-341.507 359.192,-342.238"/>
+</g>
+<!-- proc~bctoi_i2p -->
+<g id="node16" class="node"><title>proc~bctoi_i2p</title>
+<a xlink:href="../proc/bctoi_i2p.html" xlink:title="bctoi_I2P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="276,-466 220,-466 220,-440 276,-440 276,-466"/>
+<text text-anchor="middle" x="248" y="-450.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">bctoi_I2P</text>
+</a>
+</g>
+<!-- proc~bctoi_i2p&#45;&gt;interface~str -->
+<g id="edge44" class="edge"><title>proc~bctoi_i2p&#45;&gt;interface~str</title>
+<path fill="none" stroke="black" d="M276.612,-443.935C285.162,-440.557 294.302,-436.241 302,-431 320.17,-418.629 337.152,-400.277 348.896,-386.063"/>
+<polygon fill="black" stroke="black" points="351.639,-388.237 355.175,-378.249 346.183,-383.852 351.639,-388.237"/>
+</g>
+<!-- proc~errored~2 -->
+<g id="node17" class="node"><title>proc~errored~2</title>
+<a xlink:href="../proc/errored%7E2.html" xlink:title="errored">
+<polygon fill="#d9534f" stroke="#d9534f" points="275,-26 221,-26 221,-1.24345e-14 275,-3.55271e-15 275,-26"/>
+<text text-anchor="middle" x="248" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">errored</text>
+</a>
+</g>
+<!-- proc~errored~2&#45;&gt;interface~str -->
+<g id="edge46" class="edge"><title>proc~errored~2&#45;&gt;interface~str</title>
+<path fill="none" stroke="black" d="M275.169,-18.3503C284.97,-21.5985 295.265,-26.7771 302,-35 340.861,-82.444 358.389,-274.623 363.409,-341.735"/>
+<polygon fill="black" stroke="black" points="359.92,-342.013 364.132,-351.734 366.901,-341.507 359.92,-342.013"/>
+</g>
+<!-- proc~bctor_r8p -->
+<g id="node18" class="node"><title>proc~bctor_r8p</title>
+<a xlink:href="../proc/bctor_r8p.html" xlink:title="bctor_R8P">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="279,-422 217,-422 217,-396 279,-396 279,-422"/>
+<text text-anchor="middle" x="248" y="-406.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">bctor_R8P</text>
+</a>
+</g>
+<!-- proc~bctor_r8p&#45;&gt;interface~str -->
+<g id="edge48" class="edge"><title>proc~bctor_r8p&#45;&gt;interface~str</title>
+<path fill="none" stroke="black" d="M279.662,-397.093C294.54,-391.498 312.375,-384.791 327.885,-378.958"/>
+<polygon fill="black" stroke="black" points="329.558,-382.068 337.686,-375.272 327.094,-375.516 329.558,-382.068"/>
+</g>
+<!-- interface~bcton&#45;&gt;proc~bctoi_i8p -->
+<g id="edge4" class="edge"><title>interface~bcton&#45;&gt;proc~bctoi_i8p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M140.825,-554.249C152.227,-568.843 172.264,-592.201 194,-607 198.932,-610.358 204.455,-613.336 210.036,-615.93"/>
+<polygon fill="black" stroke="black" points="208.818,-619.216 219.388,-619.935 211.573,-612.781 208.818,-619.216"/>
+</g>
+<!-- interface~bcton&#45;&gt;proc~bctoi_i1p -->
+<g id="edge6" class="edge"><title>interface~bcton&#45;&gt;proc~bctoi_i1p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M158.136,-551.205C173.485,-556.977 192.924,-564.288 209.794,-570.632"/>
+<polygon fill="black" stroke="black" points="208.787,-573.992 219.379,-574.236 211.251,-567.44 208.787,-573.992"/>
+</g>
+<!-- interface~bcton&#45;&gt;proc~bctoi_i4p -->
+<g id="edge8" class="edge"><title>interface~bcton&#45;&gt;proc~bctoi_i4p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M158.136,-541C173.342,-541 192.561,-541 209.32,-541"/>
+<polygon fill="black" stroke="black" points="209.379,-544.5 219.379,-541 209.379,-537.5 209.379,-544.5"/>
+</g>
+<!-- interface~bcton&#45;&gt;proc~bctor_r4p -->
+<g id="edge10" class="edge"><title>interface~bcton&#45;&gt;proc~bctor_r4p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M158.136,-530.795C172.559,-525.371 190.594,-518.589 206.714,-512.527"/>
+<polygon fill="black" stroke="black" points="208.326,-515.66 216.454,-508.864 205.862,-509.108 208.326,-515.66"/>
+</g>
+<!-- interface~bcton&#45;&gt;proc~bctoi_i2p -->
+<g id="edge12" class="edge"><title>interface~bcton&#45;&gt;proc~bctoi_i2p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M140.825,-527.751C152.227,-513.157 172.264,-489.799 194,-475 198.932,-471.642 204.455,-468.664 210.036,-466.07"/>
+<polygon fill="black" stroke="black" points="211.573,-469.219 219.388,-462.065 208.818,-462.784 211.573,-469.219"/>
+</g>
+<!-- interface~bcton&#45;&gt;proc~bctor_r8p -->
+<g id="edge14" class="edge"><title>interface~bcton&#45;&gt;proc~bctor_r8p</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M135.254,-527.968C143.275,-505.293 162.696,-458.388 194,-431 197.9,-427.588 202.399,-424.661 207.102,-422.161"/>
+<polygon fill="black" stroke="black" points="208.716,-425.27 216.293,-417.866 205.752,-418.929 208.716,-425.27"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+Nodes of different colours represent the following:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph1" class="graph" transform="scale(0.817602 0.817602) rotate(0) translate(4 30)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-30 781,-30 781,5 -4,5"/>
+<!-- Module -->
+<g id="node1" class="node"><title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-26 2.13163e-14,-26 0,-1.24345e-14 54,-3.55271e-15 54,-26"/>
+<text text-anchor="middle" x="27" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node"><title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-26 72,-26 72,-1.24345e-14 138,-3.55271e-15 138,-26"/>
+<text text-anchor="middle" x="105" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Type -->
+<g id="node3" class="node"><title>Type</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="210,-26 156,-26 156,-1.24345e-14 210,-3.55271e-15 210,-26"/>
+<text text-anchor="middle" x="183" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
+</g>
+<!-- Subroutine -->
+<g id="node4" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="292,-26 228,-26 228,-1.24345e-14 292,-3.55271e-15 292,-26"/>
+<text text-anchor="middle" x="260" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node5" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="364,-26 310,-26 310,-1.24345e-14 364,-3.55271e-15 364,-26"/>
+<text text-anchor="middle" x="337" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node6" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="436,-26 382,-26 382,-1.24345e-14 436,-3.55271e-15 436,-26"/>
+<text text-anchor="middle" x="409" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node7" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="590,-26 454,-26 454,-1.24345e-14 590,-3.55271e-15 590,-26"/>
+<text text-anchor="middle" x="522" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node8" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="662,-26 608,-26 608,-1.24345e-14 662,-3.55271e-15 662,-26"/>
+<text text-anchor="middle" x="635" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node9" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="776,-26 680,-26 680,-1.24345e-14 776,-3.55271e-15 776,-26"/>
+<text text-anchor="middle" x="728" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<h5>Module Graph</h5>
+<p>Solid arrows point from a parent (sub)module to the submodule which is
+descended from it. Dashed arrows point from a module being used to the
+module using it.</p>
+<h5>Type Graph</h5>
+<p>Solid arrows point from one derived type to another which extends
+(inherits from) it. Dashed arrows point from a derived type to another
+type containing it as a components, with a label listing the name(s) of
+said component(s).</p>
+<h5>Call Graph</h5>
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+     
+    <br>
+	
+	
+
+	
+
+	
+	 <h2>Module Procedures</h2>
+	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strf_r8p"></span><h3>
+private elemental function <a href='../proc/strf_r8p.html'>strf_R8P</a>(fm, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DR8P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting real to string. This function achieves casting of real to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_r8p"></span><h3>
+private elemental function <a href='../proc/str_r8p.html'>str_R8P</a>(no_sign, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DR8P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting real to string. This function achieves casting of real to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strf_r4p"></span><h3>
+private elemental function <a href='../proc/strf_r4p.html'>strf_R4P</a>(fm, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DR4P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting real to string. This function achieves casting of real to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_r4p"></span><h3>
+private elemental function <a href='../proc/str_r4p.html'>str_R4P</a>(no_sign, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DR4P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting real to string. This function achieves casting of real to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strf_i8p"></span><h3>
+private elemental function <a href='../proc/strf_i8p.html'>strf_I8P</a>(fm, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI8P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting integer to string. This function achieves casting of integer to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_i8p"></span><h3>
+private elemental function <a href='../proc/str_i8p.html'>str_I8P</a>(no_sign, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI8P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting integer to string. This function achieves casting of integer to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strf_i4p"></span><h3>
+private elemental function <a href='../proc/strf_i4p.html'>strf_I4P</a>(fm, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI4P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting integer to string. This function achieves casting of integer to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_i4p"></span><h3>
+private elemental function <a href='../proc/str_i4p.html'>str_I4P</a>(no_sign, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI4P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting integer to string. This function achieves casting of integer to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strf_i2p"></span><h3>
+private elemental function <a href='../proc/strf_i2p.html'>strf_I2P</a>(fm, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I2P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI2P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting integer to string. This function achieves casting of integer to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_i2p"></span><h3>
+private elemental function <a href='../proc/str_i2p.html'>str_I2P</a>(no_sign, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I2P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI2P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting integer to string. This function achieves casting of integer to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strf_i1p"></span><h3>
+private elemental function <a href='../proc/strf_i1p.html'>strf_I1P</a>(fm, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI1P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting integer to string. This function achieves casting of integer to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_i1p"></span><h3>
+private elemental function <a href='../proc/str_i1p.html'>str_I1P</a>(no_sign, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI1P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting integer to string. This function achieves casting of integer to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_bol"></span><h3>
+private elemental function <a href='../proc/str_bol.html'>str_bol</a>(n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Logical to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=1)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting logical to string. This function achieves casting of logical to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_a_r8p"></span><h3>
+private pure function <a href='../proc/str_a_r8p.html'>str_a_R8P</a>(no_sign, delimiters, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Real array to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting real (array) to string. This function achieves casting of real to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_a_r4p"></span><h3>
+private pure function <a href='../proc/str_a_r4p.html'>str_a_R4P</a>(no_sign, delimiters, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Real array to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting real (array) to string. This function achieves casting of real to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_a_i8p"></span><h3>
+private pure function <a href='../proc/str_a_i8p.html'>str_a_I8P</a>(no_sign, delimiters, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Integer array to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting integer (array) to string. This function achieves casting of integer to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_a_i4p"></span><h3>
+private pure function <a href='../proc/str_a_i4p.html'>str_a_I4P</a>(no_sign, delimiters, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Integer array to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting integer (array) to string. This function achieves casting of integer to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_a_i2p"></span><h3>
+private pure function <a href='../proc/str_a_i2p.html'>str_a_I2P</a>(no_sign, delimiters, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I2P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Integer array to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting integer (array) to string. This function achieves casting of integer to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_a_i1p"></span><h3>
+private pure function <a href='../proc/str_a_i1p.html'>str_a_I1P</a>(no_sign, delimiters, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Integer array to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Procedure for converting integer (array) to string. This function achieves casting of integer to string.</p>
+        
+
+  </div>
+  </div>
+
+ 	 
+  	 
+
+ </div>
+</div>
+
+    <hr>
+    <footer>
+        <div class="row">
+        <div class="col-md-4">&copy; 2016 </div>
+	<div class="col-md-4"><span class="text-center"> FLAP was developed by Stefano Zaghi</span></div>
+        <div class="col-md-4"><span class="pull-right">Documentation generated by <a href="https://github.com/cmacmackin/ford">FORD</a></span></div>
+        </div>
+        <br>
+    </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

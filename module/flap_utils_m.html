@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <meta name="description" content="Fortran command Line Arguments Parser for poor people">
+    
+    <meta name="author" content="Chris MacMackin" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>flap_utils_m &ndash; FLAP</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">FLAP </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+                
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+				
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+								
+            <li><a href="../lists/types.html">Derived Types</a></li>
+				
+				
+            <li><a href="../lists/programs.html">Programs</a></li>
+				
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>flap_utils_m 
+    <small>Module</small>
+    
+    </h1>
+	 
+<div class="row">
+<div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+    <li><i class="fa fa-code"></i><a href="../src/flap_utils_m.f90"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li><a href='../sourcefile/flap_utils_m.f90.html'>flap_utils_m.f90</a></li>
+  
+     <li class="active">flap_utils_m</li>
+  </ol>
+</div>
+</div>
+</div>
+    
+  </div>
+  
+  <div class="row">
+    <div class="col-lg-3">
+    
+<div id="sidebar">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#inters">Interfaces</a></h3></div>
+    <div id="inters" class="panel-collapse collapse">
+        <div class="list-group">
+          
+          <a class="list-group-item" href="../module/flap_utils_m.html#interface-count">count</a>
+          
+        </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs">Functions</a></h3></div>
+    <div id="funcs" class="panel-collapse collapse">
+        <div class="list-group">
+          
+          <a class="list-group-item" href="../module/flap_utils_m.html#proc-count_substring">count_substring</a>
+          
+          <a class="list-group-item" href="../module/flap_utils_m.html#proc-replace">replace</a>
+          
+          <a class="list-group-item" href="../module/flap_utils_m.html#proc-replace_all">replace_all</a>
+          
+          <a class="list-group-item" href="../module/flap_utils_m.html#proc-unique">unique</a>
+          
+          <a class="list-group-item" href="../module/flap_utils_m.html#proc-upper_case">upper_case</a>
+          
+          <a class="list-group-item" href="../module/flap_utils_m.html#proc-wstrip">wstrip</a>
+          
+        </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs">Subroutines</a></h3></div>
+    <div class="list-group">
+        <div id="subs" class="panel-collapse collapse">
+          
+          <a class="list-group-item" href="../module/flap_utils_m.html#proc-tokenize">tokenize</a>
+          
+        </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  <hr>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allmods">All Modules</a></h3></div>
+    <div id="allmods" class="panel-collapse collapse">
+        <div class="list-group">
+          
+          <a class="list-group-item" href="../module/flap.html">flap</a>
+          
+          <a class="list-group-item" href="../module/flap_command_line_argument_t.html">flap_command_line_argument_t</a>
+          
+          <a class="list-group-item" href="../module/flap_command_line_arguments_group_t.html">flap_command_line_arguments_group_t</a>
+          
+          <a class="list-group-item" href="../module/flap_command_line_interface_t.html">flap_command_line_interface_t</a>
+          
+          <a class="list-group-item" href="../module/flap_object_t.html">flap_object_t</a>
+          
+          <a class="list-group-item" href="../module/flap_utils_m.html">flap_utils_m</a>
+          
+          <a class="list-group-item" href="../module/ir_precision.html">IR_Precision</a>
+          
+        </div>
+    </div>
+  </div>
+  
+</div>
+
+    </div>
+    
+    <div class="col-lg-9" id='text'>
+    
+    
+  
+    <ul class="list-inline">
+      <li><h4>Uses:</h4></li>
+      
+      <li><a href='../module/ir_precision.html'>IR_Precision</a></li>
+      
+    </ul>
+  
+
+    
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: module~~flap_utils_m~~UsesGraph Pages: 1 -->
+<svg id="moduleflap_utils_mUsesGraph" width="312pt" height="34pt"
+ viewBox="0.00 0.00 312.00 34.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~flap_utils_m~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 30)">
+<title>module~~flap_utils_m~~UsesGraph</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-30 309,-30 309,5 -4,5"/>
+<!-- module~flap_utils_m -->
+<g id="node1" class="node"><title>module~flap_utils_m</title>
+<polygon fill="none" stroke="black" points="304,-26 234,-26 234,-1.24345e-14 304,-3.55271e-15 304,-26"/>
+<text text-anchor="middle" x="269" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">flap_utils_m</text>
+</g>
+<!-- module~ir_precision -->
+<g id="node2" class="node"><title>module~ir_precision</title>
+<a xlink:href="../module/ir_precision.html" xlink:title="IR_Precision">
+<polygon fill="#337ab7" stroke="#337ab7" points="197,-26 125,-26 125,-1.24345e-14 197,-3.55271e-15 197,-26"/>
+<text text-anchor="middle" x="161" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">IR_Precision</text>
+</a>
+</g>
+<!-- module~ir_precision&#45;&gt;module~flap_utils_m -->
+<g id="edge4" class="edge"><title>module~ir_precision&#45;&gt;module~flap_utils_m</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M197.564,-13C206.009,-13 215.091,-13 223.853,-13"/>
+<polygon fill="black" stroke="black" points="223.936,-16.5001 233.935,-13 223.935,-9.5001 223.936,-16.5001"/>
+</g>
+<!-- iso_fortran_env -->
+<g id="node3" class="node"><title>iso_fortran_env</title>
+<a xlink:href="https://gcc.gnu.org/onlinedocs/gfortran/ISO_005fFORTRAN_005fENV.html" xlink:title="iso_fortran_env">
+<polygon fill="#337ab7" stroke="#337ab7" points="87,-26 1,-26 1,-1.24345e-14 87,-3.55271e-15 87,-26"/>
+<text text-anchor="middle" x="44" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iso_fortran_env</text>
+</a>
+</g>
+<!-- iso_fortran_env&#45;&gt;module~ir_precision -->
+<g id="edge2" class="edge"><title>iso_fortran_env&#45;&gt;module~ir_precision</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M87.5665,-13C96.2522,-13 105.409,-13 114.198,-13"/>
+<polygon fill="black" stroke="black" points="114.297,-16.5001 124.296,-13 114.296,-9.5001 114.297,-16.5001"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+Nodes of different colours represent the following:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph1" class="graph" transform="scale(0.817602 0.817602) rotate(0) translate(4 30)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-30 781,-30 781,5 -4,5"/>
+<!-- Module -->
+<g id="node1" class="node"><title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-26 2.13163e-14,-26 0,-1.24345e-14 54,-3.55271e-15 54,-26"/>
+<text text-anchor="middle" x="27" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node"><title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-26 72,-26 72,-1.24345e-14 138,-3.55271e-15 138,-26"/>
+<text text-anchor="middle" x="105" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Type -->
+<g id="node3" class="node"><title>Type</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="210,-26 156,-26 156,-1.24345e-14 210,-3.55271e-15 210,-26"/>
+<text text-anchor="middle" x="183" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
+</g>
+<!-- Subroutine -->
+<g id="node4" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="292,-26 228,-26 228,-1.24345e-14 292,-3.55271e-15 292,-26"/>
+<text text-anchor="middle" x="260" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node5" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="364,-26 310,-26 310,-1.24345e-14 364,-3.55271e-15 364,-26"/>
+<text text-anchor="middle" x="337" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node6" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="436,-26 382,-26 382,-1.24345e-14 436,-3.55271e-15 436,-26"/>
+<text text-anchor="middle" x="409" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node7" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="590,-26 454,-26 454,-1.24345e-14 590,-3.55271e-15 590,-26"/>
+<text text-anchor="middle" x="522" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node8" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="662,-26 608,-26 608,-1.24345e-14 662,-3.55271e-15 662,-26"/>
+<text text-anchor="middle" x="635" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node9" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="776,-26 680,-26 680,-1.24345e-14 776,-3.55271e-15 776,-26"/>
+<text text-anchor="middle" x="728" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<h5>Module Graph</h5>
+<p>Solid arrows point from a parent (sub)module to the submodule which is
+descended from it. Dashed arrows point from a module being used to the
+module using it.</p>
+<h5>Type Graph</h5>
+<p>Solid arrows point from one derived type to another which extends
+(inherits from) it. Dashed arrows point from a derived type to another
+type containing it as a components, with a label listing the name(s) of
+said component(s).</p>
+<h5>Call Graph</h5>
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+    
+    <p>FLAP utils.</p>
+    
+    
+    <h3>Used By</h3>
+    
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: module~~flap_utils_m~~UsedByGraph Pages: 1 -->
+<svg id="moduleflap_utils_mUsedByGraph" width="641pt" height="171pt"
+ viewBox="0.00 0.00 641.00 170.66" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~flap_utils_m~~UsedByGraph" class="graph" transform="scale(0.671908 0.671908) rotate(0) translate(4 250)">
+<title>module~~flap_utils_m~~UsedByGraph</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-250 951,-250 951,5 -4,5"/>
+<!-- module~flap_utils_m -->
+<g id="node1" class="node"><title>module~flap_utils_m</title>
+<polygon fill="none" stroke="black" points="70,-95 3.55271e-14,-95 0,-69 70,-69 70,-95"/>
+<text text-anchor="middle" x="35" y="-79.55" font-family="Helvetica,sans-Serif" font-size="10.50">flap_utils_m</text>
+</g>
+<!-- module~flap_command_line_argument_t -->
+<g id="node2" class="node"><title>module~flap_command_line_argument_t</title>
+<a xlink:href="../module/flap_command_line_argument_t.html" xlink:title="flap_command_line_argument_t">
+<polygon fill="#337ab7" stroke="#337ab7" points="272,-116 106,-116 106,-90 272,-90 272,-116"/>
+<text text-anchor="middle" x="189" y="-100.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flap_command_line_argument_t</text>
+</a>
+</g>
+<!-- module~flap_utils_m&#45;&gt;module~flap_command_line_argument_t -->
+<g id="edge26" class="edge"><title>module~flap_utils_m&#45;&gt;module~flap_command_line_argument_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M70.3307,-86.8178C78.1376,-87.8824 86.7622,-89.0585 95.6936,-90.2764"/>
+<polygon fill="black" stroke="black" points="95.4993,-93.7822 105.881,-91.6655 96.4452,-86.8464 95.4993,-93.7822"/>
+</g>
+<!-- module~flap_command_line_interface_t -->
+<g id="node3" class="node"><title>module~flap_command_line_interface_t</title>
+<a xlink:href="../module/flap_command_line_interface_t.html" xlink:title="flap_command_line_interface_t">
+<polygon fill="#337ab7" stroke="#337ab7" points="712,-116 550,-116 550,-90 712,-90 712,-116"/>
+<text text-anchor="middle" x="631" y="-100.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flap_command_line_interface_t</text>
+</a>
+</g>
+<!-- module~flap_utils_m&#45;&gt;module~flap_command_line_interface_t -->
+<g id="edge28" class="edge"><title>module~flap_utils_m&#45;&gt;module~flap_command_line_interface_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M70.2418,-77.7909C136.811,-70.359 285.623,-56.218 411,-62"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M411,-62C466.643,-64.2552 528.945,-76.8381 573.005,-87.4767"/>
+<polygon fill="black" stroke="black" points="572.411,-90.9349 582.957,-89.9216 574.081,-84.137 572.411,-90.9349"/>
+</g>
+<!-- module~flap_command_line_argument_t&#45;&gt;module~flap_command_line_interface_t -->
+<g id="edge22" class="edge"><title>module~flap_command_line_argument_t&#45;&gt;module~flap_command_line_interface_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M229.125,-89.8926C273.295,-76.806 346.595,-59.0298 411,-62"/>
+</g>
+<!-- module~flap -->
+<g id="node4" class="node"><title>module~flap</title>
+<a xlink:href="../module/flap.html" xlink:title="flap">
+<polygon fill="#337ab7" stroke="#337ab7" points="802,-136 748,-136 748,-110 802,-110 802,-136"/>
+<text text-anchor="middle" x="775" y="-120.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flap</text>
+</a>
+</g>
+<!-- module~flap_command_line_argument_t&#45;&gt;module~flap -->
+<g id="edge18" class="edge"><title>module~flap_command_line_argument_t&#45;&gt;module~flap</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M251.462,-116.053C269.624,-119.439 289.542,-122.76 308,-125 450.756,-142.327 487.245,-147.731 631,-144"/>
+</g>
+<!-- module~flap_command_line_arguments_group_t -->
+<g id="node5" class="node"><title>module~flap_command_line_arguments_group_t</title>
+<a xlink:href="../module/flap_command_line_arguments_group_t.html" xlink:title="flap_command_line_arguments_group_t">
+<polygon fill="#337ab7" stroke="#337ab7" points="513,-116 309,-116 309,-90 513,-90 513,-116"/>
+<text text-anchor="middle" x="411" y="-100.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flap_command_line_arguments_group_t</text>
+</a>
+</g>
+<!-- module~flap_command_line_argument_t&#45;&gt;module~flap_command_line_arguments_group_t -->
+<g id="edge20" class="edge"><title>module~flap_command_line_argument_t&#45;&gt;module~flap_command_line_arguments_group_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M272.296,-103C280.786,-103 289.506,-103 298.241,-103"/>
+<polygon fill="black" stroke="black" points="298.488,-106.5 308.488,-103 298.488,-99.5001 298.488,-106.5"/>
+</g>
+<!-- module~flap_command_line_interface_t&#45;&gt;module~flap -->
+<g id="edge24" class="edge"><title>module~flap_command_line_interface_t&#45;&gt;module~flap</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M712.258,-114.286C721.13,-115.518 729.811,-116.724 737.75,-117.826"/>
+<polygon fill="black" stroke="black" points="737.327,-121.301 747.714,-119.21 738.29,-114.368 737.327,-121.301"/>
+</g>
+<!-- program~test_choices_logical -->
+<g id="node6" class="node"><title>program~test_choices_logical</title>
+<a xlink:href="../program/test_choices_logical.html" xlink:title="test_choices_logical">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="946,-246 838,-246 838,-220 946,-220 946,-246"/>
+<text text-anchor="middle" x="892" y="-230.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_choices_logical</text>
+</a>
+</g>
+<!-- module~flap&#45;&gt;program~test_choices_logical -->
+<g id="edge2" class="edge"><title>module~flap&#45;&gt;program~test_choices_logical</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M781.341,-136.122C791.091,-155.053 811.452,-190.046 838,-211 839.775,-212.401 841.652,-213.726 843.6,-214.976"/>
+<polygon fill="black" stroke="black" points="842.06,-218.126 852.489,-219.99 845.499,-212.028 842.06,-218.126"/>
+</g>
+<!-- program~test_hidden -->
+<g id="node7" class="node"><title>program~test_hidden</title>
+<a xlink:href="../program/test_hidden.html" xlink:title="test_hidden">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="926,-202 858,-202 858,-176 926,-176 926,-202"/>
+<text text-anchor="middle" x="892" y="-186.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_hidden</text>
+</a>
+</g>
+<!-- module~flap&#45;&gt;program~test_hidden -->
+<g id="edge4" class="edge"><title>module~flap&#45;&gt;program~test_hidden</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M791.453,-136.019C803.796,-145.399 821.359,-157.946 838,-167 841.307,-168.799 844.792,-170.54 848.335,-172.201"/>
+<polygon fill="black" stroke="black" points="847.203,-175.528 857.762,-176.398 850.05,-169.133 847.203,-175.528"/>
+</g>
+<!-- program~test_minimal -->
+<g id="node8" class="node"><title>program~test_minimal</title>
+<a xlink:href="../program/test_minimal.html" xlink:title="test_minimal">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="928,-158 856,-158 856,-132 928,-132 928,-158"/>
+<text text-anchor="middle" x="892" y="-142.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_minimal</text>
+</a>
+</g>
+<!-- module~flap&#45;&gt;program~test_minimal -->
+<g id="edge6" class="edge"><title>module~flap&#45;&gt;program~test_minimal</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M802.136,-128.103C814.971,-130.516 830.665,-133.467 845.325,-136.224"/>
+<polygon fill="black" stroke="black" points="844.787,-139.684 855.261,-138.092 846.08,-132.804 844.787,-139.684"/>
+</g>
+<!-- program~test_basic -->
+<g id="node9" class="node"><title>program~test_basic</title>
+<a xlink:href="../program/test_basic.html" xlink:title="test_basic">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="922,-114 862,-114 862,-88 922,-88 922,-114"/>
+<text text-anchor="middle" x="892" y="-98.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_basic</text>
+</a>
+</g>
+<!-- module~flap&#45;&gt;program~test_basic -->
+<g id="edge8" class="edge"><title>module~flap&#45;&gt;program~test_basic</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M802.136,-117.897C816.783,-115.143 835.154,-111.689 851.462,-108.623"/>
+<polygon fill="black" stroke="black" points="852.117,-112.061 861.298,-106.773 850.823,-105.181 852.117,-112.061"/>
+</g>
+<!-- program~test_nested -->
+<g id="node10" class="node"><title>program~test_nested</title>
+<a xlink:href="../program/test_nested.html" xlink:title="test_nested">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="926,-70 858,-70 858,-44 926,-44 926,-70"/>
+<text text-anchor="middle" x="892" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_nested</text>
+</a>
+</g>
+<!-- module~flap&#45;&gt;program~test_nested -->
+<g id="edge10" class="edge"><title>module~flap&#45;&gt;program~test_nested</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M791.453,-109.981C803.796,-100.601 821.359,-88.0535 838,-79 841.307,-77.2009 844.792,-75.4603 848.335,-73.799"/>
+<polygon fill="black" stroke="black" points="850.05,-76.8666 857.762,-69.6017 847.203,-70.4718 850.05,-76.8666"/>
+</g>
+<!-- program~test_string -->
+<g id="node11" class="node"><title>program~test_string</title>
+<a xlink:href="../program/test_string.html" xlink:title="test_string">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="923,-26 861,-26 861,-1.24345e-14 923,-3.55271e-15 923,-26"/>
+<text text-anchor="middle" x="892" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_string</text>
+</a>
+</g>
+<!-- module~flap&#45;&gt;program~test_string -->
+<g id="edge12" class="edge"><title>module~flap&#45;&gt;program~test_string</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M781.341,-109.878C791.091,-90.9472 811.452,-55.9538 838,-35 842.116,-31.7514 846.777,-28.9167 851.594,-26.4615"/>
+<polygon fill="black" stroke="black" points="853.299,-29.5307 860.947,-22.1986 850.396,-23.161 853.299,-29.5307"/>
+</g>
+<!-- module~flap_command_line_arguments_group_t&#45;&gt;module~flap_command_line_interface_t -->
+<g id="edge16" class="edge"><title>module~flap_command_line_arguments_group_t&#45;&gt;module~flap_command_line_interface_t</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M513.593,-103C522.369,-103 531.208,-103 539.886,-103"/>
+<polygon fill="black" stroke="black" points="539.985,-106.5 549.985,-103 539.985,-99.5001 539.985,-106.5"/>
+</g>
+<!-- module~flap_command_line_arguments_group_t&#45;&gt;module~flap -->
+<g id="edge14" class="edge"><title>module~flap_command_line_arguments_group_t&#45;&gt;module~flap</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M466.234,-116.026C520.535,-128.335 599.686,-144.813 631,-144"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M631,-144C667.552,-143.051 708.799,-136.464 737.75,-130.916"/>
+<polygon fill="black" stroke="black" points="738.693,-134.297 747.829,-128.931 737.341,-127.429 738.693,-134.297"/>
+</g>
+</g>
+</svg>
+</div>
+                <script>var panmoduleflap_utils_mUsedByGraph = svgPanZoom('#moduleflap_utils_mUsedByGraph', {
+                    zoomEnabled: true,
+                    controlIconsEnabled: true,
+                    fit: true,
+                    center: true,});
+                    </script>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+Nodes of different colours represent the following:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph1" class="graph" transform="scale(0.817602 0.817602) rotate(0) translate(4 30)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-30 781,-30 781,5 -4,5"/>
+<!-- Module -->
+<g id="node1" class="node"><title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-26 2.13163e-14,-26 0,-1.24345e-14 54,-3.55271e-15 54,-26"/>
+<text text-anchor="middle" x="27" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node"><title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-26 72,-26 72,-1.24345e-14 138,-3.55271e-15 138,-26"/>
+<text text-anchor="middle" x="105" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Type -->
+<g id="node3" class="node"><title>Type</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="210,-26 156,-26 156,-1.24345e-14 210,-3.55271e-15 210,-26"/>
+<text text-anchor="middle" x="183" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
+</g>
+<!-- Subroutine -->
+<g id="node4" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="292,-26 228,-26 228,-1.24345e-14 292,-3.55271e-15 292,-26"/>
+<text text-anchor="middle" x="260" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node5" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="364,-26 310,-26 310,-1.24345e-14 364,-3.55271e-15 364,-26"/>
+<text text-anchor="middle" x="337" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node6" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="436,-26 382,-26 382,-1.24345e-14 436,-3.55271e-15 436,-26"/>
+<text text-anchor="middle" x="409" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node7" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="590,-26 454,-26 454,-1.24345e-14 590,-3.55271e-15 590,-26"/>
+<text text-anchor="middle" x="522" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node8" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="662,-26 608,-26 608,-1.24345e-14 662,-3.55271e-15 662,-26"/>
+<text text-anchor="middle" x="635" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node9" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="776,-26 680,-26 680,-1.24345e-14 776,-3.55271e-15 776,-26"/>
+<text text-anchor="middle" x="728" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<h5>Module Graph</h5>
+<p>Solid arrows point from a parent (sub)module to the submodule which is
+descended from it. Dashed arrows point from a module being used to the
+module using it.</p>
+<h5>Type Graph</h5>
+<p>Solid arrows point from one derived type to another which extends
+(inherits from) it. Dashed arrows point from a derived type to another
+type containing it as a components, with a label listing the name(s) of
+said component(s).</p>
+<h5>Call Graph</h5>
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+    <br>
+    
+
+    
+    
+    
+    
+    
+    <section>
+	 <h2>Interfaces</h2>
+	 
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-count"></span><h3>public interface <a href='../interface/count.html'>count</a>
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+    <p>Overload intrinsic function count for counting substring occurences into strings.</p>
+  </div>
+  
+  <ul class="list-group">
+  
+  
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/count_substring.html'>count_substring</a>(string, substring) result(No)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>string</strong></td><td><p>String.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>substring</strong></td><td><p>Substring.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I4P)
+  </small></h4>
+  <p>Number of occurrences.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Count the number of occurences of a substring into a string.</p>
+        
+
+    </li>
+  
+  
+  </ul>
+</div>
+
+    
+    </section>
+	<br>
+    
+
+    
+    
+    
+    
+     
+    <section>
+    <h2>Functions</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-count_substring"></span><h3>
+private elemental function <a href='../proc/count_substring.html'>count_substring</a>(string, substring) result(No)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>string</strong></td><td><p>String.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>substring</strong></td><td><p>Substring.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I4P)
+  </small></h4>
+  <p>Number of occurrences.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Count the number of occurences of a substring into a string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-replace"></span><h3>
+public pure function <a href='../proc/replace.html'>replace</a>(string, substring, restring) result(newstring)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>string</strong></td><td><p>String to be modified.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>substring</strong></td><td><p>Substring to be replaced.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>restring</strong></td><td><p>String to be inserted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>New modified string.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Replace substring (only first occurrence) into a string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-replace_all"></span><h3>
+public pure function <a href='../proc/replace_all.html'>replace_all</a>(string, substring, restring) result(newstring)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>string</strong></td><td><p>String to be modified.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>substring</strong></td><td><p>Substring to be replaced.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>restring</strong></td><td><p>String to be inserted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>New modified string.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Replace substring (all occurrences) into a string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-unique"></span><h3>
+public pure function <a href='../proc/unique.html'>unique</a>(string, substring) result(uniq)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>string</strong></td><td><p>String to be parsed.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>substring</strong></td><td><p>Substring which multiple occurences must be reduced to one.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=len(string))
+  </small></h4>
+  <p>String parsed.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Reduce to one (unique) multiple (sequential) occurrences of a characters substring into a string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-upper_case"></span><h3>
+public pure function <a href='../proc/upper_case.html'>upper_case</a>(string)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>string</strong></td><td><p>String to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=len(string))
+  </small></h4>
+  <p>Converted string.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert the lower case characters of a string to upper case one.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-wstrip"></span><h3>
+public pure function <a href='../proc/wstrip.html'>wstrip</a>(string) result(newstring)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>string</strong></td><td><p>String to be modified.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>New modified string.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Strip out leading and trailing white spaces from a string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    </section>
+    <br>
+    
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-tokenize"></span><h3>
+public pure subroutine <a href='../proc/tokenize.html'>tokenize</a>(strin, delimiter, toks, Nt)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>strin</strong></td><td><p>String to be tokenized.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiter</strong></td><td><p>Delimiter of tokens.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=len(strin)),</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>toks</strong>(:)</td><td><p>Tokens.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>Nt</strong></td><td><p>Number of tokens.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Tokenize a string in order to parse it.</p>
+        
+
+  </div>
+  </div>
+
+    
+    </section>    
+    <br>
+    
+    
+    
+    </div>
+  </div>
+
+    <hr>
+    <footer>
+        <div class="row">
+        <div class="col-md-4">&copy; 2016 </div>
+	<div class="col-md-4"><span class="text-center"> FLAP was developed by Stefano Zaghi</span></div>
+        <div class="col-md-4"><span class="pull-right">Documentation generated by <a href="https://github.com/cmacmackin/ford">FORD</a></span></div>
+        </div>
+        <br>
+    </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
