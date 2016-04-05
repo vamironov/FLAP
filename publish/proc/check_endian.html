@@ -102,14 +102,14 @@
      
     
     
-    <li><i class="fa fa-code"></i><a href="../src/IR_Precision.F90"> Source File</a></li>
+    <li><i class="fa fa-code"></i><a href="../src/penf.F90"> Source File</a></li>
      
   </ul>
   <ol class="breadcrumb in-well text-right">
   
-     <li><a href='../sourcefile/ir_precision.f90.html'>IR_Precision.F90</a></li>
+     <li><a href='../sourcefile/penf.f90.html'>penf.F90</a></li>
   
-     <li><a href='../module/ir_precision.html'>IR_Precision</a></li>
+     <li><a href='../module/penf.html'>penf</a></li>
   
      <li class="active">check_endian</li>
   </ol>
@@ -133,6 +133,18 @@
   
   
   
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs">Functions</a></h3></div>
+    <div id="funcs" class="panel-collapse collapse">
+        <div class="list-group">
+          
+          <a class="list-group-item" href="../proc/check_endian.html#proc-is_little_endian">is_little_endian</a>
+          
+        </div>
+    </div>
+  </div>
   
   
   
@@ -175,11 +187,15 @@
           
           <a class="list-group-item" href="../interface/bcton.html">bcton</a>
           
+          <a class="list-group-item" href="../proc/bctor_r16p.html">bctor_R16P</a>
+          
           <a class="list-group-item" href="../proc/bctor_r4p.html">bctor_R4P</a>
           
           <a class="list-group-item" href="../proc/bctor_r8p.html">bctor_R8P</a>
           
           <a class="list-group-item" href="../interface/bit_size.html">bit_size</a>
+          
+          <a class="list-group-item" href="../interface/bit_size%7E2.html">bit_size</a>
           
           <a class="list-group-item" href="../proc/bit_size_chr.html">bit_size_chr</a>
           
@@ -363,10 +379,6 @@
           
           <a class="list-group-item" href="../proc/init.html">init</a>
           
-          <a class="list-group-item" href="../proc/ir_init.html">IR_init</a>
-          
-          <a class="list-group-item" href="../proc/ir_print.html">IR_Print</a>
-          
           <a class="list-group-item" href="../proc/is_called_group.html">is_called_group</a>
           
           <a class="list-group-item" href="../proc/is_defined.html">is_defined</a>
@@ -374,8 +386,6 @@
           <a class="list-group-item" href="../proc/is_defined%7E2.html">is_defined</a>
           
           <a class="list-group-item" href="../proc/is_defined_group.html">is_defined_group</a>
-          
-          <a class="list-group-item" href="../proc/is_little_endian.html">is_little_endian</a>
           
           <a class="list-group-item" href="../proc/is_parsed.html">is_parsed</a>
           
@@ -390,6 +400,10 @@
           <a class="list-group-item" href="../proc/parse.html">parse</a>
           
           <a class="list-group-item" href="../proc/parse%7E2.html">parse</a>
+          
+          <a class="list-group-item" href="../proc/penf_init.html">penf_init</a>
+          
+          <a class="list-group-item" href="../proc/penf_print.html">penf_print</a>
           
           <a class="list-group-item" href="../proc/print_error_message.html">print_error_message</a>
           
@@ -522,7 +536,7 @@ public subroutine check_endian()
     
     
     <h3>Description</h3>
-    <p>Subroutine for checking the type of bit ordering (big or little endian) of the running architecture.</p>
+    <p>Check the type of bit ordering (big or little endian) of the running architecture.</p>
 <p></p><div class="alert alert-info" role="alert"><h4>Note</h4>The result is stored into the <em>endian</em> global variable.</div>
     
     
@@ -544,15 +558,13 @@ public subroutine check_endian()
 <polygon fill="none" stroke="black" points="79,-26 1,-26 1,-1.24345e-14 79,-3.55271e-15 79,-26"/>
 <text text-anchor="middle" x="40" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">check_endian</text>
 </g>
-<!-- proc~is_little_endian -->
-<g id="node2" class="node"><title>proc~is_little_endian</title>
-<a xlink:href="../proc/is_little_endian.html" xlink:title="is_little_endian">
+<!-- none~is_little_endian -->
+<g id="node2" class="node"><title>none~is_little_endian</title>
 <polygon fill="#d94e8f" stroke="#d94e8f" points="199,-26 117,-26 117,-1.24345e-14 199,-3.55271e-15 199,-26"/>
 <text text-anchor="middle" x="158" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">is_little_endian</text>
-</a>
 </g>
-<!-- proc~check_endian&#45;&gt;proc~is_little_endian -->
-<g id="edge2" class="edge"><title>proc~check_endian&#45;&gt;proc~is_little_endian</title>
+<!-- proc~check_endian&#45;&gt;none~is_little_endian -->
+<g id="edge2" class="edge"><title>proc~check_endian&#45;&gt;none~is_little_endian</title>
 <path fill="none" stroke="black" d="M79.6206,-13C88.0902,-13 97.1592,-13 106.014,-13"/>
 <polygon fill="black" stroke="black" points="106.263,-16.5001 116.263,-13 106.263,-9.5001 106.263,-16.5001"/>
 </g>
@@ -659,39 +671,39 @@ implementation in a submodule of an interface in a parent module.</p>
 <!-- Generated by graphviz version 2.26.3 (20100126.1600)
  -->
 <!-- Title: proc~~check_endian~~CalledByGraph Pages: 1 -->
-<svg id="proccheck_endianCalledByGraph" width="282pt" height="34pt"
- viewBox="0.00 0.00 282.00 34.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg id="proccheck_endianCalledByGraph" width="268pt" height="34pt"
+ viewBox="0.00 0.00 268.00 34.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="proc~~check_endian~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 30)">
 <title>proc~~check_endian~~CalledByGraph</title>
-<polygon fill="white" stroke="white" points="-4,5 -4,-30 279,-30 279,5 -4,5"/>
+<polygon fill="white" stroke="white" points="-4,5 -4,-30 265,-30 265,5 -4,5"/>
 <!-- proc~check_endian -->
 <g id="node1" class="node"><title>proc~check_endian</title>
-<polygon fill="none" stroke="black" points="273,-26 195,-26 195,-1.24345e-14 273,-3.55271e-15 273,-26"/>
-<text text-anchor="middle" x="234" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">check_endian</text>
+<polygon fill="none" stroke="black" points="259,-26 181,-26 181,-1.24345e-14 259,-3.55271e-15 259,-26"/>
+<text text-anchor="middle" x="220" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">check_endian</text>
 </g>
-<!-- proc~ir_init -->
-<g id="node2" class="node"><title>proc~ir_init</title>
-<a xlink:href="../proc/ir_init.html" xlink:title="IR_init">
-<polygon fill="#d9534f" stroke="#d9534f" points="158,-26 104,-26 104,-1.24345e-14 158,-3.55271e-15 158,-26"/>
-<text text-anchor="middle" x="131" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">IR_init</text>
+<!-- proc~penf_init -->
+<g id="node2" class="node"><title>proc~penf_init</title>
+<a xlink:href="../proc/penf_init.html" xlink:title="penf_init">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-26 90,-26 90,-1.24345e-14 144,-3.55271e-15 144,-26"/>
+<text text-anchor="middle" x="117" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">penf_init</text>
 </a>
 </g>
-<!-- proc~ir_init&#45;&gt;proc~check_endian -->
-<g id="edge4" class="edge"><title>proc~ir_init&#45;&gt;proc~check_endian</title>
-<path fill="none" stroke="black" d="M158.062,-13C166.117,-13 175.21,-13 184.232,-13"/>
-<polygon fill="black" stroke="black" points="184.329,-16.5001 194.329,-13 184.329,-9.5001 184.329,-16.5001"/>
+<!-- proc~penf_init&#45;&gt;proc~check_endian -->
+<g id="edge4" class="edge"><title>proc~penf_init&#45;&gt;proc~check_endian</title>
+<path fill="none" stroke="black" d="M144.062,-13C152.117,-13 161.21,-13 170.232,-13"/>
+<polygon fill="black" stroke="black" points="170.329,-16.5001 180.329,-13 170.329,-9.5001 170.329,-16.5001"/>
 </g>
-<!-- program~test_driver -->
-<g id="node3" class="node"><title>program~test_driver</title>
-<a xlink:href="../program/test_driver.html" xlink:title="Test_Driver">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="68,-26 3.55271e-14,-26 0,-1.24345e-14 68,-3.55271e-15 68,-26"/>
-<text text-anchor="middle" x="34" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Test_Driver</text>
+<!-- program~test_all -->
+<g id="node3" class="node"><title>program~test_all</title>
+<a xlink:href="../program/test_all.html" xlink:title="test_all">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="54,-26 2.13163e-14,-26 0,-1.24345e-14 54,-3.55271e-15 54,-26"/>
+<text text-anchor="middle" x="27" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_all</text>
 </a>
 </g>
-<!-- program~test_driver&#45;&gt;proc~ir_init -->
-<g id="edge2" class="edge"><title>program~test_driver&#45;&gt;proc~ir_init</title>
-<path fill="none" stroke="black" d="M68.1986,-13C76.4058,-13 85.2132,-13 93.559,-13"/>
-<polygon fill="black" stroke="black" points="93.8037,-16.5001 103.804,-13 93.8037,-9.5001 93.8037,-16.5001"/>
+<!-- program~test_all&#45;&gt;proc~penf_init -->
+<g id="edge2" class="edge"><title>program~test_all&#45;&gt;proc~penf_init</title>
+<path fill="none" stroke="black" d="M54.003,-13C62.0277,-13 70.9665,-13 79.5309,-13"/>
+<polygon fill="black" stroke="black" points="79.7051,-16.5001 89.705,-13 79.705,-9.5001 79.7051,-16.5001"/>
 </g>
 </g>
 </svg>
@@ -798,6 +810,51 @@ implementation in a submodule of an interface in a parent module.</p>
     
     
     
+     
+    <section>
+    <h2>Functions</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-is_little_endian"></span><h3>
+pure function is_little_endian() result(is_little)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>logical
+  </small></h4>
+  <p>Logical output: true is the running architecture uses little endian ordering, false otherwise.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Check if the type of the bit ordering of the running architecture is little endian.</p>
+        
+
+  </div>
+  </div>
+
+    
+    </section>
+    <br>
     
 
 
@@ -808,11 +865,9 @@ implementation in a submodule of an interface in a parent module.</p>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
     <div class="highlight"><pre><span></span>  <span class="k">subroutine </span><span class="n">check_endian</span><span class="p">()</span>
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
-  <span class="c">!&lt; Subroutine for checking the type of bit ordering (big or little endian) of the running architecture.</span>
+  <span class="c">!&lt; Check the type of bit ordering (big or little endian) of the running architecture.</span>
   <span class="c">!&lt;</span>
   <span class="c">!&gt; @note The result is stored into the *endian* global variable.</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
-  <span class="k">implicit none</span>
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
 
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
@@ -823,6 +878,21 @@ implementation in a submodule of an interface in a parent module.</p>
   <span class="n">endif</span>
   <span class="k">return</span>
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+  <span class="k">contains</span>
+<span class="k">    pure function </span><span class="n">is_little_endian</span><span class="p">()</span> <span class="k">result</span><span class="p">(</span><span class="n">is_little</span><span class="p">)</span>
+    <span class="c">!-------------------------------------------------------------------------------------------------------------------------------</span>
+    <span class="c">!&lt; Check if the type of the bit ordering of the running architecture is little endian.</span>
+    <span class="c">!-------------------------------------------------------------------------------------------------------------------------------</span>
+    <span class="kt">logical</span>      <span class="kd">::</span> <span class="n">is_little</span> <span class="c">!&lt; Logical output: true is the running architecture uses little endian ordering, false otherwise.</span>
+    <span class="kt">integer</span><span class="p">(</span><span class="n">I1P</span><span class="p">)</span> <span class="kd">::</span> <span class="n">int1</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">)</span> <span class="c">!&lt; One byte integer array for casting 4 bytes integer.</span>
+    <span class="c">!-------------------------------------------------------------------------------------------------------------------------------</span>
+
+    <span class="c">!-------------------------------------------------------------------------------------------------------------------------------</span>
+    <span class="n">int1</span> <span class="o">=</span> <span class="nb">transfer</span><span class="p">(</span><span class="mi">1_I4P</span><span class="p">,</span> <span class="n">int1</span><span class="p">)</span>
+    <span class="n">is_little</span> <span class="o">=</span> <span class="p">(</span><span class="n">int1</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">==</span><span class="mi">1_I1P</span><span class="p">)</span>
+    <span class="k">return</span>
+    <span class="c">!-------------------------------------------------------------------------------------------------------------------------------</span>
+    <span class="n">endfunction</span> <span class="n">is_little_endian</span>
   <span class="n">endsubroutine</span> <span class="n">check_endian</span>
 </pre></div>
 

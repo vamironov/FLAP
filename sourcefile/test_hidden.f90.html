@@ -176,7 +176,7 @@
           
           <a class="list-group-item" href="../sourcefile/flap_utils_m.f90.html">flap_utils_m.f90</a>
           
-          <a class="list-group-item" href="../sourcefile/ir_precision.f90.html">IR_Precision.F90</a>
+          <a class="list-group-item" href="../sourcefile/penf.f90.html">penf.F90</a>
           
           <a class="list-group-item" href="../sourcefile/test_all.f90.html">test_all.f90</a>
           
@@ -214,8 +214,8 @@
 <a name="ln-8"></a><span class="c">!&lt;###Usage Compile</span>
 <a name="ln-9"></a><span class="c">!&lt; See [usage instructions](https://github.com/szaghi/FLAP/wiki/Testing-Programs).</span>
 <a name="ln-10"></a><span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
-<a name="ln-11"></a><span class="k">use </span><span class="n">IR_Precision</span>
-<a name="ln-12"></a><span class="k">use </span><span class="n">flap</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">command_line_interface</span>
+<a name="ln-11"></a><span class="k">use </span><span class="n">flap</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">command_line_interface</span>
+<a name="ln-12"></a><span class="k">use </span><span class="n">penf</span>
 <a name="ln-13"></a><span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
 <a name="ln-14"></a>
 <a name="ln-15"></a><span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
@@ -239,7 +239,7 @@
 <a name="ln-33"></a><span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="n">cli</span><span class="p">%</span><span class="n">progname</span><span class="o">//</span><span class="s1">&#39; has been called with the following argument:&#39;</span>
 <a name="ln-34"></a><span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;String       = &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">a_string</span><span class="p">))</span>
 <a name="ln-35"></a><span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;Ghost string = &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">g_string</span><span class="p">))</span>
-<a name="ln-36"></a><span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;Integer      = &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">str</span><span class="p">(.</span><span class="n">true</span><span class="p">.,</span> <span class="n">a_integer</span><span class="p">)))</span>
+<a name="ln-36"></a><span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;Integer      = &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">str</span><span class="p">(</span><span class="n">a_integer</span><span class="p">,</span> <span class="p">.</span><span class="n">true</span><span class="p">.)))</span>
 <a name="ln-37"></a><span class="k">stop</span>
 <a name="ln-38"></a><span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
 <a name="ln-39"></a><span class="n">endprogram</span> <span class="n">test_hidden</span>

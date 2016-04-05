@@ -102,14 +102,14 @@
      
     
     
-    <li><i class="fa fa-code"></i><a href="../src/IR_Precision.F90"> Source File</a></li>
+    <li><i class="fa fa-code"></i><a href="../src/penf.F90"> Source File</a></li>
      
   </ul>
   <ol class="breadcrumb in-well text-right">
   
-     <li><a href='../sourcefile/ir_precision.f90.html'>IR_Precision.F90</a></li>
+     <li><a href='../sourcefile/penf.f90.html'>penf.F90</a></li>
   
-     <li><a href='../module/ir_precision.html'>IR_Precision</a></li>
+     <li><a href='../module/penf_stringify.html'>penf_stringify</a></li>
   
      <li class="active">strf_R16P</li>
   </ol>
@@ -175,11 +175,15 @@
           
           <a class="list-group-item" href="../interface/bcton.html">bcton</a>
           
+          <a class="list-group-item" href="../proc/bctor_r16p.html">bctor_R16P</a>
+          
           <a class="list-group-item" href="../proc/bctor_r4p.html">bctor_R4P</a>
           
           <a class="list-group-item" href="../proc/bctor_r8p.html">bctor_R8P</a>
           
           <a class="list-group-item" href="../interface/bit_size.html">bit_size</a>
+          
+          <a class="list-group-item" href="../interface/bit_size%7E2.html">bit_size</a>
           
           <a class="list-group-item" href="../proc/bit_size_chr.html">bit_size_chr</a>
           
@@ -363,10 +367,6 @@
           
           <a class="list-group-item" href="../proc/init.html">init</a>
           
-          <a class="list-group-item" href="../proc/ir_init.html">IR_init</a>
-          
-          <a class="list-group-item" href="../proc/ir_print.html">IR_Print</a>
-          
           <a class="list-group-item" href="../proc/is_called_group.html">is_called_group</a>
           
           <a class="list-group-item" href="../proc/is_defined.html">is_defined</a>
@@ -374,8 +374,6 @@
           <a class="list-group-item" href="../proc/is_defined%7E2.html">is_defined</a>
           
           <a class="list-group-item" href="../proc/is_defined_group.html">is_defined_group</a>
-          
-          <a class="list-group-item" href="../proc/is_little_endian.html">is_little_endian</a>
           
           <a class="list-group-item" href="../proc/is_parsed.html">is_parsed</a>
           
@@ -390,6 +388,10 @@
           <a class="list-group-item" href="../proc/parse.html">parse</a>
           
           <a class="list-group-item" href="../proc/parse%7E2.html">parse</a>
+          
+          <a class="list-group-item" href="../proc/penf_init.html">penf_init</a>
+          
+          <a class="list-group-item" href="../proc/penf_print.html">penf_print</a>
           
           <a class="list-group-item" href="../proc/print_error_message.html">print_error_message</a>
           
@@ -573,7 +575,7 @@ private elemental function strf_R16P(fm, n) result(str)
     
     
     <h3>Description</h3>
-    <p>Procedure for converting real to string. This function achieves casting of real to string.</p>
+    <p>Convert real to string.</p>
     
     
      
@@ -596,18 +598,17 @@ private elemental function strf_R16P(fm, n) result(str)
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span>  <span class="k">elemental function </span><span class="n">strf_R16P</span><span class="p">(</span><span class="n">fm</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span>  <span class="k">elemental function </span><span class="n">strf_R16P</span><span class="p">(</span><span class="n">fm</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
-  <span class="c">!&lt; Procedure for converting real to string. This function achieves casting of real to string.</span>
+  <span class="c">!&lt; Convert real to string.</span>
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
-  <span class="k">implicit none</span>
-<span class="k">  </span><span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span><span class="kd">::</span> <span class="n">fm</span>  <span class="c">!&lt; Format different from the standard for the kind.</span>
-  <span class="kt">real</span><span class="p">(</span><span class="n">R16P</span><span class="p">),</span>   <span class="k">intent</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span><span class="kd">::</span> <span class="n">n</span>   <span class="c">!&lt; Real to be converted.</span>
-  <span class="kt">character</span><span class="p">(</span><span class="n">DR16P</span><span class="p">)</span><span class="kd">::</span>         <span class="n">str</span> <span class="c">!&lt; Returned string containing input number.</span>
+  <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">fm</span>  <span class="c">!&lt; Format different from the standard for the kind.</span>
+  <span class="kt">real</span><span class="p">(</span><span class="n">R16P</span><span class="p">),</span>   <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">n</span>   <span class="c">!&lt; Real to be converted.</span>
+  <span class="kt">character</span><span class="p">(</span><span class="n">DR16P</span><span class="p">)</span>         <span class="kd">::</span> <span class="n">str</span> <span class="c">!&lt; Returned string containing input number.</span>
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
 
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
-  <span class="k">write</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="nb">trim</span><span class="p">(</span><span class="n">fm</span><span class="p">))</span> <span class="n">n</span> <span class="c">! Casting of n to string.</span>
+  <span class="k">write</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">fm</span><span class="p">))</span> <span class="n">n</span>
   <span class="k">return</span>
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="n">endfunction</span> <span class="n">strf_R16P</span>

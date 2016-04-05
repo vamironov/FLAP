@@ -102,14 +102,14 @@
      
     
     
-    <li><i class="fa fa-code"></i><a href="../src/IR_Precision.F90"> Source File</a></li>
+    <li><i class="fa fa-code"></i><a href="../src/penf.F90"> Source File</a></li>
      
   </ul>
   <ol class="breadcrumb in-well text-right">
   
-     <li><a href='../sourcefile/ir_precision.f90.html'>IR_Precision.F90</a></li>
+     <li><a href='../sourcefile/penf.f90.html'>penf.F90</a></li>
   
-     <li><a href='../module/ir_precision.html'>IR_Precision</a></li>
+     <li><a href='../module/penf_stringify.html'>penf_stringify</a></li>
   
      <li class="active">strz_I1P</li>
   </ol>
@@ -175,11 +175,15 @@
           
           <a class="list-group-item" href="../interface/bcton.html">bcton</a>
           
+          <a class="list-group-item" href="../proc/bctor_r16p.html">bctor_R16P</a>
+          
           <a class="list-group-item" href="../proc/bctor_r4p.html">bctor_R4P</a>
           
           <a class="list-group-item" href="../proc/bctor_r8p.html">bctor_R8P</a>
           
           <a class="list-group-item" href="../interface/bit_size.html">bit_size</a>
+          
+          <a class="list-group-item" href="../interface/bit_size%7E2.html">bit_size</a>
           
           <a class="list-group-item" href="../proc/bit_size_chr.html">bit_size_chr</a>
           
@@ -363,10 +367,6 @@
           
           <a class="list-group-item" href="../proc/init.html">init</a>
           
-          <a class="list-group-item" href="../proc/ir_init.html">IR_init</a>
-          
-          <a class="list-group-item" href="../proc/ir_print.html">IR_Print</a>
-          
           <a class="list-group-item" href="../proc/is_called_group.html">is_called_group</a>
           
           <a class="list-group-item" href="../proc/is_defined.html">is_defined</a>
@@ -374,8 +374,6 @@
           <a class="list-group-item" href="../proc/is_defined%7E2.html">is_defined</a>
           
           <a class="list-group-item" href="../proc/is_defined_group.html">is_defined_group</a>
-          
-          <a class="list-group-item" href="../proc/is_little_endian.html">is_little_endian</a>
           
           <a class="list-group-item" href="../proc/is_parsed.html">is_parsed</a>
           
@@ -390,6 +388,10 @@
           <a class="list-group-item" href="../proc/parse.html">parse</a>
           
           <a class="list-group-item" href="../proc/parse%7E2.html">parse</a>
+          
+          <a class="list-group-item" href="../proc/penf_init.html">penf_init</a>
+          
+          <a class="list-group-item" href="../proc/penf_print.html">penf_print</a>
           
           <a class="list-group-item" href="../proc/print_error_message.html">print_error_message</a>
           
@@ -505,7 +507,7 @@
     
     <div class="col-lg-9" id='text'>
     <h2>
-private elemental function strz_I1P(nz_pad, n) result(str)
+private elemental function strz_I1P(n, nz_pad) result(str)
     
     
     
@@ -533,12 +535,12 @@ private elemental function strz_I1P(nz_pad, n) result(str)
   
 <tr>
   
-  <td><span class="anchor" id="variable-nz_pad%7E4"></span>integer(kind=I4P),</td>
-  <td>intent(in),</td>
-  <td>optional</td>
+  <td><span class="anchor" id="variable-n%7E27"></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
   
   <td></td><td>::</td>
-  <td><strong>nz_pad</strong></td><td><p>Number of zeros padding.</p></td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
   
 </tr>
 
@@ -548,12 +550,12 @@ private elemental function strz_I1P(nz_pad, n) result(str)
   
 <tr>
   
-  <td><span class="anchor" id="variable-n%7E27"></span>integer(kind=I1P),</td>
-  <td>intent(in)</td>
-  <td></td>
+  <td><span class="anchor" id="variable-nz_pad%7E4"></span>integer(kind=I4P),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
   
   <td></td><td>::</td>
-  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  <td><strong>nz_pad</strong></td><td><p>Number of zeros padding.</p></td>
   
 </tr>
 
@@ -573,8 +575,7 @@ private elemental function strz_I1P(nz_pad, n) result(str)
     
     
     <h3>Description</h3>
-    <p>Procedure for converting integer to string, prefixing with the right number of zeros. This function achieves casting of
- integer to string.</p>
+    <p>Convert integer to string, prefixing with the right number of zeros.</p>
     
     
      
@@ -620,17 +621,17 @@ private elemental function strz_I1P(nz_pad, n) result(str)
 <path fill="none" stroke="black" d="M92.2258,-47.67C100.793,-45.9408 109.64,-44.1552 117.893,-42.4896"/>
 <polygon fill="black" stroke="black" points="118.852,-45.8665 127.962,-40.4572 117.467,-39.0049 118.852,-45.8665"/>
 </g>
-<!-- program~test_driver -->
-<g id="node4" class="node"><title>program~test_driver</title>
-<a xlink:href="../program/test_driver.html" xlink:title="Test_Driver">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="80,-26 12,-26 12,-1.24345e-14 80,-3.55271e-15 80,-26"/>
-<text text-anchor="middle" x="46" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Test_Driver</text>
+<!-- program~test_all -->
+<g id="node4" class="node"><title>program~test_all</title>
+<a xlink:href="../program/test_all.html" xlink:title="test_all">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="73,-26 19,-26 19,-1.24345e-14 73,-3.55271e-15 73,-26"/>
+<text text-anchor="middle" x="46" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_all</text>
 </a>
 </g>
-<!-- program~test_driver&#45;&gt;interface~strz -->
-<g id="edge4" class="edge"><title>program~test_driver&#45;&gt;interface~strz</title>
-<path fill="none" stroke="black" d="M80.1892,-19.9006C92.1882,-22.3224 105.72,-25.0536 117.943,-27.5206"/>
-<polygon fill="black" stroke="black" points="117.346,-30.9706 127.841,-29.5183 118.731,-24.1089 117.346,-30.9706"/>
+<!-- program~test_all&#45;&gt;interface~strz -->
+<g id="edge4" class="edge"><title>program~test_all&#45;&gt;interface~strz</title>
+<path fill="none" stroke="black" d="M73.2241,-18.4948C86.6197,-21.1985 102.977,-24.5 117.533,-27.4379"/>
+<polygon fill="black" stroke="black" points="117.25,-30.9513 127.745,-29.499 118.635,-24.0897 117.25,-30.9513"/>
 </g>
 </g>
 </svg>
@@ -745,15 +746,13 @@ implementation in a submodule of an interface in a parent module.</p>
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span>  <span class="k">elemental function </span><span class="n">strz_I1P</span><span class="p">(</span><span class="n">nz_pad</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span>  <span class="k">elemental function </span><span class="n">strz_I1P</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">nz_pad</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
-  <span class="c">!&lt; Procedure for converting integer to string, prefixing with the right number of zeros. This function achieves casting of</span>
-  <span class="c">!&lt; integer to string.</span>
+  <span class="c">!&lt; Convert integer to string, prefixing with the right number of zeros.</span>
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
-  <span class="k">implicit none</span>
-<span class="k">  </span><span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">IN</span><span class="p">),</span> <span class="k">optional</span><span class="kd">::</span> <span class="n">nz_pad</span> <span class="c">!&lt; Number of zeros padding.</span>
-  <span class="kt">integer</span><span class="p">(</span><span class="n">I1P</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span><span class="kd">::</span>           <span class="n">n</span>      <span class="c">!&lt; Integer to be converted.</span>
-  <span class="kt">character</span><span class="p">(</span><span class="n">DI1P</span><span class="p">)</span><span class="kd">::</span>                    <span class="n">str</span>    <span class="c">!&lt; Returned string containing input number plus padding zeros.</span>
+  <span class="kt">integer</span><span class="p">(</span><span class="n">I1P</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>           <span class="kd">::</span> <span class="n">n</span>      <span class="c">!&lt; Integer to be converted.</span>
+  <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span> <span class="k">optional</span> <span class="kd">::</span> <span class="n">nz_pad</span> <span class="c">!&lt; Number of zeros padding.</span>
+  <span class="kt">character</span><span class="p">(</span><span class="n">DI1P</span><span class="p">)</span>                    <span class="kd">::</span> <span class="n">str</span>    <span class="c">!&lt; Returned string containing input number plus padding zeros.</span>
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
 
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
