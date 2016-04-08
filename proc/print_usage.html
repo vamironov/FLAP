@@ -598,7 +598,7 @@ private subroutine print_usage(self, pref)
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
 
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
-  <span class="k">write</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="n">self</span><span class="p">%</span><span class="n">usage</span><span class="p">(</span><span class="n">pref</span><span class="o">=</span><span class="n">pref</span><span class="p">,</span> <span class="n">g</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+  <span class="k">write</span><span class="p">(</span><span class="n">self</span><span class="p">%</span><span class="n">usage_lun</span><span class="p">,</span> <span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="n">self</span><span class="p">%</span><span class="n">usage</span><span class="p">(</span><span class="n">pref</span><span class="o">=</span><span class="n">pref</span><span class="p">,</span> <span class="n">g</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
   <span class="k">return</span>
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="n">endsubroutine</span> <span class="n">print_usage</span>

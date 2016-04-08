@@ -734,7 +734,7 @@ private elemental subroutine <a href='../proc/free%7E3.html'>free</a>(self)
          
     
     <h3>
-private subroutine <a href='../proc/init.html'>init</a>(self, progname, version, help, description, license, authors, examples, epilog, disable_hv)
+private subroutine <a href='../proc/init.html'>init</a>(self, progname, version, help, description, license, authors, examples, epilog, disable_hv, usage_lun, error_lun, version_lun)
     
     
     
@@ -900,6 +900,51 @@ private subroutine <a href='../proc/init.html'>init</a>(self, progname, version,
   
   <td></td><td>::</td>
   <td><strong>disable_hv</strong></td><td><p>Disable automatic insert of 'help' and 'version' CLAs.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>usage_lun</strong></td><td><p>Unit number to print usage/help</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>error_lun</strong></td><td><p>Unit number to print error info</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>version_lun</strong></td><td><p>Unit number to print version/license info</p></td>
   
 </tr>
 
