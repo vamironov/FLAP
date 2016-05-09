@@ -212,6 +212,8 @@
           
           <a class="list-group-item" href="../type/command_line_interface.html#boundprocedure-save_man_page">save_man_page</a>
           
+          <a class="list-group-item" href="../type/command_line_interface.html#boundprocedure-save_usage_to_markdown">save_usage_to_markdown</a>
+          
           <a class="list-group-item" href="../type/command_line_interface.html#boundprocedure-errored%7E3">errored</a>
           
           <a class="list-group-item" href="../type/command_line_interface.html#boundprocedure-check%7E3">check</a>
@@ -1128,7 +1130,7 @@ private subroutine <a href='../proc/add_group.html'>add_group</a>(self, help, de
          
     
     <h3>
-private subroutine <a href='../proc/add%7E2.html'>add</a>(self, pref, group, group_index, switch, switch_ab, help, required, positional, position, hidden, act, def, nargs, choices, exclude, envvar, error)
+private subroutine <a href='../proc/add%7E2.html'>add</a>(self, pref, group, group_index, switch, switch_ab, help, help_markdown, required, positional, position, hidden, act, def, nargs, choices, exclude, envvar, error)
     
     
     
@@ -1249,6 +1251,21 @@ private subroutine <a href='../proc/add%7E2.html'>add</a>(self, pref, group, gro
   
   <td></td><td>::</td>
   <td><strong>help</strong></td><td><p>Help message describing the CLA.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>help_markdown</strong></td><td><p>Longer help message, markdown formatted.</p></td>
   
 </tr>
 
@@ -3927,7 +3944,7 @@ private subroutine <a href='../proc/get_cla_list_varying_char%7E2.html'>get_cla_
          
     
     <h3>
-private function <a href='../proc/usage%7E3.html'>usage</a>(self, g, pref, no_header, no_examples, no_epilog) result(usaged)
+private function <a href='../proc/usage%7E3.html'>usage</a>(self, g, pref, no_header, no_examples, no_epilog, markdown) result(usaged)
     
     
     
@@ -4033,6 +4050,21 @@ private function <a href='../proc/usage%7E3.html'>usage</a>(self, g, pref, no_he
   
   <td></td><td>::</td>
   <td><strong>no_epilog</strong></td><td><p>Avoid insert epilogue to usage.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>markdown</strong></td><td><p>Format things with markdown</p></td>
   
 </tr>
 
@@ -4344,6 +4376,113 @@ private subroutine <a href='../proc/save_man_page.html'>save_man_page</a>(self, 
 
        
        <p>Save man page build on the CLI.</p>
+        
+
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-save_usage_to_markdown"></span><h3>procedure, public :: <strong>save_usage_to_markdown</strong>  
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+
+
+    <p>Save parts of the CLI as markdown.</p>
+  </div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+    
+    <h3>
+private subroutine <a href='../proc/save_usage_to_markdown.html'>save_usage_to_markdown</a>(self, markdown_file, error)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/command_line_interface.html'>command_line_interface</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td><p>CLI data.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>markdown_file</strong></td><td><p>Output file name for saving man page.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>error</strong></td><td><p>Error trapping flag.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Save the CLI as a markdown page, for inclusion into the documentation.</p>
         
 
       
@@ -7403,6 +7542,7 @@ private elemental subroutine <a href='../proc/cli_assign_cli.html'>cli_assign_cl
     <span class="k">procedure</span><span class="p">,</span> <span class="k">public</span> <span class="kd">::</span> <span class="n">signature</span>                       <span class="c">!&lt; Get CLI signature.</span>
     <span class="k">procedure</span><span class="p">,</span> <span class="k">public</span> <span class="kd">::</span> <span class="n">print_usage</span>                     <span class="c">!&lt; Print correct usage of CLI.</span>
     <span class="k">procedure</span><span class="p">,</span> <span class="k">public</span> <span class="kd">::</span> <span class="n">save_man_page</span>                   <span class="c">!&lt; Save man page build on CLI.</span>
+    <span class="k">procedure</span><span class="p">,</span> <span class="k">public</span> <span class="kd">::</span> <span class="n">save_usage_to_markdown</span>          <span class="c">!&lt; Save parts of the CLI as markdown.</span>
     <span class="c">! private methods</span>
     <span class="k">procedure</span><span class="p">,</span> <span class="k">private</span> <span class="kd">::</span> <span class="n">errored</span>                         <span class="c">!&lt; Trig error occurence and print meaningful message.</span>
     <span class="k">procedure</span><span class="p">,</span> <span class="k">private</span> <span class="kd">::</span> <span class="n">check</span>                           <span class="c">!&lt; Check data consistency.</span>

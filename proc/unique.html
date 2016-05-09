@@ -435,6 +435,8 @@
           
           <a class="list-group-item" href="../proc/save_man_page.html">save_man_page</a>
           
+          <a class="list-group-item" href="../proc/save_usage_to_markdown.html">save_usage_to_markdown</a>
+          
           <a class="list-group-item" href="../proc/set_mutually_exclusive_groups.html">set_mutually_exclusive_groups</a>
           
           <a class="list-group-item" href="../proc/signature.html">signature</a>
@@ -523,7 +525,7 @@
     
     <div class="col-lg-9" id='text'>
     <h2>
-public pure function unique(string, substring) result(uniq)
+public elemental function unique(string, substring) result(uniq)
     
     
     
@@ -800,7 +802,7 @@ implementation in a submodule of an interface in a parent module.</p>
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span>  <span class="k">pure function </span><span class="n">unique</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">substring</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">uniq</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span>  <span class="k">elemental function </span><span class="n">unique</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">substring</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">uniq</span><span class="p">)</span>
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="c">!&lt; Reduce to one (unique) multiple (sequential) occurrences of a characters substring into a string.</span>
   <span class="c">!&lt;</span>

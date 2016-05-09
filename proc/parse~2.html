@@ -433,6 +433,8 @@
           
           <a class="list-group-item" href="../proc/save_man_page.html">save_man_page</a>
           
+          <a class="list-group-item" href="../proc/save_usage_to_markdown.html">save_usage_to_markdown</a>
+          
           <a class="list-group-item" href="../proc/set_mutually_exclusive_groups.html">set_mutually_exclusive_groups</a>
           
           <a class="list-group-item" href="../proc/signature.html">signature</a>
@@ -757,7 +759,11 @@ private subroutine parse(self, pref, args, error)
 
   <span class="c">! parse CLI</span>
   <span class="k">do </span><span class="n">g</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">size</span><span class="p">(</span><span class="n">ai</span><span class="p">,</span><span class="nb">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">ai</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">call </span><span class="n">self</span><span class="p">%</span><span class="n">clasg</span><span class="p">(</span><span class="n">g</span><span class="p">)%</span><span class="n">parse</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">self</span><span class="p">%</span><span class="n">args</span><span class="p">(</span><span class="n">ai</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span><span class="n">ai</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="mi">2</span><span class="p">)),</span> <span class="n">pref</span><span class="o">=</span><span class="n">pref</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">ai</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<span class="k">      call </span><span class="n">self</span><span class="p">%</span><span class="n">clasg</span><span class="p">(</span><span class="n">g</span><span class="p">)%</span><span class="n">parse</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">self</span><span class="p">%</span><span class="n">args</span><span class="p">(</span><span class="n">ai</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span><span class="n">ai</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="mi">2</span><span class="p">)),</span> <span class="n">pref</span><span class="o">=</span><span class="n">pref</span><span class="p">)</span>
+    <span class="k">else</span>
+<span class="k">      call </span><span class="n">self</span><span class="p">%</span><span class="n">clasg</span><span class="p">(</span><span class="n">g</span><span class="p">)%</span><span class="n">sanitize_defaults</span>
+    <span class="n">endif</span>
     <span class="n">self</span><span class="p">%</span><span class="n">error</span> <span class="o">=</span> <span class="n">self</span><span class="p">%</span><span class="n">clasg</span><span class="p">(</span><span class="n">g</span><span class="p">)%</span><span class="n">error</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">self</span><span class="p">%</span><span class="n">error</span> <span class="o">/=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">exit</span>
 <span class="k">  </span><span class="n">enddo</span>

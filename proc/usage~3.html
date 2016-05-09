@@ -139,6 +139,8 @@
         
         <a class="list-group-item" href="../proc/usage%7E3.html#variable-no_epilogd">no_epilogd</a>
         
+        <a class="list-group-item" href="../proc/usage%7E3.html#variable-markdownd%7E3">markdownd</a>
+        
         <a class="list-group-item" href="../proc/usage%7E3.html#variable-gi">gi</a>
         
         <a class="list-group-item" href="../proc/usage%7E3.html#variable-e">e</a>
@@ -441,6 +443,8 @@
           
           <a class="list-group-item" href="../proc/save_man_page.html">save_man_page</a>
           
+          <a class="list-group-item" href="../proc/save_usage_to_markdown.html">save_usage_to_markdown</a>
+          
           <a class="list-group-item" href="../proc/set_mutually_exclusive_groups.html">set_mutually_exclusive_groups</a>
           
           <a class="list-group-item" href="../proc/signature.html">signature</a>
@@ -529,7 +533,7 @@
     
     <div class="col-lg-9" id='text'>
     <h2>
-private function usage(self, g, pref, no_header, no_examples, no_epilog) result(usaged)
+private function usage(self, g, pref, no_header, no_examples, no_epilog, markdown) result(usaged)
     
     
     
@@ -641,6 +645,21 @@ private function usage(self, g, pref, no_header, no_examples, no_epilog) result(
   
 </tr>
 
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-markdown%7E3"></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>markdown</strong></td><td><p>Format things with markdown</p></td>
+  
+</tr>
+
 </tbody>
 </table>
 
@@ -737,6 +756,20 @@ private function usage(self, g, pref, no_header, no_examples, no_epilog) result(
   
 <tr>
   
+  <td><span class="anchor" id="variable-markdownd%7E3"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>markdownd</strong></td><td></td><td></td><td><p>Format for markdown.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
   <td><span class="anchor" id="variable-gi"></span>integer(kind=I4P),</td>
   
   <td>public</td>
@@ -782,7 +815,7 @@ private function usage(self, g, pref, no_header, no_examples, no_epilog) result(
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span>  <span class="k">function </span><span class="n">usage</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">pref</span><span class="p">,</span> <span class="n">no_header</span><span class="p">,</span> <span class="n">no_examples</span><span class="p">,</span> <span class="n">no_epilog</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">usaged</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span>  <span class="k">function </span><span class="n">usage</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">pref</span><span class="p">,</span> <span class="n">no_header</span><span class="p">,</span> <span class="n">no_examples</span><span class="p">,</span> <span class="n">no_epilog</span><span class="p">,</span> <span class="n">markdown</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">usaged</span><span class="p">)</span>
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="c">!&lt; Print correct usage of CLI.</span>
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
@@ -792,11 +825,13 @@ private function usage(self, g, pref, no_header, no_examples, no_epilog) result(
   <span class="kt">logical</span><span class="p">,</span>      <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">no_header</span>    <span class="c">!&lt; Avoid insert header to usage.</span>
   <span class="kt">logical</span><span class="p">,</span>      <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">no_examples</span>  <span class="c">!&lt; Avoid insert examples to usage.</span>
   <span class="kt">logical</span><span class="p">,</span>      <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">no_epilog</span>    <span class="c">!&lt; Avoid insert epilogue to usage.</span>
+  <span class="kt">logical</span><span class="p">,</span>      <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">markdown</span>     <span class="c">!&lt; Format things with markdown</span>
   <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span>             <span class="kd">::</span> <span class="n">prefd</span>        <span class="c">!&lt; Prefixing string.</span>
   <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span>             <span class="kd">::</span> <span class="n">usaged</span>       <span class="c">!&lt; Usage string.</span>
   <span class="kt">logical</span>                                   <span class="kd">::</span> <span class="n">no_headerd</span>   <span class="c">!&lt; Avoid insert header to usage.</span>
   <span class="kt">logical</span>                                   <span class="kd">::</span> <span class="n">no_examplesd</span> <span class="c">!&lt; Avoid insert examples to usage.</span>
   <span class="kt">logical</span>                                   <span class="kd">::</span> <span class="n">no_epilogd</span>   <span class="c">!&lt; Avoid insert epilogue to usage.</span>
+  <span class="kt">logical</span>                                   <span class="kd">::</span> <span class="n">markdownd</span>    <span class="c">!&lt; Format for markdown.</span>
   <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                              <span class="kd">::</span> <span class="n">gi</span>           <span class="c">!&lt; Counter.</span>
   <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                              <span class="kd">::</span> <span class="n">e</span>            <span class="c">!&lt; Counter.</span>
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
@@ -805,9 +840,10 @@ private function usage(self, g, pref, no_header, no_examples, no_epilog) result(
   <span class="n">no_headerd</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span> <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">no_header</span><span class="p">))</span> <span class="n">no_headerd</span> <span class="o">=</span> <span class="n">no_header</span>
   <span class="n">no_examplesd</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span> <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">no_examples</span><span class="p">))</span> <span class="n">no_examplesd</span> <span class="o">=</span> <span class="n">no_examples</span>
   <span class="n">no_epilogd</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span> <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">no_epilog</span><span class="p">))</span> <span class="n">no_epilogd</span> <span class="o">=</span> <span class="n">no_epilog</span>
+  <span class="n">markdownd</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span> <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">markdown</span><span class="p">))</span> <span class="n">markdownd</span> <span class="o">=</span> <span class="n">markdown</span>
   <span class="n">prefd</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">pref</span><span class="p">))</span> <span class="n">prefd</span> <span class="o">=</span> <span class="n">pref</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">g</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">then</span> <span class="c">! usage of a specific command</span>
-    <span class="n">usaged</span> <span class="o">=</span> <span class="n">self</span><span class="p">%</span><span class="n">clasg</span><span class="p">(</span><span class="n">g</span><span class="p">)%</span><span class="n">usage</span><span class="p">(</span><span class="n">pref</span><span class="o">=</span><span class="n">prefd</span><span class="p">,</span><span class="n">no_header</span><span class="o">=</span><span class="n">no_headerd</span><span class="p">)</span>
+    <span class="n">usaged</span> <span class="o">=</span> <span class="n">self</span><span class="p">%</span><span class="n">clasg</span><span class="p">(</span><span class="n">g</span><span class="p">)%</span><span class="n">usage</span><span class="p">(</span><span class="n">pref</span><span class="o">=</span><span class="n">prefd</span><span class="p">,</span><span class="n">no_header</span><span class="o">=</span><span class="n">no_headerd</span><span class="p">,</span><span class="n">markdown</span><span class="o">=</span><span class="n">markdownd</span><span class="p">)</span>
   <span class="k">else</span> <span class="c">! usage of whole CLI</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">no_headerd</span><span class="p">)</span> <span class="k">then</span>
 <span class="k">      </span><span class="n">usaged</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -815,7 +851,7 @@ private function usage(self, g, pref, no_header, no_examples, no_epilog) result(
 <span class="k">      </span><span class="n">usaged</span> <span class="o">=</span> <span class="n">prefd</span><span class="o">//</span><span class="n">self</span><span class="p">%</span><span class="n">help</span><span class="o">//</span><span class="n">self</span><span class="p">%</span><span class="n">progname</span><span class="o">//</span><span class="s1">&#39; &#39;</span><span class="o">//</span><span class="n">self</span><span class="p">%</span><span class="n">signature</span><span class="p">()</span>
       <span class="k">if</span> <span class="p">(</span><span class="n">self</span><span class="p">%</span><span class="n">description</span><span class="o">/=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="n">usaged</span> <span class="o">=</span> <span class="n">usaged</span><span class="o">//</span><span class="nb">new_line</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">//</span><span class="nb">new_line</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">//</span><span class="n">prefd</span><span class="o">//</span><span class="n">self</span><span class="p">%</span><span class="n">description</span>
     <span class="n">endif</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">self</span><span class="p">%</span><span class="n">clasg</span><span class="p">(</span><span class="mi">0</span><span class="p">)%</span><span class="n">Na</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="n">usaged</span> <span class="o">=</span> <span class="n">usaged</span><span class="o">//</span><span class="nb">new_line</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">//</span><span class="n">self</span><span class="p">%</span><span class="n">clasg</span><span class="p">(</span><span class="mi">0</span><span class="p">)%</span><span class="n">usage</span><span class="p">(</span><span class="n">pref</span><span class="o">=</span><span class="n">prefd</span><span class="p">,</span><span class="n">no_header</span><span class="o">=</span><span class="p">.</span><span class="n">true</span><span class="p">.)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">self</span><span class="p">%</span><span class="n">clasg</span><span class="p">(</span><span class="mi">0</span><span class="p">)%</span><span class="n">Na</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="n">usaged</span> <span class="o">=</span> <span class="n">usaged</span><span class="o">//</span><span class="nb">new_line</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">//</span><span class="n">self</span><span class="p">%</span><span class="n">clasg</span><span class="p">(</span><span class="mi">0</span><span class="p">)%</span><span class="n">usage</span><span class="p">(</span><span class="n">pref</span><span class="o">=</span><span class="n">prefd</span><span class="p">,</span><span class="n">no_header</span><span class="o">=</span><span class="p">.</span><span class="n">true</span><span class="p">.,</span><span class="n">markdown</span><span class="o">=</span><span class="n">markdownd</span><span class="p">)</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">self</span><span class="p">%</span><span class="n">clasg</span><span class="p">,</span><span class="nb">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span> <span class="k">then</span>
 <span class="k">      </span><span class="n">usaged</span> <span class="o">=</span> <span class="n">usaged</span><span class="o">//</span><span class="nb">new_line</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">//</span><span class="nb">new_line</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">//</span><span class="n">prefd</span><span class="o">//</span><span class="s1">&#39;Commands:&#39;</span>
       <span class="k">do </span><span class="n">gi</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="p">(</span><span class="n">self</span><span class="p">%</span><span class="n">clasg</span><span class="p">,</span><span class="nb">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
