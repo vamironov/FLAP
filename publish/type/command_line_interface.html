@@ -320,8 +320,8 @@
 </g>
 <!-- type~command_line_arguments_group&#45;&gt;type~command_line_interface -->
 <g id="edge8" class="edge"><title>type~command_line_arguments_group&#45;&gt;type~command_line_interface</title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M449.775,-22.4475C463.245,-23.9481 476.999,-25.5002 490,-27 492.523,-27.2911 495.089,-27.5891 497.681,-27.8917"/>
-<polygon fill="black" stroke="black" points="497.423,-31.3854 507.763,-29.077 498.24,-24.4333 497.423,-31.3854"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M449.775,-22.4475C463.245,-23.9481 476.999,-25.5002 490,-27 492.523,-27.2911 495.089,-27.5891 497.681,-27.8917"/>
+<polygon fill="#000000" stroke="#000000" points="497.423,-31.3854 507.763,-29.077 498.24,-24.4333 497.423,-31.3854"/>
 <text text-anchor="middle" x="479" y="-31.45" font-family="Helvetica,sans-Serif" font-size="9.50">clasg</text>
 </g>
 <!-- type~command_line_argument -->
@@ -333,8 +333,8 @@
 </g>
 <!-- type~command_line_argument&#45;&gt;type~command_line_arguments_group -->
 <g id="edge4" class="edge"><title>type~command_line_argument&#45;&gt;type~command_line_arguments_group</title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M226.08,-13C238.85,-13 252.452,-13 265.937,-13"/>
-<polygon fill="black" stroke="black" points="266.212,-16.5001 276.212,-13 266.212,-9.5001 266.212,-16.5001"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M226.08,-13C238.85,-13 252.452,-13 265.937,-13"/>
+<polygon fill="#000000" stroke="#000000" points="266.212,-16.5001 276.212,-13 266.212,-9.5001 266.212,-16.5001"/>
 <text text-anchor="middle" x="251" y="-17.45" font-family="Helvetica,sans-Serif" font-size="9.50">cla</text>
 </g>
 <!-- type~object -->
@@ -346,20 +346,20 @@
 </g>
 <!-- type~object&#45;&gt;type~command_line_interface -->
 <g id="edge10" class="edge"><title>type~object&#45;&gt;type~command_line_interface</title>
-<path fill="none" stroke="black" d="M251,-54C297.135,-50.0652 418.101,-44.1171 497.924,-40.4007"/>
-<polygon fill="black" stroke="black" points="498.104,-43.8962 507.931,-39.9364 497.779,-36.9037 498.104,-43.8962"/>
+<path fill="none" stroke="#000000" d="M251,-54C297.135,-50.0652 418.101,-44.1171 497.924,-40.4007"/>
+<polygon fill="#000000" stroke="#000000" points="498.104,-43.8962 507.931,-39.9364 497.779,-36.9037 498.104,-43.8962"/>
 </g>
 <!-- type~object&#45;&gt;type~command_line_arguments_group -->
 <g id="edge6" class="edge"><title>type~object&#45;&gt;type~command_line_arguments_group</title>
-<path fill="none" stroke="black" d="M73,-54C151.57,-44.7649 172.213,-61.151 251,-54"/>
-<path fill="none" stroke="black" d="M251,-54C263.689,-52.9178 264.299,-45.026 276,-40 285.155,-36.0678 295.072,-32.4358 304.823,-29.1944"/>
-<polygon fill="black" stroke="black" points="306.036,-32.4809 314.484,-26.0865 303.892,-25.8172 306.036,-32.4809"/>
+<path fill="none" stroke="#000000" d="M73,-54C151.57,-44.7649 172.213,-61.151 251,-54"/>
+<path fill="none" stroke="#000000" d="M251,-54C263.689,-52.9178 264.299,-45.026 276,-40 285.155,-36.0678 295.072,-32.4358 304.823,-29.1944"/>
+<polygon fill="#000000" stroke="#000000" points="306.036,-32.4809 314.484,-26.0865 303.892,-25.8172 306.036,-32.4809"/>
 </g>
 <!-- type~object&#45;&gt;type~command_line_argument -->
 <g id="edge2" class="edge"><title>type~object&#45;&gt;type~command_line_argument</title>
-<path fill="none" stroke="black" d="M54.3042,-55.0508C60.469,-54.9964 66.9721,-54.7085 73,-54"/>
-<path fill="none" stroke="black" d="M73,-54C83.4176,-52.7755 82.8407,-45.1119 92,-40 98.3994,-36.4284 105.368,-33.0805 112.314,-30.0402"/>
-<polygon fill="black" stroke="black" points="113.849,-33.1918 121.714,-26.093 111.138,-26.7377 113.849,-33.1918"/>
+<path fill="none" stroke="#000000" d="M54.3042,-55.0508C60.469,-54.9964 66.9721,-54.7085 73,-54"/>
+<path fill="none" stroke="#000000" d="M73,-54C83.4176,-52.7755 82.8407,-45.1119 92,-40 98.3994,-36.4284 105.368,-33.0805 112.314,-30.0402"/>
+<polygon fill="#000000" stroke="#000000" points="113.849,-33.1918 121.714,-26.093 111.138,-26.7377 113.849,-33.1918"/>
 </g>
 </g>
 </svg>
@@ -440,6 +440,8 @@ Nodes of different colours represent the following:
 </g>
 </svg>
 
+Where possible, edges connecting nodes are given different colours to make them
+easier to distinguish in large graphs.
 <h5>Module Graph</h5>
 <p>Solid arrows point from a parent (sub)module to the submodule which is
 descended from it. Dashed arrows point from a module being used to the
@@ -498,7 +500,7 @@ implementation in a submodule of an interface in a parent module.</p>
   
 <tr>
   
-  <td><span class="anchor" id="variable-args"></span>character(len=512),</td>
+  <td><span class="anchor" id="variable-args"></span>character(len=:),</td>
   
   <td>private,</td>
   <td>allocatable</td><td>::</td>
@@ -512,11 +514,11 @@ implementation in a submodule of an interface in a parent module.</p>
   
 <tr>
   
-  <td><span class="anchor" id="variable-examples"></span>character(len=512),</td>
+  <td><span class="anchor" id="variable-examples"></span>character(len=:),</td>
   
   <td>private,</td>
   <td>allocatable</td><td>::</td>
-  <td><strong>examples</strong>(:)</td><td></td><td></td><td><p>Examples of correct usage.</p></td>
+  <td><strong>examples</strong>(:)</td><td></td><td></td><td><p>Examples of correct usage (not work with gfortran).</p></td>
   
 </tr>
 
@@ -7578,12 +7580,18 @@ private elemental subroutine <a href='../proc/cli_assign_cli.html'>cli_assign_cl
 
     <hr>
     <footer>
-        <div class="row">
+      <div class="row">
         <div class="col-md-4">&copy; 2016 </div>
-	<div class="col-md-4"><span class="text-center"> FLAP was developed by Stefano Zaghi</span></div>
-        <div class="col-md-4"><span class="pull-right">Documentation generated by <a href="https://github.com/cmacmackin/ford">FORD</a></span></div>
+        <div class="col-md-4"><span class="text-center"> FLAP was developed by Stefano Zaghi</span></div>
+        <div class="col-md-4">
+          <span class="pull-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </span>
         </div>
-        <br>
+      </div>
+      <br>
     </footer>
     </div> <!-- /container -->
 
@@ -7611,6 +7619,6 @@ private elemental subroutine <a href='../proc/cli_assign_cli.html'>cli_assign_cl
         }
       });
     </script>
-    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </body>
 </html>
