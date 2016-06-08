@@ -1,0 +1,8585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <meta name="description" content="Fortran command Line Arguments Parser for poor people">
+    
+    <meta name="author" content="Chris MacMackin" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>penf_stringify &ndash; FLAP</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">FLAP </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+                
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+				
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+								
+            <li><a href="../lists/types.html">Derived Types</a></li>
+				
+				
+            <li><a href="../lists/programs.html">Programs</a></li>
+				
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>penf_stringify 
+    <small>Module</small>
+    
+    </h1>
+	 
+<div class="row">
+<div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+    <li><i class="fa fa-code"></i><a href="../src/penf.F90"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li><a href='../sourcefile/penf.f90.html'>penf.F90</a></li>
+  
+     <li class="active">penf_stringify</li>
+  </ol>
+</div>
+</div>
+</div>
+    
+  </div>
+  
+  <div class="row">
+    <div class="col-lg-3">
+    
+<div id="sidebar">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#inters">Interfaces</a></h3></div>
+    <div id="inters" class="panel-collapse collapse">
+        <div class="list-group">
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#interface-str">str</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#interface-strz">strz</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#interface-cton">cton</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#interface-bstr">bstr</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#interface-bcton">bcton</a>
+          
+        </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs">Functions</a></h3></div>
+    <div id="funcs" class="panel-collapse collapse">
+        <div class="list-group">
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-strf_r16p">strf_R16P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-strf_r8p">strf_R8P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-strf_r4p">strf_R4P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-strf_i8p">strf_I8P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-strf_i4p">strf_I4P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-strf_i2p">strf_I2P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-strf_i1p">strf_I1P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-str_r16p">str_R16P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-str_r8p">str_R8P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-str_r4p">str_R4P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-str_i8p">str_I8P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-str_i4p">str_I4P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-str_i2p">str_I2P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-str_i1p">str_I1P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-str_bol">str_bol</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-str_a_r16p">str_a_R16P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-str_a_r8p">str_a_R8P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-str_a_r4p">str_a_R4P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-str_a_i8p">str_a_I8P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-str_a_i4p">str_a_I4P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-str_a_i2p">str_a_I2P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-str_a_i1p">str_a_I1P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-strz_i8p">strz_I8P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-strz_i4p">strz_I4P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-strz_i2p">strz_I2P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-strz_i1p">strz_I1P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-ctor_r16p">ctor_R16P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-ctor_r8p">ctor_R8P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-ctor_r4p">ctor_R4P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-ctoi_i8p">ctoi_I8P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-ctoi_i4p">ctoi_I4P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-ctoi_i2p">ctoi_I2P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-ctoi_i1p">ctoi_I1P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-bstr_r16p">bstr_R16P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-bstr_r8p">bstr_R8P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-bstr_r4p">bstr_R4P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-bstr_i8p">bstr_I8P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-bstr_i4p">bstr_I4P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-bstr_i2p">bstr_I2P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-bstr_i1p">bstr_I1P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-bctor_r16p">bctor_R16P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-bctor_r8p">bctor_R8P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-bctor_r4p">bctor_R4P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-bctoi_i8p">bctoi_I8P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-bctoi_i4p">bctoi_I4P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-bctoi_i2p">bctoi_I2P</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html#proc-bctoi_i1p">bctoi_I1P</a>
+          
+        </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <hr>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allmods">All Modules</a></h3></div>
+    <div id="allmods" class="panel-collapse collapse">
+        <div class="list-group">
+          
+          <a class="list-group-item" href="../module/flap.html">flap</a>
+          
+          <a class="list-group-item" href="../module/flap_command_line_argument_t.html">flap_command_line_argument_t</a>
+          
+          <a class="list-group-item" href="../module/flap_command_line_arguments_group_t.html">flap_command_line_arguments_group_t</a>
+          
+          <a class="list-group-item" href="../module/flap_command_line_interface_t.html">flap_command_line_interface_t</a>
+          
+          <a class="list-group-item" href="../module/flap_object_t.html">flap_object_t</a>
+          
+          <a class="list-group-item" href="../module/flap_utils_m.html">flap_utils_m</a>
+          
+          <a class="list-group-item" href="../module/penf%7E2.html">penf</a>
+          
+          <a class="list-group-item" href="../module/penf.html">penf</a>
+          
+          <a class="list-group-item" href="../module/penf_b_size.html">penf_b_size</a>
+          
+          <a class="list-group-item" href="../module/penf_b_size%7E2.html">penf_b_size</a>
+          
+          <a class="list-group-item" href="../module/penf_global_parameters_variables.html">penf_global_parameters_variables</a>
+          
+          <a class="list-group-item" href="../module/penf_global_parameters_variables%7E2.html">penf_global_parameters_variables</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify%7E2.html">penf_stringify</a>
+          
+          <a class="list-group-item" href="../module/penf_stringify.html">penf_stringify</a>
+          
+        </div>
+    </div>
+  </div>
+  
+</div>
+
+    </div>
+    
+    <div class="col-lg-9" id='text'>
+    
+    
+  
+    <ul class="list-inline">
+      <li><h4>Uses:</h4></li>
+      
+      <li><a href="https://gcc.gnu.org/onlinedocs/gfortran/ISO_005fFORTRAN_005fENV.html">iso_fortran_env</a></li>
+      
+      <li><a href='../module/penf_b_size.html'>penf_b_size</a></li>
+      
+      <li><a href='../module/penf_global_parameters_variables.html'>penf_global_parameters_variables</a></li>
+      
+    </ul>
+  
+
+    
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: module~~penf_stringify~2~~UsesGraph Pages: 1 -->
+<svg id="modulepenf_stringify2UsesGraph" width="422pt" height="98pt"
+ viewBox="0.00 0.00 422.00 98.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~penf_stringify~2~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 94)">
+<title>module~~penf_stringify~2~~UsesGraph</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-94 419,-94 419,5 -4,5"/>
+<!-- module~penf_stringify~2 -->
+<g id="node1" class="node"><title>module~penf_stringify~2</title>
+<polygon fill="none" stroke="black" points="414,-70 338,-70 338,-44 414,-44 414,-70"/>
+<text text-anchor="middle" x="376" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50">penf_stringify</text>
+</g>
+<!-- module~penf_b_size -->
+<g id="node2" class="node"><title>module~penf_b_size</title>
+<a xlink:href="../module/penf_b_size.html" xlink:title="penf_b_size">
+<polygon fill="#337ab7" stroke="#337ab7" points="293,-70 223,-70 223,-44 293,-44 293,-70"/>
+<text text-anchor="middle" x="258" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">penf_b_size</text>
+</a>
+</g>
+<!-- module~penf_b_size&#45;&gt;module~penf_stringify~2 -->
+<g id="edge4" class="edge"><title>module~penf_b_size&#45;&gt;module~penf_stringify~2</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M293.084,-57C304.014,-57 316.261,-57 327.919,-57"/>
+<polygon fill="#000000" stroke="#000000" points="327.964,-60.5001 337.964,-57 327.964,-53.5001 327.964,-60.5001"/>
+</g>
+<!-- iso_fortran_env -->
+<g id="node3" class="node"><title>iso_fortran_env</title>
+<a xlink:href="https://gcc.gnu.org/onlinedocs/gfortran/ISO_005fFORTRAN_005fENV.html" xlink:title="iso_fortran_env">
+<polygon fill="#337ab7" stroke="#337ab7" points="301,-26 215,-26 215,-1.24345e-14 301,-3.55271e-15 301,-26"/>
+<text text-anchor="middle" x="258" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iso_fortran_env</text>
+</a>
+</g>
+<!-- iso_fortran_env&#45;&gt;module~penf_stringify~2 -->
+<g id="edge6" class="edge"><title>iso_fortran_env&#45;&gt;module~penf_stringify~2</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M293.084,-26.0823C305.103,-30.5637 318.715,-35.6394 331.384,-40.3636"/>
+<polygon fill="#000000" stroke="#000000" points="330.254,-43.6777 340.847,-43.8921 332.7,-37.1188 330.254,-43.6777"/>
+</g>
+<!-- module~penf_global_parameters_variables -->
+<g id="node4" class="node"><title>module~penf_global_parameters_variables</title>
+<a xlink:href="../module/penf_global_parameters_variables.html" xlink:title="penf_global_parameters_variables">
+<polygon fill="#337ab7" stroke="#337ab7" points="178,-90 8.52651e-14,-90 0,-64 178,-64 178,-90"/>
+<text text-anchor="middle" x="89" y="-74.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">penf_global_parameters_variables</text>
+</a>
+</g>
+<!-- module~penf_global_parameters_variables&#45;&gt;module~penf_stringify~2 -->
+<g id="edge8" class="edge"><title>module~penf_global_parameters_variables&#45;&gt;module~penf_stringify~2</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M178.016,-83.9058C216.349,-85.3156 261.562,-84.8838 302,-79 311.156,-77.6678 320.755,-75.4544 329.892,-72.9319"/>
+<polygon fill="#000000" stroke="#000000" points="330.965,-76.2646 339.582,-70.1004 329.002,-69.5455 330.965,-76.2646"/>
+</g>
+<!-- module~penf_global_parameters_variables&#45;&gt;module~penf_b_size -->
+<g id="edge2" class="edge"><title>module~penf_global_parameters_variables&#45;&gt;module~penf_b_size</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M178.449,-66.4144C190.206,-65.0229 201.835,-63.6467 212.422,-62.3939"/>
+<polygon fill="#000000" stroke="#000000" points="213.107,-65.8372 222.627,-61.1862 212.285,-58.8858 213.107,-65.8372"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+Nodes of different colours represent the following:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph1" class="graph" transform="scale(0.817602 0.817602) rotate(0) translate(4 30)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-30 781,-30 781,5 -4,5"/>
+<!-- Module -->
+<g id="node1" class="node"><title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-26 2.13163e-14,-26 0,-1.24345e-14 54,-3.55271e-15 54,-26"/>
+<text text-anchor="middle" x="27" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node"><title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-26 72,-26 72,-1.24345e-14 138,-3.55271e-15 138,-26"/>
+<text text-anchor="middle" x="105" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Type -->
+<g id="node3" class="node"><title>Type</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="210,-26 156,-26 156,-1.24345e-14 210,-3.55271e-15 210,-26"/>
+<text text-anchor="middle" x="183" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
+</g>
+<!-- Subroutine -->
+<g id="node4" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="292,-26 228,-26 228,-1.24345e-14 292,-3.55271e-15 292,-26"/>
+<text text-anchor="middle" x="260" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node5" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="364,-26 310,-26 310,-1.24345e-14 364,-3.55271e-15 364,-26"/>
+<text text-anchor="middle" x="337" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node6" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="436,-26 382,-26 382,-1.24345e-14 436,-3.55271e-15 436,-26"/>
+<text text-anchor="middle" x="409" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node7" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="590,-26 454,-26 454,-1.24345e-14 590,-3.55271e-15 590,-26"/>
+<text text-anchor="middle" x="522" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node8" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="662,-26 608,-26 608,-1.24345e-14 662,-3.55271e-15 662,-26"/>
+<text text-anchor="middle" x="635" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node9" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="776,-26 680,-26 680,-1.24345e-14 776,-3.55271e-15 776,-26"/>
+<text text-anchor="middle" x="728" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+Where possible, edges connecting nodes are given different colours to make them
+easier to distinguish in large graphs.
+<h5>Module Graph</h5>
+<p>Solid arrows point from a parent (sub)module to the submodule which is
+descended from it. Dashed arrows point from a module being used to the
+module using it.</p>
+<h5>Type Graph</h5>
+<p>Solid arrows point from one derived type to another which extends
+(inherits from) it. Dashed arrows point from a derived type to another
+type containing it as a components, with a label listing the name(s) of
+said component(s).</p>
+<h5>Call Graph</h5>
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+    
+    <p>PENF string-to-number (and viceversa) facility.</p>
+    
+    
+    <h3>Used By</h3>
+    
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: module~~penf_stringify~2~~UsedByGraph Pages: 1 -->
+<svg id="modulepenf_stringify2UsedByGraph" width="641pt" height="143pt"
+ viewBox="0.00 0.00 641.00 143.45" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~penf_stringify~2~~UsedByGraph" class="graph" transform="scale(0.552586 0.552586) rotate(0) translate(4 255.593)">
+<title>module~~penf_stringify~2~~UsedByGraph</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-255.593 1157,-255.593 1157,5 -4,5"/>
+<!-- module~penf_stringify~2 -->
+<g id="node1" class="node"><title>module~penf_stringify~2</title>
+<polygon fill="none" stroke="black" points="76,-104 3.55271e-14,-104 0,-78 76,-78 76,-104"/>
+<text text-anchor="middle" x="38" y="-88.55" font-family="Helvetica,sans-Serif" font-size="10.50">penf_stringify</text>
+</g>
+<!-- module~penf~2 -->
+<g id="node2" class="node"><title>module~penf~2</title>
+<a xlink:href="../module/penf%7E2.html" xlink:title="penf">
+<polygon fill="#337ab7" stroke="#337ab7" points="166,-126 112,-126 112,-100 166,-100 166,-126"/>
+<text text-anchor="middle" x="139" y="-110.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">penf</text>
+</a>
+</g>
+<!-- module~penf_stringify~2&#45;&gt;module~penf~2 -->
+<g id="edge60" class="edge"><title>module~penf_stringify~2&#45;&gt;module~penf~2</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M76.1838,-99.3173C84.6032,-101.151 93.5092,-103.091 101.886,-104.916"/>
+<polygon fill="#000000" stroke="#000000" points="101.256,-108.361 111.772,-107.069 102.746,-101.521 101.256,-108.361"/>
+</g>
+<!-- module~penf -->
+<g id="node3" class="node"><title>module~penf</title>
+<a xlink:href="../module/penf.html" xlink:title="penf">
+<polygon fill="#337ab7" stroke="#337ab7" points="166,-82 112,-82 112,-56 166,-56 166,-82"/>
+<text text-anchor="middle" x="139" y="-66.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">penf</text>
+</a>
+</g>
+<!-- module~penf_stringify~2&#45;&gt;module~penf -->
+<g id="edge62" class="edge"><title>module~penf_stringify~2&#45;&gt;module~penf</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M76.1838,-82.6827C84.6032,-80.8488 93.5092,-78.9089 101.886,-77.0843"/>
+<polygon fill="#000000" stroke="#000000" points="102.746,-80.4791 111.772,-74.9309 101.256,-73.6395 102.746,-80.4791"/>
+</g>
+<!-- module~flap_command_line_argument_t -->
+<g id="node4" class="node"><title>module~flap_command_line_argument_t</title>
+<a xlink:href="../module/flap_command_line_argument_t.html" xlink:title="flap_command_line_argument_t">
+<polygon fill="#337ab7" stroke="#337ab7" points="478,-167 312,-167 312,-141 478,-141 478,-167"/>
+<text text-anchor="middle" x="395" y="-151.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flap_command_line_argument_t</text>
+</a>
+</g>
+<!-- module~penf~2&#45;&gt;module~flap_command_line_argument_t -->
+<g id="edge36" class="edge"><title>module~penf~2&#45;&gt;module~flap_command_line_argument_t</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M144.209,-126.134C156.039,-153.7 187.93,-216.414 239,-233"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M239,-233C264.995,-241.443 331.601,-198.924 368.827,-172.957"/>
+<polygon fill="#000000" stroke="#000000" points="371.024,-175.691 377.178,-167.066 366.989,-169.971 371.024,-175.691"/>
+</g>
+<!-- module~flap_command_line_arguments_group_t -->
+<g id="node5" class="node"><title>module~flap_command_line_arguments_group_t</title>
+<a xlink:href="../module/flap_command_line_arguments_group_t.html" xlink:title="flap_command_line_arguments_group_t">
+<polygon fill="#337ab7" stroke="#337ab7" points="719,-205 515,-205 515,-179 719,-179 719,-205"/>
+<text text-anchor="middle" x="617" y="-189.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flap_command_line_arguments_group_t</text>
+</a>
+</g>
+<!-- module~penf~2&#45;&gt;module~flap_command_line_arguments_group_t -->
+<g id="edge38" class="edge"><title>module~penf~2&#45;&gt;module~flap_command_line_arguments_group_t</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M239,-233C304.943,-254.417 325.74,-236.191 395,-233"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M395,-233C451.055,-230.417 513.847,-217.9 558.308,-207.367"/>
+<polygon fill="#000000" stroke="#000000" points="559.168,-210.76 568.071,-205.017 557.529,-203.955 559.168,-210.76"/>
+</g>
+<!-- module~flap_utils_m -->
+<g id="node6" class="node"><title>module~flap_utils_m</title>
+<a xlink:href="../module/flap_utils_m.html" xlink:title="flap_utils_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="274,-126 204,-126 204,-100 274,-100 274,-126"/>
+<text text-anchor="middle" x="239" y="-110.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flap_utils_m</text>
+</a>
+</g>
+<!-- module~penf~2&#45;&gt;module~flap_utils_m -->
+<g id="edge40" class="edge"><title>module~penf~2&#45;&gt;module~flap_utils_m</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M166.061,-113C174.557,-113 184.181,-113 193.586,-113"/>
+<polygon fill="#000000" stroke="#000000" points="193.643,-116.5 203.643,-113 193.643,-109.5 193.643,-116.5"/>
+</g>
+<!-- program~test_hidden -->
+<g id="node7" class="node"><title>program~test_hidden</title>
+<a xlink:href="../program/test_hidden.html" xlink:title="test_hidden">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1132,-246 1064,-246 1064,-220 1132,-220 1132,-246"/>
+<text text-anchor="middle" x="1098" y="-230.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_hidden</text>
+</a>
+</g>
+<!-- module~penf~2&#45;&gt;program~test_hidden -->
+<g id="edge42" class="edge"><title>module~penf~2&#45;&gt;program~test_hidden</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M981,-233C1004.57,-227.523 1031.54,-227.144 1053.64,-228.303"/>
+<polygon fill="#000000" stroke="#000000" points="1053.54,-231.804 1063.74,-228.956 1053.99,-224.818 1053.54,-231.804"/>
+</g>
+<!-- module~flap_object_t -->
+<g id="node8" class="node"><title>module~flap_object_t</title>
+<a xlink:href="../module/flap_object_t.html" xlink:title="flap_object_t">
+<polygon fill="#337ab7" stroke="#337ab7" points="275,-170 203,-170 203,-144 275,-144 275,-170"/>
+<text text-anchor="middle" x="239" y="-154.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flap_object_t</text>
+</a>
+</g>
+<!-- module~penf~2&#45;&gt;module~flap_object_t -->
+<g id="edge44" class="edge"><title>module~penf~2&#45;&gt;module~flap_object_t</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M166.061,-124.907C176.455,-129.48 188.537,-134.796 199.842,-139.771"/>
+<polygon fill="#000000" stroke="#000000" points="198.539,-143.021 209.101,-143.845 201.358,-136.614 198.539,-143.021"/>
+</g>
+<!-- program~test_basic -->
+<g id="node9" class="node"><title>program~test_basic</title>
+<a xlink:href="../program/test_basic.html" xlink:title="test_basic">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1128,-202 1068,-202 1068,-176 1128,-176 1128,-202"/>
+<text text-anchor="middle" x="1098" y="-186.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_basic</text>
+</a>
+</g>
+<!-- module~penf~2&#45;&gt;program~test_basic -->
+<g id="edge46" class="edge"><title>module~penf~2&#45;&gt;program~test_basic</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M981,-233C995.985,-229.518 1030.26,-216.396 1057.86,-205.381"/>
+<polygon fill="#000000" stroke="#000000" points="1059.33,-208.564 1067.3,-201.592 1056.72,-202.068 1059.33,-208.564"/>
+</g>
+<!-- program~test_minimal -->
+<g id="node10" class="node"><title>program~test_minimal</title>
+<a xlink:href="../program/test_minimal.html" xlink:title="test_minimal">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1134,-158 1062,-158 1062,-132 1134,-132 1134,-158"/>
+<text text-anchor="middle" x="1098" y="-142.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_minimal</text>
+</a>
+</g>
+<!-- module~penf~2&#45;&gt;program~test_minimal -->
+<g id="edge48" class="edge"><title>module~penf~2&#45;&gt;program~test_minimal</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M395,-233C655.168,-221.013 724.757,-279.59 981,-233"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M981,-233C1020.5,-223.822 1010.48,-189.822 1044,-167 1046.68,-165.177 1049.53,-163.466 1052.47,-161.867"/>
+<polygon fill="#000000" stroke="#000000" points="1054.07,-164.983 1061.47,-157.409 1050.96,-158.71 1054.07,-164.983"/>
+</g>
+<!-- program~test_string -->
+<g id="node11" class="node"><title>program~test_string</title>
+<a xlink:href="../program/test_string.html" xlink:title="test_string">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1129,-114 1067,-114 1067,-88 1129,-88 1129,-114"/>
+<text text-anchor="middle" x="1098" y="-98.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_string</text>
+</a>
+</g>
+<!-- module~penf~2&#45;&gt;program~test_string -->
+<g id="edge50" class="edge"><title>module~penf~2&#45;&gt;program~test_string</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M981,-57C985.093,-57 1025.01,-72.2861 1057.1,-84.8386"/>
+<polygon fill="#000000" stroke="#000000" points="1056.17,-88.2337 1066.75,-88.6265 1058.72,-81.7169 1056.17,-88.2337"/>
+</g>
+<!-- module~flap_command_line_interface_t -->
+<g id="node12" class="node"><title>module~flap_command_line_interface_t</title>
+<a xlink:href="../module/flap_command_line_interface_t.html" xlink:title="flap_command_line_interface_t">
+<polygon fill="#337ab7" stroke="#337ab7" points="918,-111 756,-111 756,-85 918,-85 918,-111"/>
+<text text-anchor="middle" x="837" y="-95.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flap_command_line_interface_t</text>
+</a>
+</g>
+<!-- module~penf~2&#45;&gt;module~flap_command_line_interface_t -->
+<g id="edge52" class="edge"><title>module~penf~2&#45;&gt;module~flap_command_line_interface_t</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M617,-75C659.479,-75.4327 706.325,-79.786 745.833,-84.5909"/>
+<polygon fill="#000000" stroke="#000000" points="745.619,-88.0913 755.975,-85.8536 746.484,-81.1449 745.619,-88.0913"/>
+</g>
+<!-- program~test_nested -->
+<g id="node13" class="node"><title>program~test_nested</title>
+<a xlink:href="../program/test_nested.html" xlink:title="test_nested">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1132,-70 1064,-70 1064,-44 1132,-44 1132,-70"/>
+<text text-anchor="middle" x="1098" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_nested</text>
+</a>
+</g>
+<!-- module~penf~2&#45;&gt;program~test_nested -->
+<g id="edge54" class="edge"><title>module~penf~2&#45;&gt;program~test_nested</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M981,-57C1005.11,-57 1032.02,-57 1053.94,-57"/>
+<polygon fill="#000000" stroke="#000000" points="1053.95,-60.5001 1063.95,-57 1053.95,-53.5001 1053.95,-60.5001"/>
+</g>
+<!-- program~test_choices_logical -->
+<g id="node14" class="node"><title>program~test_choices_logical</title>
+<a xlink:href="../program/test_choices_logical.html" xlink:title="test_choices_logical">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1152,-26 1044,-26 1044,-1.24345e-14 1152,-3.55271e-15 1152,-26"/>
+<text text-anchor="middle" x="1098" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_choices_logical</text>
+</a>
+</g>
+<!-- module~penf~2&#45;&gt;program~test_choices_logical -->
+<g id="edge56" class="edge"><title>module~penf~2&#45;&gt;program~test_choices_logical</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M166.114,-101.547C177.059,-97.4509 189.934,-93.2861 202,-91 383.355,-56.6385 432.428,-73.1199 617,-75"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M617,-75C778.958,-77.3793 819.025,-57 981,-57"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M981,-57C985.018,-56.8885 1023.58,-42.1658 1055.35,-29.7831"/>
+<polygon fill="#000000" stroke="#000000" points="1056.91,-32.933 1064.95,-26.0341 1054.36,-26.4129 1056.91,-32.933"/>
+</g>
+<!-- program~test_all -->
+<g id="node15" class="node"><title>program~test_all</title>
+<a xlink:href="../program/test_all.html" xlink:title="test_all">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="266,-44 212,-44 212,-18 266,-18 266,-44"/>
+<text text-anchor="middle" x="239" y="-28.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_all</text>
+</a>
+</g>
+<!-- module~penf~2&#45;&gt;program~test_all -->
+<g id="edge58" class="edge"><title>module~penf~2&#45;&gt;program~test_all</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M155.403,-99.889C158.931,-96.9989 162.615,-93.9262 166,-91 182.42,-76.8054 185.207,-71.752 202,-58 205.163,-55.41 208.547,-52.7715 211.937,-50.2083"/>
+<polygon fill="#000000" stroke="#000000" points="214.289,-52.8218 220.25,-44.0628 210.128,-47.1929 214.289,-52.8218"/>
+</g>
+<!-- module~flap_command_line_argument_t&#45;&gt;module~flap_command_line_arguments_group_t -->
+<g id="edge16" class="edge"><title>module~flap_command_line_argument_t&#45;&gt;module~flap_command_line_arguments_group_t</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M471.089,-167.024C490.417,-170.333 511.317,-173.91 531.095,-177.295"/>
+<polygon fill="#000000" stroke="#000000" points="530.563,-180.755 541.01,-178.993 531.744,-173.856 530.563,-180.755"/>
+</g>
+<!-- module~flap_command_line_argument_t&#45;&gt;module~flap_command_line_interface_t -->
+<g id="edge18" class="edge"><title>module~flap_command_line_argument_t&#45;&gt;module~flap_command_line_interface_t</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M478.103,-154.969C519.83,-154.924 571.137,-154.063 617,-151"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M617,-151C678.043,-146.923 746.226,-128.195 790.276,-114.149"/>
+<polygon fill="#000000" stroke="#000000" points="791.408,-117.461 799.843,-111.05 789.251,-110.802 791.408,-117.461"/>
+</g>
+<!-- module~flap -->
+<g id="node16" class="node"><title>module~flap</title>
+<a xlink:href="../module/flap.html" xlink:title="flap">
+<polygon fill="#337ab7" stroke="#337ab7" points="1008,-136 954,-136 954,-110 1008,-110 1008,-136"/>
+<text text-anchor="middle" x="981" y="-120.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flap</text>
+</a>
+</g>
+<!-- module~flap_command_line_argument_t&#45;&gt;module~flap -->
+<g id="edge14" class="edge"><title>module~flap_command_line_argument_t&#45;&gt;module~flap</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M617,-151C714.56,-144.484 740.213,-164.884 837,-151"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M837,-151C873.486,-145.766 914.741,-137.501 943.713,-131.305"/>
+<polygon fill="#000000" stroke="#000000" points="944.764,-134.659 953.799,-129.125 943.285,-127.816 944.764,-134.659"/>
+</g>
+<!-- module~flap_command_line_arguments_group_t&#45;&gt;module~flap_command_line_interface_t -->
+<g id="edge22" class="edge"><title>module~flap_command_line_arguments_group_t&#45;&gt;module~flap_command_line_interface_t</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M683.006,-178.947C695.624,-175.279 708.48,-170.689 720,-165 738.174,-156.025 738.771,-147.679 756,-137 768.703,-129.126 783.236,-121.686 796.453,-115.457"/>
+<polygon fill="#000000" stroke="#000000" points="798.184,-118.513 805.799,-111.146 795.252,-112.156 798.184,-118.513"/>
+</g>
+<!-- module~flap_command_line_arguments_group_t&#45;&gt;module~flap -->
+<g id="edge20" class="edge"><title>module~flap_command_line_arguments_group_t&#45;&gt;module~flap</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M679.357,-178.941C723.278,-170.097 783.543,-158.669 837,-151"/>
+</g>
+<!-- module~flap_utils_m&#45;&gt;module~flap_command_line_argument_t -->
+<g id="edge24" class="edge"><title>module~flap_utils_m&#45;&gt;module~flap_command_line_argument_t</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M274.009,-122.201C292.156,-126.971 314.818,-132.926 335.607,-138.39"/>
+<polygon fill="#000000" stroke="#000000" points="334.756,-141.785 345.317,-140.942 336.535,-135.015 334.756,-141.785"/>
+</g>
+<!-- module~flap_utils_m&#45;&gt;module~flap_command_line_interface_t -->
+<g id="edge26" class="edge"><title>module~flap_utils_m&#45;&gt;module~flap_command_line_interface_t</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M274.055,-114.399C305.704,-115.33 353.529,-115.91 395,-113"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M395,-113C516.134,-104.501 656.294,-100.778 745.738,-99.1738"/>
+<polygon fill="#000000" stroke="#000000" points="745.912,-102.671 755.85,-98.9977 745.79,-95.6725 745.912,-102.671"/>
+</g>
+<!-- module~flap_object_t&#45;&gt;module~flap_command_line_argument_t -->
+<g id="edge28" class="edge"><title>module~flap_object_t&#45;&gt;module~flap_command_line_argument_t</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M275.575,-156.297C283.644,-156.141 292.545,-155.97 301.741,-155.793"/>
+<polygon fill="#000000" stroke="#000000" points="301.879,-159.292 311.81,-155.6 301.745,-152.293 301.879,-159.292"/>
+</g>
+<!-- module~flap_object_t&#45;&gt;module~flap_command_line_arguments_group_t -->
+<g id="edge30" class="edge"><title>module~flap_object_t&#45;&gt;module~flap_command_line_arguments_group_t</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M275.833,-168.134C287.317,-171.186 300.094,-174.158 312,-176 375.15,-185.772 446.435,-189.889 504.202,-191.51"/>
+<polygon fill="#000000" stroke="#000000" points="504.369,-195.015 514.456,-191.776 504.55,-188.018 504.369,-195.015"/>
+</g>
+<!-- module~flap_object_t&#45;&gt;module~flap_command_line_interface_t -->
+<g id="edge32" class="edge"><title>module~flap_object_t&#45;&gt;module~flap_command_line_interface_t</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M272.109,-143.896C303.24,-132.487 351.439,-117.142 395,-113"/>
+</g>
+<!-- module~flap_command_line_interface_t&#45;&gt;module~flap -->
+<g id="edge34" class="edge"><title>module~flap_command_line_interface_t&#45;&gt;module~flap</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M911.952,-111.013C922.993,-112.929 933.942,-114.83 943.756,-116.534"/>
+<polygon fill="#000000" stroke="#000000" points="943.461,-120.035 953.912,-118.297 944.658,-113.138 943.461,-120.035"/>
+</g>
+<!-- module~flap&#45;&gt;program~test_hidden -->
+<g id="edge2" class="edge"><title>module~flap&#45;&gt;program~test_hidden</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M987.341,-136.122C997.091,-155.053 1017.45,-190.046 1044,-211 1047.31,-213.611 1050.97,-215.954 1054.78,-218.048"/>
+<polygon fill="#000000" stroke="#000000" points="1053.32,-221.233 1063.84,-222.489 1056.4,-214.947 1053.32,-221.233"/>
+</g>
+<!-- module~flap&#45;&gt;program~test_basic -->
+<g id="edge8" class="edge"><title>module~flap&#45;&gt;program~test_basic</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M997.453,-136.019C1009.8,-145.399 1027.36,-157.946 1044,-167 1048.5,-169.447 1053.33,-171.786 1058.18,-173.964"/>
+<polygon fill="#000000" stroke="#000000" points="1056.89,-177.219 1067.46,-177.94 1059.65,-170.785 1056.89,-177.219"/>
+</g>
+<!-- module~flap&#45;&gt;program~test_minimal -->
+<g id="edge6" class="edge"><title>module~flap&#45;&gt;program~test_minimal</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1008.14,-128.103C1020.97,-130.516 1036.66,-133.467 1051.33,-136.224"/>
+<polygon fill="#000000" stroke="#000000" points="1050.79,-139.684 1061.26,-138.092 1052.08,-132.804 1050.79,-139.684"/>
+</g>
+<!-- module~flap&#45;&gt;program~test_string -->
+<g id="edge10" class="edge"><title>module~flap&#45;&gt;program~test_string</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1008.14,-117.897C1022.53,-115.19 1040.53,-111.806 1056.63,-108.779"/>
+<polygon fill="#000000" stroke="#000000" points="1057.7,-112.14 1066.88,-106.852 1056.4,-105.261 1057.7,-112.14"/>
+</g>
+<!-- module~flap&#45;&gt;program~test_nested -->
+<g id="edge4" class="edge"><title>module~flap&#45;&gt;program~test_nested</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M997.453,-109.981C1009.8,-100.601 1027.36,-88.0535 1044,-79 1047.31,-77.2009 1050.79,-75.4603 1054.34,-73.799"/>
+<polygon fill="#000000" stroke="#000000" points="1056.05,-76.8666 1063.76,-69.6017 1053.2,-70.4718 1056.05,-76.8666"/>
+</g>
+<!-- module~flap&#45;&gt;program~test_choices_logical -->
+<g id="edge12" class="edge"><title>module~flap&#45;&gt;program~test_choices_logical</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M987.341,-109.878C997.091,-90.9472 1017.45,-55.9538 1044,-35 1045.78,-33.5986 1047.65,-32.2743 1049.6,-31.0242"/>
+<polygon fill="#000000" stroke="#000000" points="1051.5,-33.9715 1058.49,-26.0103 1048.06,-27.8744 1051.5,-33.9715"/>
+</g>
+</g>
+</svg>
+</div>
+                <script>var panmodulepenf_stringify2UsedByGraph = svgPanZoom('#modulepenf_stringify2UsedByGraph', {
+                    zoomEnabled: true,
+                    controlIconsEnabled: true,
+                    fit: true,
+                    center: true,});
+                    </script>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+Nodes of different colours represent the following:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph1" class="graph" transform="scale(0.817602 0.817602) rotate(0) translate(4 30)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-30 781,-30 781,5 -4,5"/>
+<!-- Module -->
+<g id="node1" class="node"><title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-26 2.13163e-14,-26 0,-1.24345e-14 54,-3.55271e-15 54,-26"/>
+<text text-anchor="middle" x="27" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node"><title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-26 72,-26 72,-1.24345e-14 138,-3.55271e-15 138,-26"/>
+<text text-anchor="middle" x="105" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Type -->
+<g id="node3" class="node"><title>Type</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="210,-26 156,-26 156,-1.24345e-14 210,-3.55271e-15 210,-26"/>
+<text text-anchor="middle" x="183" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
+</g>
+<!-- Subroutine -->
+<g id="node4" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="292,-26 228,-26 228,-1.24345e-14 292,-3.55271e-15 292,-26"/>
+<text text-anchor="middle" x="260" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node5" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="364,-26 310,-26 310,-1.24345e-14 364,-3.55271e-15 364,-26"/>
+<text text-anchor="middle" x="337" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node6" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="436,-26 382,-26 382,-1.24345e-14 436,-3.55271e-15 436,-26"/>
+<text text-anchor="middle" x="409" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node7" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="590,-26 454,-26 454,-1.24345e-14 590,-3.55271e-15 590,-26"/>
+<text text-anchor="middle" x="522" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node8" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="662,-26 608,-26 608,-1.24345e-14 662,-3.55271e-15 662,-26"/>
+<text text-anchor="middle" x="635" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node9" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="776,-26 680,-26 680,-1.24345e-14 776,-3.55271e-15 776,-26"/>
+<text text-anchor="middle" x="728" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+Where possible, edges connecting nodes are given different colours to make them
+easier to distinguish in large graphs.
+<h5>Module Graph</h5>
+<p>Solid arrows point from a parent (sub)module to the submodule which is
+descended from it. Dashed arrows point from a module being used to the
+module using it.</p>
+<h5>Type Graph</h5>
+<p>Solid arrows point from one derived type to another which extends
+(inherits from) it. Dashed arrows point from a derived type to another
+type containing it as a components, with a label listing the name(s) of
+said component(s).</p>
+<h5>Call Graph</h5>
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+    <br>
+    
+
+    
+    
+    
+    
+    
+    <section>
+	 <h2>Interfaces</h2>
+	 
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-str"></span><h3>public interface <a href='../interface/str.html'>str</a>
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+    <p>Convert number (real and integer) to string (number to string type casting).</p>
+  </div>
+  
+  <ul class="list-group">
+  
+  
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/strf_r8p.html'>strf_R8P</a>(fm, n) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DR8P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/str_r8p.html'>str_R8P</a>(n, no_sign) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DR8P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/strf_r4p.html'>strf_R4P</a>(fm, n) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DR4P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/str_r4p.html'>str_R4P</a>(n, no_sign) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DR4P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/strf_i8p.html'>strf_I8P</a>(fm, n) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI8P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/str_i8p.html'>str_I8P</a>(n, no_sign) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI8P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/strf_i4p.html'>strf_I4P</a>(fm, n) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI4P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/str_i4p.html'>str_I4P</a>(n, no_sign) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI4P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Converting integer to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/strf_i2p.html'>strf_I2P</a>(fm, n) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I2P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI2P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/str_i2p.html'>str_I2P</a>(n, no_sign) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I2P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI2P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/strf_i1p.html'>strf_I1P</a>(fm, n) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI1P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/str_i1p.html'>str_I1P</a>(n, no_sign) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI1P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/str_bol.html'>str_bol</a>(n) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Logical to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=1)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert logical to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/str_a_r8p.html'>str_a_R8P</a>(n, no_sign, delimiters) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Real array to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real array to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/str_a_r4p.html'>str_a_R4P</a>(n, no_sign, delimiters) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Real array to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real array to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/str_a_i8p.html'>str_a_I8P</a>(n, no_sign, delimiters) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Integer array to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer array to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/str_a_i4p.html'>str_a_I4P</a>(n, no_sign, delimiters) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Integer array to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer array to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/str_a_i2p.html'>str_a_I2P</a>(n, no_sign, delimiters) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I2P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Integer array to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer array to string.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/str_a_i1p.html'>str_a_I1P</a>(n, no_sign, delimiters) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Integer array to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer array to string.</p>
+        
+
+    </li>
+  
+  
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-strz"></span><h3>public interface <a href='../interface/strz.html'>strz</a>
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+    <p>Convert integer, to string, prefixing with the right number of zeros (integer to string type casting with zero padding).</p>
+  </div>
+  
+  <ul class="list-group">
+  
+  
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/strz_i8p.html'>strz_I8P</a>(n, nz_pad) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>nz_pad</strong></td><td><p>Number of zeros padding.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI8P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Converting integer to string, prefixing with the right number of zeros.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/strz_i4p.html'>strz_I4P</a>(n, nz_pad) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>nz_pad</strong></td><td><p>Number of zeros padding.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI4P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string, prefixing with the right number of zeros.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/strz_i2p.html'>strz_I2P</a>(n, nz_pad) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I2P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>nz_pad</strong></td><td><p>Number of zeros padding.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI2P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string, prefixing with the right number of zeros.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/strz_i1p.html'>strz_I1P</a>(n, nz_pad) result(str)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>nz_pad</strong></td><td><p>Number of zeros padding.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI1P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string, prefixing with the right number of zeros.</p>
+        
+
+    </li>
+  
+  
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-cton"></span><h3>public interface <a href='../interface/cton.html'>cton</a>
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+    <p>Convert string to number (real and integer, string to number type casting).</p>
+  </div>
+  
+  <ul class="list-group">
+  
+  
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private function <a href='../proc/ctor_r8p.html'>ctor_R8P</a>(str, knd, pref, error) result(n)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>str</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>pref</strong></td><td><p>Prefixing string.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>error</strong></td><td><p>Error trapping flag: 0 no errors, &gt;0 error occurs.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R8P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert string to real.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private function <a href='../proc/ctor_r4p.html'>ctor_R4P</a>(str, knd, pref, error) result(n)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>str</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>pref</strong></td><td><p>Prefixing string.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>error</strong></td><td><p>Error trapping flag: 0 no errors, &gt;0 error occurs.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R4P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert string to real.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private function <a href='../proc/ctoi_i8p.html'>ctoi_I8P</a>(str, knd, pref, error) result(n)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>str</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>pref</strong></td><td><p>Prefixing string.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>error</strong></td><td><p>Error trapping flag: 0 no errors, &gt;0 error occurs.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I8P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert string to integer.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private function <a href='../proc/ctoi_i4p.html'>ctoi_I4P</a>(str, knd, pref, error) result(n)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>str</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>pref</strong></td><td><p>Prefixing string.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>error</strong></td><td><p>Error trapping flag: 0 no errors, &gt;0 error occurs.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I4P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert string to integer.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private function <a href='../proc/ctoi_i2p.html'>ctoi_I2P</a>(str, knd, pref, error) result(n)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>str</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I2P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>pref</strong></td><td><p>Prefixing string.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>error</strong></td><td><p>Error trapping flag: 0 no errors, &gt;0 error occurs.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I2P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert string to integer.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private function <a href='../proc/ctoi_i1p.html'>ctoi_I1P</a>(str, knd, pref, error) result(n)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>str</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>pref</strong></td><td><p>Prefixing string.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>error</strong></td><td><p>Error trapping flag: 0 no errors, &gt;0 error occurs.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I1P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert string to integer.</p>
+        
+
+    </li>
+  
+  
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-bstr"></span><h3>public interface <a href='../interface/bstr.html'>bstr</a>
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+    <p>Convert number (real and integer) to bit-string (number to bit-string type casting).</p>
+  </div>
+  
+  <ul class="list-group">
+  
+  
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/bstr_r8p.html'>bstr_R8P</a>(n) result(bstr)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=64)
+  </small></h4>
+  <p>Returned bit-string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real to string of bits.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/bstr_r4p.html'>bstr_R4P</a>(n) result(bstr)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=32)
+  </small></h4>
+  <p>Returned bit-string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real to string of bits.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/bstr_i8p.html'>bstr_I8P</a>(n) result(bstr)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=64)
+  </small></h4>
+  <p>Returned bit-string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string of bits.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/bstr_i4p.html'>bstr_I4P</a>(n) result(bstr)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=32)
+  </small></h4>
+  <p>Returned bit-string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string of bits.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/bstr_i2p.html'>bstr_I2P</a>(n) result(bstr)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I2P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=16)
+  </small></h4>
+  <p>Returned bit-string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string of bits.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/bstr_i1p.html'>bstr_I1P</a>(n) result(bstr)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=8)
+  </small></h4>
+  <p>Returned bit-string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string of bits.</p>
+        
+
+    </li>
+  
+  
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-bcton"></span><h3>public interface <a href='../interface/bcton.html'>bcton</a>
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+    <p>Convert bit-string to number (real and integer, bit-string to number type casting).</p>
+  </div>
+  
+  <ul class="list-group">
+  
+  
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/bctor_r8p.html'>bctor_R8P</a>(bstr, knd) result(n)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bstr</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R8P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert bit-string to real.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/bctor_r4p.html'>bctor_R4P</a>(bstr, knd) result(n)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bstr</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R4P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert bit-string to real.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/bctoi_i8p.html'>bctoi_I8P</a>(bstr, knd) result(n)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bstr</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I8P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert bit-string to integer.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/bctoi_i4p.html'>bctoi_I4P</a>(bstr, knd) result(n)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bstr</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I4P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert bit-string to integer.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/bctoi_i2p.html'>bctoi_I2P</a>(bstr, knd) result(n)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bstr</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I2P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I2P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert bit-string to integer.</p>
+        
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private elemental function <a href='../proc/bctoi_i1p.html'>bctoi_I1P</a>(bstr, knd) result(n)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bstr</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I1P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert bit-string to integer.</p>
+        
+
+    </li>
+  
+  
+  </ul>
+</div>
+
+    
+    </section>
+	<br>
+    
+
+    
+    
+    
+    
+     
+    <section>
+    <h2>Functions</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strf_r16p"></span><h3>
+private elemental function <a href='../proc/strf_r16p.html'>strf_R16P</a>(fm, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R16P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DR16P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strf_r8p"></span><h3>
+private elemental function <a href='../proc/strf_r8p.html'>strf_R8P</a>(fm, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DR8P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strf_r4p"></span><h3>
+private elemental function <a href='../proc/strf_r4p.html'>strf_R4P</a>(fm, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DR4P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strf_i8p"></span><h3>
+private elemental function <a href='../proc/strf_i8p.html'>strf_I8P</a>(fm, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI8P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strf_i4p"></span><h3>
+private elemental function <a href='../proc/strf_i4p.html'>strf_I4P</a>(fm, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI4P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strf_i2p"></span><h3>
+private elemental function <a href='../proc/strf_i2p.html'>strf_I2P</a>(fm, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I2P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI2P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strf_i1p"></span><h3>
+private elemental function <a href='../proc/strf_i1p.html'>strf_I1P</a>(fm, n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fm</strong></td><td><p>Format different from the standard for the kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI1P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_r16p"></span><h3>
+private elemental function <a href='../proc/str_r16p.html'>str_R16P</a>(n, no_sign) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R16P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DR16P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_r8p"></span><h3>
+private elemental function <a href='../proc/str_r8p.html'>str_R8P</a>(n, no_sign) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DR8P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_r4p"></span><h3>
+private elemental function <a href='../proc/str_r4p.html'>str_R4P</a>(n, no_sign) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DR4P)
+  </small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_i8p"></span><h3>
+private elemental function <a href='../proc/str_i8p.html'>str_I8P</a>(n, no_sign) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI8P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_i4p"></span><h3>
+private elemental function <a href='../proc/str_i4p.html'>str_I4P</a>(n, no_sign) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI4P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Converting integer to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_i2p"></span><h3>
+private elemental function <a href='../proc/str_i2p.html'>str_I2P</a>(n, no_sign) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I2P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI2P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_i1p"></span><h3>
+private elemental function <a href='../proc/str_i1p.html'>str_I1P</a>(n, no_sign) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI1P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_bol"></span><h3>
+private elemental function <a href='../proc/str_bol.html'>str_bol</a>(n) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Logical to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=1)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert logical to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_a_r16p"></span><h3>
+private pure function <a href='../proc/str_a_r16p.html'>str_a_R16P</a>(n, no_sign, delimiters) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R16P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Real array to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Converting real array to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_a_r8p"></span><h3>
+private pure function <a href='../proc/str_a_r8p.html'>str_a_R8P</a>(n, no_sign, delimiters) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Real array to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real array to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_a_r4p"></span><h3>
+private pure function <a href='../proc/str_a_r4p.html'>str_a_R4P</a>(n, no_sign, delimiters) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Real array to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real array to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_a_i8p"></span><h3>
+private pure function <a href='../proc/str_a_i8p.html'>str_a_I8P</a>(n, no_sign, delimiters) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Integer array to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer array to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_a_i4p"></span><h3>
+private pure function <a href='../proc/str_a_i4p.html'>str_a_I4P</a>(n, no_sign, delimiters) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Integer array to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer array to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_a_i2p"></span><h3>
+private pure function <a href='../proc/str_a_i2p.html'>str_a_I2P</a>(n, no_sign, delimiters) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I2P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Integer array to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer array to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-str_a_i1p"></span><h3>
+private pure function <a href='../proc/str_a_i1p.html'>str_a_I1P</a>(n, no_sign, delimiters) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong>(:)</td><td><p>Integer array to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>no_sign</strong></td><td><p>Flag for leaving out the sign.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>delimiters</strong>(1:2)</td><td><p>Eventual delimiters of array values.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=:),
+  allocatable</small></h4>
+  <p>Returned string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer array to string.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strz_i8p"></span><h3>
+private elemental function <a href='../proc/strz_i8p.html'>strz_I8P</a>(n, nz_pad) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>nz_pad</strong></td><td><p>Number of zeros padding.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI8P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Converting integer to string, prefixing with the right number of zeros.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strz_i4p"></span><h3>
+private elemental function <a href='../proc/strz_i4p.html'>strz_I4P</a>(n, nz_pad) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>nz_pad</strong></td><td><p>Number of zeros padding.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI4P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string, prefixing with the right number of zeros.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strz_i2p"></span><h3>
+private elemental function <a href='../proc/strz_i2p.html'>strz_I2P</a>(n, nz_pad) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I2P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>nz_pad</strong></td><td><p>Number of zeros padding.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI2P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string, prefixing with the right number of zeros.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strz_i1p"></span><h3>
+private elemental function <a href='../proc/strz_i1p.html'>strz_I1P</a>(n, nz_pad) result(str)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Integer to be converted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>nz_pad</strong></td><td><p>Number of zeros padding.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=DI1P)
+  </small></h4>
+  <p>Returned string containing input number plus padding zeros.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string, prefixing with the right number of zeros.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-ctor_r16p"></span><h3>
+private function <a href='../proc/ctor_r16p.html'>ctor_R16P</a>(str, knd, pref, error) result(n)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>str</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R16P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>pref</strong></td><td><p>Prefixing string.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>error</strong></td><td><p>Error trapping flag: 0 no errors, &gt;0 error occurs.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R16P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert string to real.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-ctor_r8p"></span><h3>
+private function <a href='../proc/ctor_r8p.html'>ctor_R8P</a>(str, knd, pref, error) result(n)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>str</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>pref</strong></td><td><p>Prefixing string.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>error</strong></td><td><p>Error trapping flag: 0 no errors, &gt;0 error occurs.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R8P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert string to real.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-ctor_r4p"></span><h3>
+private function <a href='../proc/ctor_r4p.html'>ctor_R4P</a>(str, knd, pref, error) result(n)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>str</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>pref</strong></td><td><p>Prefixing string.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>error</strong></td><td><p>Error trapping flag: 0 no errors, &gt;0 error occurs.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R4P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert string to real.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-ctoi_i8p"></span><h3>
+private function <a href='../proc/ctoi_i8p.html'>ctoi_I8P</a>(str, knd, pref, error) result(n)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>str</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>pref</strong></td><td><p>Prefixing string.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>error</strong></td><td><p>Error trapping flag: 0 no errors, &gt;0 error occurs.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I8P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert string to integer.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-ctoi_i4p"></span><h3>
+private function <a href='../proc/ctoi_i4p.html'>ctoi_I4P</a>(str, knd, pref, error) result(n)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>str</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>pref</strong></td><td><p>Prefixing string.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>error</strong></td><td><p>Error trapping flag: 0 no errors, &gt;0 error occurs.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I4P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert string to integer.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-ctoi_i2p"></span><h3>
+private function <a href='../proc/ctoi_i2p.html'>ctoi_I2P</a>(str, knd, pref, error) result(n)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>str</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I2P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>pref</strong></td><td><p>Prefixing string.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>error</strong></td><td><p>Error trapping flag: 0 no errors, &gt;0 error occurs.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I2P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert string to integer.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-ctoi_i1p"></span><h3>
+private function <a href='../proc/ctoi_i1p.html'>ctoi_I1P</a>(str, knd, pref, error) result(n)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>str</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>pref</strong></td><td><p>Prefixing string.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>error</strong></td><td><p>Error trapping flag: 0 no errors, &gt;0 error occurs.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I1P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert string to integer.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bstr_r16p"></span><h3>
+private elemental function <a href='../proc/bstr_r16p.html'>bstr_R16P</a>(n) result(bstr)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R16P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=128)
+  </small></h4>
+  <p>Returned bit-string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real to string of bits.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bstr_r8p"></span><h3>
+private elemental function <a href='../proc/bstr_r8p.html'>bstr_R8P</a>(n) result(bstr)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=64)
+  </small></h4>
+  <p>Returned bit-string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real to string of bits.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bstr_r4p"></span><h3>
+private elemental function <a href='../proc/bstr_r4p.html'>bstr_R4P</a>(n) result(bstr)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=32)
+  </small></h4>
+  <p>Returned bit-string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert real to string of bits.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bstr_i8p"></span><h3>
+private elemental function <a href='../proc/bstr_i8p.html'>bstr_I8P</a>(n) result(bstr)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=64)
+  </small></h4>
+  <p>Returned bit-string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string of bits.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bstr_i4p"></span><h3>
+private elemental function <a href='../proc/bstr_i4p.html'>bstr_I4P</a>(n) result(bstr)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=32)
+  </small></h4>
+  <p>Returned bit-string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string of bits.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bstr_i2p"></span><h3>
+private elemental function <a href='../proc/bstr_i2p.html'>bstr_I2P</a>(n) result(bstr)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I2P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=16)
+  </small></h4>
+  <p>Returned bit-string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string of bits.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bstr_i1p"></span><h3>
+private elemental function <a href='../proc/bstr_i1p.html'>bstr_I1P</a>(n) result(bstr)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Real to be converted.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=8)
+  </small></h4>
+  <p>Returned bit-string containing input number.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert integer to string of bits.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bctor_r16p"></span><h3>
+private elemental function <a href='../proc/bctor_r16p.html'>bctor_R16P</a>(bstr, knd) result(n)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bstr</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R16P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R16P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert bit-string to real.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bctor_r8p"></span><h3>
+private elemental function <a href='../proc/bctor_r8p.html'>bctor_R8P</a>(bstr, knd) result(n)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bstr</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R8P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert bit-string to real.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bctor_r4p"></span><h3>
+private elemental function <a href='../proc/bctor_r4p.html'>bctor_R4P</a>(bstr, knd) result(n)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bstr</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R4P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert bit-string to real.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bctoi_i8p"></span><h3>
+private elemental function <a href='../proc/bctoi_i8p.html'>bctoi_I8P</a>(bstr, knd) result(n)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bstr</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I8P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I8P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert bit-string to integer.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bctoi_i4p"></span><h3>
+private elemental function <a href='../proc/bctoi_i4p.html'>bctoi_I4P</a>(bstr, knd) result(n)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bstr</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I4P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I4P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert bit-string to integer.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bctoi_i2p"></span><h3>
+private elemental function <a href='../proc/bctoi_i2p.html'>bctoi_I2P</a>(bstr, knd) result(n)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bstr</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I2P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I2P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert bit-string to integer.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bctoi_i1p"></span><h3>
+private elemental function <a href='../proc/bctoi_i1p.html'>bctoi_I1P</a>(bstr, knd) result(n)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bstr</strong></td><td><p>String containing input number.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I1P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>knd</strong></td><td><p>Number kind.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=I1P)
+  </small></h4>
+  <p>Number returned.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert bit-string to integer.</p>
+        
+
+  </div>
+  </div>
+
+    
+    </section>
+    <br>
+    
+
+    
+    
+    
+    </div>
+  </div>
+
+    <hr>
+    <footer>
+      <div class="row">
+        <div class="col-md-4">&copy; 2016 </div>
+        <div class="col-md-4"><span class="text-center"> FLAP was developed by Stefano Zaghi</span></div>
+        <div class="col-md-4">
+          <span class="pull-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </span>
+        </div>
+      </div>
+      <br>
+    </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
