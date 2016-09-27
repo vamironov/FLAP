@@ -149,14 +149,6 @@
 <li>FLAP is OOP designed;</li>
 <li>FLAP is a Free, Open Source Project.</li>
 </ul>
-<h4 id="table-of-contents"><a class="toclink" href="#table-of-contents">Table of Contents</a></h4>
-<ul>
-<li><a href="#what-is-flap">What is FLAP?</a></li>
-<li><a href="#main-features">Main features</a></li>
-<li><a href="#copyrights">Copyrights</a></li>
-<li><a href="#documentation">Documentation</a></li>
-<li><a href="#a-taste-of-flap">A Taste of FLAP</a></li>
-</ul>
 <h4 id="issues"><a class="toclink" href="#issues">Issues</a></h4>
 <p><a href=""><img alt="GitHub issues" src="https://img.shields.io/github/issues/szaghi/FLAP.svg"></a>
 <a href="https://waffle.io/szaghi/FLAP"><img alt="Ready in backlog" src="https://badge.waffle.io/szaghi/FLAP.png?label=ready&amp;title=Ready"></a>
@@ -169,6 +161,9 @@
 <a href=""><img alt="Compiler" src="https://img.shields.io/badge/g95-not%20tested-yellow.svg"></a>
 <a href=""><img alt="Compiler" src="https://img.shields.io/badge/NAG-not%20tested-yellow.svg"></a>
 <a href=""><img alt="Compiler" src="https://img.shields.io/badge/PGI-not%20tested-yellow.svg"></a></p>
+<hr>
+<p>| <a href="#what-is-flap">What is FLAP?</a> | <a href="#main-features">Main features</a> | <a href="#copyrights">Copyrights</a> | <a href="#documentation">Documentation</a> | <a href="#download-and-compile">Download &amp; Compile</a> |</p>
+<hr>
 <h2 id="what-is-flap"><a class="toclink" href="#what-is-flap">What is FLAP?</a></h2>
 <p>Modern Fortran standards (2003+) have introduced support for Command Line Arguments (CLA), thus it is possible to construct nice and effective Command Line Interfaces (CLI). FLAP is a small library designed to simplify the (repetitive) construction of complicated CLI in pure Fortran (standard 2003+). FLAP has been inspired by the python module <em>argparse</em> trying to mimic it. Once you have defined the arguments that are required by means of a user-friendly method of the CLI, FLAP will parse the CLAs for you. It is worthy of note that FLAP, as <em>argparse</em>, also automatically generates help and usage messages and issues errors when users give the program invalid arguments.</p>
 <p>Go to <a href="#top">Top</a></p>
@@ -222,82 +217,56 @@
 <h2 id="documentation"><a class="toclink" href="#documentation">Documentation</a></h2>
 <p>Besides this README file the FLAP documentation is contained into its own <a href="https://github.com/szaghi/FLAP/wiki">wiki</a>. Detailed documentation of the API is contained into the <a href="http://szaghi.github.io/FLAP/index.html">GitHub Pages</a> that can also be created locally by means of <a href="https://github.com/cmacmackin/ford">ford tool</a>.</p>
 <h3 id="a-taste-of-flap"><a class="toclink" href="#a-taste-of-flap">A Taste of FLAP</a></h3>
-<p>Running the provided test program, <code>test_basic -h</code>, a taste of FLAP is served:</p>
-<div class="codehilite"><pre><span></span>usage:  test_basic [value] --string value [--integer value] [--real value] [--boolean] [--boolean_val value] [--integer_list value#1 value#2 value#3] [--help] [--version]
+<p>A minimal <em>plate</em>:</p>
+<div class="codehilite"><pre><span></span><span class="k">program </span><span class="n">minimal</span>
+<span class="k">type</span><span class="p">(</span><span class="n">command_line_interface</span><span class="p">)</span> <span class="kd">::</span> <span class="n">cli</span>    <span class="c">! Command Line Interface (CLI).</span>
+<span class="kt">character</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">string</span> <span class="c">! String value.</span>
+<span class="kt">integer</span>                      <span class="kd">::</span> <span class="n">error</span>  <span class="c">! Error trapping flag.</span>
 
-Toy program for testing FLAP
+<span class="k">call </span><span class="n">cli</span><span class="p">%</span><span class="n">init</span><span class="p">(</span><span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;minimal FLAP example&#39;</span><span class="p">)</span>
+<span class="k">call </span><span class="n">cli</span><span class="p">%</span><span class="n">add</span><span class="p">(</span><span class="n">switch</span><span class="o">=</span><span class="s1">&#39;--string&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+             <span class="n">switch_ab</span><span class="o">=</span><span class="s1">&#39;-s&#39;</span><span class="p">,</span>    <span class="p">&amp;</span>
+             <span class="n">help</span><span class="o">=</span><span class="s1">&#39;a string&#39;</span><span class="p">,</span>   <span class="p">&amp;</span>
+             <span class="n">required</span><span class="o">=</span><span class="p">.</span><span class="n">true</span><span class="p">.,</span>   <span class="p">&amp;</span>
+             <span class="n">act</span><span class="o">=</span><span class="s1">&#39;store&#39;</span><span class="p">,</span>       <span class="p">&amp;</span>
+             <span class="n">error</span><span class="o">=</span><span class="n">error</span><span class="p">)</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="o">/=</span><span class="mi">0</span><span class="p">)</span> <span class="k">stop</span>
+<span class="k">call </span><span class="n">cli</span><span class="p">%</span><span class="n">get</span><span class="p">(</span><span class="n">switch</span><span class="o">=</span><span class="s1">&#39;-s&#39;</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="n">string</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">error</span><span class="p">)</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="o">/=</span><span class="mi">0</span><span class="p">)</span> <span class="k">stop</span>
+<span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="n">cli</span><span class="p">%</span><span class="n">progname</span><span class="o">//</span><span class="s1">&#39; has been called with the following argument:&#39;</span>
+<span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;String = &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">string</span><span class="p">))</span>
+<span class="n">endprogram</span> <span class="n">minimal</span>
+</pre></div>
+
+
+<p>That <em>built and run</em> provides:</p>
+<div class="codehilite"><pre><span></span>→ ./minimal
+./minimal: error: named option <span class="s2">&quot;--string&quot;</span> is required!
+
+usage:  ./exe/test_minimal --string value <span class="o">[</span>--help<span class="o">]</span> <span class="o">[</span>--version<span class="o">]</span>
+
+minimal FLAP example
 
 Required switches:
    --string value, -s value
-          String input
+    a string
 
 Optional switches:
-   value
-          1-th argument
-          default value 1.0
-          Positional real input
-   --integer value, -i value, value in: (1,3,5)
-          default value 1
-          Integer input with fixed range
-   --real value, -r value
-          default value 1.0
-          Real input
-   --boolean, -b
-          default value .false.
-          Boolean input
-   --boolean_val value, -bv value
-          default value .true.
-          Valued boolean input
-   --integer_list value#1 value#2 value#3, -il value#1 value#2 value#3
-          default value 1 8 32
-          Integer list input
    --help, -h
-          Print this help message
+    Print this <span class="nb">help</span> message
    --version, -v
-          Print version
-
-Examples:
-   test_basic -s &#39;Hello FLAP&#39;
-   test_basic -s &#39;Hello FLAP&#39; -i -2 # printing error...
-   test_basic -s &#39;Hello FLAP&#39; -i 3 -r 33.d0
-   test_basic -s &#39;Hello FLAP&#39; --integer_list 10 -3 87
-   test_basic 33.0 -s &#39;Hello FLAP&#39; -i 5
-   test_basic --string &#39;Hello FLAP&#39; --boolean
+    Print version
 </pre></div>
 
 
-<p>Not so bad for just a very few statements as the following:</p>
-<div class="codehilite"><pre><span></span><span class="c">! initializing Command Line Interface</span>
-<span class="k">call </span><span class="n">cli</span><span class="p">%</span><span class="n">init</span><span class="p">(</span><span class="n">progname</span>    <span class="o">=</span> <span class="s1">&#39;test_basic&#39;</span><span class="p">,</span>                                           <span class="p">&amp;</span>
-              <span class="n">version</span>     <span class="o">=</span> <span class="s1">&#39;v2.1.5&#39;</span><span class="p">,</span>                                               <span class="p">&amp;</span>
-              <span class="n">authors</span>     <span class="o">=</span> <span class="s1">&#39;Stefano Zaghi&#39;</span><span class="p">,</span>                                        <span class="p">&amp;</span>
-              <span class="n">license</span>     <span class="o">=</span> <span class="s1">&#39;MIT&#39;</span><span class="p">,</span>                                                  <span class="p">&amp;</span>
-              <span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Toy program for testing FLAP&#39;</span><span class="p">,</span>                         <span class="p">&amp;</span>
-              <span class="n">examples</span>    <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;test_basic -s &#39;Hello FLAP&#39;                          &quot;</span><span class="p">,&amp;</span>
-                             <span class="s2">&quot;test_basic -s &#39;Hello FLAP&#39; -i -2 # printing error...&quot;</span><span class="p">,&amp;</span>
-                             <span class="s2">&quot;test_basic -s &#39;Hello FLAP&#39; -i 3 -r 33.d0            &quot;</span><span class="p">,&amp;</span>
-                             <span class="s2">&quot;test_basic -s &#39;Hello FLAP&#39; --integer_list 10 -3 87  &quot;</span><span class="p">,&amp;</span>
-                             <span class="s2">&quot;test_basic 33.0 -s &#39;Hello FLAP&#39; -i 5                &quot;</span><span class="p">,&amp;</span>
-                             <span class="s2">&quot;test_basic --string &#39;Hello FLAP&#39; --boolean          &quot;</span><span class="p">])</span>
-<span class="c">! setting Command Line Argumenst</span>
-<span class="k">call </span><span class="n">cli</span><span class="p">%</span><span class="n">add</span><span class="p">(</span><span class="n">switch</span><span class="o">=</span><span class="s1">&#39;--string&#39;</span><span class="p">,</span><span class="n">switch_ab</span><span class="o">=</span><span class="s1">&#39;-s&#39;</span><span class="p">,</span><span class="n">help</span><span class="o">=</span><span class="s1">&#39;String input&#39;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="p">.</span><span class="n">true</span><span class="p">.,</span><span class="n">act</span><span class="o">=</span><span class="s1">&#39;store&#39;</span><span class="p">,</span><span class="n">error</span><span class="o">=</span><span class="n">error</span><span class="p">)</span>
-<span class="k">call </span><span class="n">cli</span><span class="p">%</span><span class="n">add</span><span class="p">(</span><span class="n">switch</span><span class="o">=</span><span class="s1">&#39;--integer&#39;</span><span class="p">,</span><span class="n">switch_ab</span><span class="o">=</span><span class="s1">&#39;-i&#39;</span><span class="p">,</span><span class="n">help</span><span class="o">=</span><span class="s1">&#39;Integer input with fixed range&#39;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="p">.</span><span class="n">false</span><span class="p">.,</span><span class="n">act</span><span class="o">=</span><span class="s1">&#39;store&#39;</span><span class="p">,&amp;</span>
-             <span class="n">def</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="n">choices</span><span class="o">=</span><span class="s1">&#39;1,3,5&#39;</span><span class="p">,</span><span class="n">error</span><span class="o">=</span><span class="n">error</span><span class="p">)</span>
-<span class="k">call </span><span class="n">cli</span><span class="p">%</span><span class="n">add</span><span class="p">(</span><span class="n">switch</span><span class="o">=</span><span class="s1">&#39;--real&#39;</span><span class="p">,</span><span class="n">switch_ab</span><span class="o">=</span><span class="s1">&#39;-r&#39;</span><span class="p">,</span><span class="n">help</span><span class="o">=</span><span class="s1">&#39;Real input&#39;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="p">.</span><span class="n">false</span><span class="p">.,</span><span class="n">act</span><span class="o">=</span><span class="s1">&#39;store&#39;</span><span class="p">,</span><span class="n">def</span><span class="o">=</span><span class="s1">&#39;1.0&#39;</span><span class="p">,</span><span class="n">error</span><span class="o">=</span><span class="n">error</span><span class="p">)</span>
-<span class="k">call </span><span class="n">cli</span><span class="p">%</span><span class="n">add</span><span class="p">(</span><span class="n">switch</span><span class="o">=</span><span class="s1">&#39;--boolean&#39;</span><span class="p">,</span><span class="n">switch_ab</span><span class="o">=</span><span class="s1">&#39;-b&#39;</span><span class="p">,</span><span class="n">help</span><span class="o">=</span><span class="s1">&#39;Boolean input&#39;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="p">.</span><span class="n">false</span><span class="p">.,</span><span class="n">act</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">,</span><span class="n">def</span><span class="o">=</span><span class="s1">&#39;.false.&#39;</span><span class="p">,&amp;</span>
-             <span class="n">error</span><span class="o">=</span><span class="n">error</span><span class="p">)</span>
-<span class="k">call </span><span class="n">cli</span><span class="p">%</span><span class="n">add</span><span class="p">(</span><span class="n">switch</span><span class="o">=</span><span class="s1">&#39;--boolean_val&#39;</span><span class="p">,</span><span class="n">switch_ab</span><span class="o">=</span><span class="s1">&#39;-bv&#39;</span><span class="p">,</span><span class="n">help</span><span class="o">=</span><span class="s1">&#39;Valued boolean input&#39;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="p">.</span><span class="n">false</span><span class="p">.,</span> <span class="n">act</span><span class="o">=</span><span class="s1">&#39;store&#39;</span><span class="p">,&amp;</span>
-             <span class="n">def</span><span class="o">=</span><span class="s1">&#39;.true.&#39;</span><span class="p">,</span><span class="n">error</span><span class="o">=</span><span class="n">error</span><span class="p">)</span>
-<span class="k">call </span><span class="n">cli</span><span class="p">%</span><span class="n">add</span><span class="p">(</span><span class="n">switch</span><span class="o">=</span><span class="s1">&#39;--integer_list&#39;</span><span class="p">,</span><span class="n">switch_ab</span><span class="o">=</span><span class="s1">&#39;-il&#39;</span><span class="p">,</span><span class="n">help</span><span class="o">=</span><span class="s1">&#39;Integer list input&#39;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="p">.</span><span class="n">false</span><span class="p">.,</span><span class="n">act</span><span class="o">=</span><span class="s1">&#39;store&#39;</span><span class="p">,&amp;</span>
-             <span class="n">nargs</span><span class="o">=</span><span class="s1">&#39;3&#39;</span><span class="p">,</span><span class="n">def</span><span class="o">=</span><span class="s1">&#39;1 8 32&#39;</span><span class="p">,</span><span class="n">error</span><span class="o">=</span><span class="n">error</span><span class="p">)</span>
-<span class="k">call </span><span class="n">cli</span><span class="p">%</span><span class="n">add</span><span class="p">(</span><span class="n">positional</span><span class="o">=</span><span class="p">.</span><span class="n">true</span><span class="p">.,</span><span class="n">position</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">help</span><span class="o">=</span><span class="s1">&#39;Positional real input&#39;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="p">.</span><span class="n">false</span><span class="p">.,</span><span class="n">def</span><span class="o">=</span><span class="s1">&#39;1.0&#39;</span><span class="p">,</span><span class="n">error</span><span class="o">=</span><span class="n">error</span><span class="p">)</span>
-<span class="c">! parsing Command Line Interface</span>
-<span class="k">call </span><span class="n">cli</span><span class="p">%</span><span class="n">parse</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="n">error</span><span class="p">)</span>
+<p>A nice automatic help-message, right? Executed correctly gives.</p>
+<div class="codehilite"><pre><span></span>→ ./minimal --string <span class="s1">&#39;hello world&#39;</span>
+./exe/minimal has been called with the following argument:
+<span class="nv">String</span> <span class="o">=</span> hello world
 </pre></div>
 
 
-<p>For more details, see the provided <a href="https://github.com/szaghi/FLAP/blob/master/src/tests/test_basic.f90">example</a>.</p>
-<p>For a practical example of FLAP usage see <a href="https://github.com/szaghi/OFF/blob/testing/src/POG.f90">POG</a> source file at line <code>85</code>.</p>
+<p>For more details, see the provided <a href="https://github.com/szaghi/FLAP/blob/master/src/tests">tests</a>.</p>
 <h4 id="nested-subcommands"><a class="toclink" href="#nested-subcommands">Nested (sub)commands</a></h4>
 <p>FLAP fully supports nested (sub)commands or groups of command line arguments. For example a fake <code>git</code> toy remake can be coded as</p>
 <div class="codehilite"><pre><span></span><span class="c">! initializing Command Line Interface</span>
@@ -387,6 +356,189 @@ Examples:
 
 
 <p>For more details, see the provided <a href="https://github.com/szaghi/FLAP/blob/master/src/tests/test_nested.f90">example</a>.</p>
+<p>Go to <a href="#top">Top</a></p>
+<hr>
+<h2 id="download-and-compile"><a class="toclink" href="#download-and-compile">Download and Compile</a></h2>
+<p>FLAP is a Fortran library composed by several modules.</p>
+<p>Before download and compile the library you must check the <a href="https://github.com/szaghi/FLAP/wiki/Requirements">requirements</a>.</p>
+<h3 id="download"><a class="toclink" href="#download">Download</a></h3>
+<p>The tree structure of the FLAP project is the following:</p>
+<div class="codehilite"><pre><span></span>.
+├── CONTRIBUTING.md
+├── fobos
+├── LICENSE.bsd-2.md
+├── LICENSE.bsd-3.md
+├── LICENSE.gpl3.md
+├── LICENSE.mit.md
+├── makedoc.sh
+├── makefile
+├── README.md
+└── src
+    ├── lib
+    │   ├── flap_command_line_arguments_group_t.f90
+    │   ├── flap_command_line_argument_t.F90
+    │   ├── flap_command_line_interface_t.F90
+    │   ├── flap.f90
+    │   ├── flap_object_t.f90
+    │   └── flap_utils_m.f90
+    ├── tests
+    │   ├── test_basic.f90
+    │   ├── test_choices_logical.f90
+    │   ├── test_nested.f90
+    │   └── test_string.f90
+    └── third_party
+        └── PENF
+</pre></div>
+
+
+<p>To download all the available releases and utilities (fobos, license, readme, etc&hellip;), it can be convenient to <em>clone</em> whole the project:</p>
+<div class="codehilite"><pre><span></span>git clone --recursive https://github.com/szaghi/FLAP
+</pre></div>
+
+
+<p>Alternatively, you can directly download a release from GitHub server, see the <a href="https://github.com/szaghi/FLAP/wiki/ChangeLog">ChangeLog</a>.</p>
+<h3 id="compile"><a class="toclink" href="#compile">Compile</a></h3>
+<p>The most easy way to compile FLAP is to use <a href="https://github.com/szaghi/FoBiS">FoBiS.py</a> within the provided fobos file.</p>
+<p>Consequently, it is strongly encouraged to install <a href="https://github.com/szaghi/FoBiS#install">FoBiS.py</a>.</p>
+<p>| <a href="#build-by-means-of-fobis">Build by means of FoBiS</a> | <a href="#build-by-means-of-gnu-make">Build by means of GNU Make</a> | <a href="#build-by-means-of-cmake">Build by means of CMake</a> |</p>
+<hr>
+<h3 id="build-by-means-of-fobis"><a class="toclink" href="#build-by-means-of-fobis">Build by means of FoBiS</a></h3>
+<p>FoBiS.py is a KISS tool for automatic building of modern Fortran projects. Providing very few options, FoBiS.py is able to build almost automatically complex Fortran projects with cumbersome inter-modules dependency. This removes the necessity to write complex makefile. Moreover, providing a very simple options file (in the FoBiS.py nomenclature indicated as <code>fobos</code> file) FoBiS.py can substitute the (ab)use of makefile for other project stuffs (build documentations, make project archive, etc&hellip;). FLAP is shipped with a fobos file that can build the library in both <em>static</em> and <em>shared</em> forms and also build the <code>Test_Driver</code> program. The provided fobos file has several building modes.</p>
+<h4 id="listing-fobos-building-modes"><a class="toclink" href="#listing-fobos-building-modes">Listing fobos building modes</a></h4>
+<p>Typing:</p>
+<div class="codehilite"><pre><span></span>FoBiS.py build -lmodes
+</pre></div>
+
+
+<p>the following message should be printed:</p>
+<div class="codehilite"><pre><span></span>The fobos file defines the following modes:
+ - <span class="s2">&quot;shared-gnu&quot;</span>
+  - <span class="s2">&quot;static-gnu&quot;</span>
+  - <span class="s2">&quot;test-driver-gnu&quot;</span>
+  - <span class="s2">&quot;shared-gnu-debug&quot;</span>
+  - <span class="s2">&quot;static-gnu-debug&quot;</span>
+  - <span class="s2">&quot;test-driver-gnu-debug&quot;</span>
+  - <span class="s2">&quot;shared-intel&quot;</span>
+  - <span class="s2">&quot;static-intel&quot;</span>
+  - <span class="s2">&quot;test-driver-intel&quot;</span>
+  - <span class="s2">&quot;shared-intel-debug&quot;</span>
+  - <span class="s2">&quot;static-intel-debug&quot;</span>
+  - <span class="s2">&quot;test-driver-intel-debug&quot;</span>
+</pre></div>
+
+
+<p>The modes should be self-explicative: <code>shared</code>, <code>static</code> and <code>test-driver</code> are the modes for building (in release, optimized form) the shared and static versions of the library and the Test Driver program, respectively. The other 3 modes are the same, but in debug form instead of release one. <code>-gnu</code> use the <code>GNU gfortran</code> compiler while <code>-intel</code> the Intel one.</p>
+<h4 id="building-the-library"><a class="toclink" href="#building-the-library">Building the library</a></h4>
+<p>The <code>shared</code> or <code>static</code> directories are created accordingly to the form of the library built. The compiled objects and mod files are placed inside this directory, as well as the linked library.</p>
+<h5 id="release-shared-library"><a class="toclink" href="#release-shared-library">Release shared library</a></h5>
+<div class="codehilite"><pre><span></span>FoBiS.py build -mode shared-gnu
+</pre></div>
+
+
+<h5 id="release-static-library"><a class="toclink" href="#release-static-library">Release static library</a></h5>
+<div class="codehilite"><pre><span></span>FoBiS.py build -mode static-gnu
+</pre></div>
+
+
+<h5 id="debug-shared-library"><a class="toclink" href="#debug-shared-library">Debug shared library</a></h5>
+<div class="codehilite"><pre><span></span>FoBiS.py build -mode shared-gnu-debug
+</pre></div>
+
+
+<h5 id="debug-static-library"><a class="toclink" href="#debug-static-library">Debug static library</a></h5>
+<div class="codehilite"><pre><span></span>FoBiS.py build -mode static-gnu-debug
+</pre></div>
+
+
+<h4 id="building-the-test-driver-program"><a class="toclink" href="#building-the-test-driver-program">Building the Test Driver program</a></h4>
+<p>The <code>Test_Driver</code> directory is created. The compiled objects and mod files are placed inside this directory, as well as the linked program.</p>
+<h5 id="release-test-driver-program"><a class="toclink" href="#release-test-driver-program">Release test driver program</a></h5>
+<div class="codehilite"><pre><span></span>FoBiS.py build -mode test-driver-gnu
+</pre></div>
+
+
+<h5 id="debug-test-driver-program"><a class="toclink" href="#debug-test-driver-program">Debug test driver program</a></h5>
+<div class="codehilite"><pre><span></span>FoBiS.py build -mode test-driver-gnu-debug
+</pre></div>
+
+
+<h4 id="listing-fobos-rules"><a class="toclink" href="#listing-fobos-rules">Listing fobos rules</a></h4>
+<p>Typing:</p>
+<div class="codehilite"><pre><span></span>FoBiS.py rule -ls
+</pre></div>
+
+
+<p>the following message should be printed:</p>
+<div class="codehilite"><pre><span></span>The fobos file defines the following rules:
+  - <span class="s2">&quot;makedoc&quot;</span> Rule <span class="k">for</span> building documentation from <span class="nb">source</span> files
+       <span class="nv">Command</span> <span class="o">=</span>&gt; rm -rf doc/html/*
+       <span class="nv">Command</span> <span class="o">=</span>&gt; ford doc/main_page.md
+       <span class="nv">Command</span> <span class="o">=</span>&gt; cp -r doc/html/publish/* doc/html/
+  - <span class="s2">&quot;deldoc&quot;</span> Rule <span class="k">for</span> deleting documentation
+       <span class="nv">Command</span> <span class="o">=</span>&gt; rm -rf doc/html/*
+  - <span class="s2">&quot;maketar&quot;</span> Rule <span class="k">for</span> making tar archive of the project
+       <span class="nv">Command</span> <span class="o">=</span>&gt; tar -czf FLAP.tar.gz *
+  - <span class="s2">&quot;makecoverage&quot;</span> Rule <span class="k">for</span> performing coverage analysis
+       <span class="nv">Command</span> <span class="o">=</span>&gt; FoBiS.py clean -mode test-driver-gnu
+       <span class="nv">Command</span> <span class="o">=</span>&gt; FoBiS.py build -mode test-driver-gnu -coverage
+       <span class="nv">Command</span> <span class="o">=</span>&gt; ./Test_Driver/Test_Driver
+       <span class="nv">Command</span> <span class="o">=</span>&gt; ./Test_Driver/Test_Driver -v
+       <span class="nv">Command</span> <span class="o">=</span>&gt; ./Test_Driver/Test_Driver -s <span class="s1">&#39;Hello FLAP&#39;</span> -i 2
+       <span class="nv">Command</span> <span class="o">=</span>&gt; ./Test_Driver/Test_Driver 33.0 -s <span class="s1">&#39;Hello FLAP&#39;</span> --integer_list <span class="m">10</span> -3 <span class="m">87</span> -i <span class="m">3</span> -r 64.123d0  --boolean --boolean_val .false.
+  - <span class="s2">&quot;coverage-analysis&quot;</span> Rule <span class="k">for</span> performing coverage analysis and saving reports in markdown
+       <span class="nv">Command</span> <span class="o">=</span>&gt; FoBiS.py clean -mode test-driver-gnu
+       <span class="nv">Command</span> <span class="o">=</span>&gt; FoBiS.py build -mode test-driver-gnu -coverage
+       <span class="nv">Command</span> <span class="o">=</span>&gt; ./Test_Driver/Test_Driver
+       <span class="nv">Command</span> <span class="o">=</span>&gt; ./Test_Driver/Test_Driver -v
+       <span class="nv">Command</span> <span class="o">=</span>&gt; ./Test_Driver/Test_Driver -s <span class="s1">&#39;Hello FLAP&#39;</span> -i 2
+       <span class="nv">Command</span> <span class="o">=</span>&gt; ./Test_Driver/Test_Driver 33.0 -s <span class="s1">&#39;Hello FLAP&#39;</span> --integer_list <span class="m">10</span> -3 <span class="m">87</span> -i <span class="m">3</span> -r 64.123d0  --boolean --boolean_val .false.
+       <span class="nv">Command</span> <span class="o">=</span>&gt; gcov -o Test_Driver/obj/ src/*
+       <span class="nv">Command</span> <span class="o">=</span>&gt; FoBiS.py rule -gcov_analyzer wiki/ Coverage-Analysis
+       <span class="nv">Command</span> <span class="o">=</span>&gt; rm -f *.gcov
+</pre></div>
+
+
+<p>The rules should be self-explicative.</p>
+<hr>
+<h3 id="build-by-means-of-gnu-make"><a class="toclink" href="#build-by-means-of-gnu-make">Build by means of GNU Make</a></h3>
+<p>Bad choice :-)</p>
+<p>However, a makefile (generated by FoBiS.py&hellip;) to be used with a compatible GNU Make tool is <a href="https://github.com/szaghi/FLAP/blob/master/makefile">provided</a>.</p>
+<p>It is convenient to clone the whole FLAP repository and run a <em>standard</em> make:</p>
+<div class="codehilite"><pre><span></span>git clone --recursive https://github.com/szaghi/FLAP
+<span class="nb">cd</span> FLAP
+make
+</pre></div>
+
+
+<p>This commands build all tests (executables are in <code>exe/</code> directory). To build only the library (statically linked) type:</p>
+<div class="codehilite"><pre><span></span>git clone --recursive https://github.com/szaghi/FLAP
+<span class="nb">cd</span> FLAP
+make <span class="nv">STATIC</span><span class="o">=</span>yes
+</pre></div>
+
+
+<h3 id="build-by-means-of-cmake"><a class="toclink" href="#build-by-means-of-cmake">Build by means of CMake</a></h3>
+<p>Bad choice :-)</p>
+<p>However, a CMake setup (kindly developed by <a href="https://github.com/victorsndvg">victorsndvg</a>) is provided.</p>
+<p>It is convenient to clone the whole FLAP repository and run a <em>standard</em> CMake configure/build commands:</p>
+<div class="codehilite"><pre><span></span>git clone --recursive https://github.com/szaghi/FLAP <span class="nv">$YOUR_FLAP_PATH</span>
+mkdir build
+<span class="nb">cd</span> build
+cmake <span class="nv">$YOUR_FLAP_PATH</span>
+make
+</pre></div>
+
+
+<p>If you want to run the tests suite type:</p>
+<div class="codehilite"><pre><span></span>git clone --recursive https://github.com/szaghi/FLAP <span class="nv">$YOUR_FLAP_PATH</span>
+mkdir build
+<span class="nb">cd</span> build
+cmake -DFLAP_ENABLE_TESTS<span class="o">=</span>ON <span class="nv">$YOUR_FLAP_PATH</span>
+make
+ctest
+</pre></div>
+
+
 <p>Go to <a href="#top">Top</a></p>
         </div>
 		  
