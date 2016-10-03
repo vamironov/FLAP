@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 1.7% of total for procedures.">61 statements</a>
+	  title=" 1.7% of total for procedures.">62 statements</a>
      </li> 
      
      
@@ -720,6 +720,7 @@ private subroutine parse(self, pref, args, error)
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
 
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">error</span><span class="p">))</span> <span class="n">error</span> <span class="o">=</span> <span class="mi">0</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">self</span><span class="p">%</span><span class="n">is_parsed_</span><span class="p">)</span> <span class="k">return</span>
 
   <span class="c">! add help and version switches if not done by user</span>

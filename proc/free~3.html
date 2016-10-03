@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 0.4% of total for procedures.">14 statements</a>
+	  title=" 0.4% of total for procedures.">15 statements</a>
      </li> 
      
      
@@ -674,6 +674,7 @@ private elemental subroutine free(self)
   <span class="n">endif</span>
   <span class="k">if</span> <span class="p">(</span><span class="nb">allocated</span><span class="p">(</span><span class="n">self</span><span class="p">%</span><span class="n">examples</span><span class="p">))</span>  <span class="k">deallocate</span><span class="p">(</span><span class="n">self</span><span class="p">%</span><span class="n">examples</span><span class="p">)</span>
   <span class="n">self</span><span class="p">%</span><span class="n">disable_hv</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+  <span class="n">self</span><span class="p">%</span><span class="n">is_parsed_</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
   <span class="k">return</span>
   <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="n">endsubroutine</span> <span class="n">free</span>
