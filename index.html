@@ -162,7 +162,7 @@
 <a href=""><img alt="Compiler" src="https://img.shields.io/badge/NAG-not%20tested-yellow.svg"></a>
 <a href=""><img alt="Compiler" src="https://img.shields.io/badge/PGI-not%20tested-yellow.svg"></a></p>
 <hr>
-<p>| <a href="#what-is-flap">What is FLAP?</a> | <a href="#main-features">Main features</a> | <a href="#copyrights">Copyrights</a> | <a href="#documentation">Documentation</a> | <a href="#download-and-compile">Download &amp; Compile</a> |</p>
+<p>| <a href="#what-is-flap">What is FLAP?</a> | <a href="#main-features">Main features</a> | <a href="#copyrights">Copyrights</a> | <a href="#documentation">Documentation</a> | <a href="#download-and-build">Download &amp; Compile</a> |</p>
 <hr>
 <h2 id="what-is-flap"><a class="toclink" href="#what-is-flap">What is FLAP?</a></h2>
 <p>Modern Fortran standards (2003+) have introduced support for Command Line Arguments (CLA), thus it is possible to construct nice and effective Command Line Interfaces (CLI). FLAP is a small library designed to simplify the (repetitive) construction of complicated CLI in pure Fortran (standard 2003+). FLAP has been inspired by the python module <em>argparse</em> trying to mimic it. Once you have defined the arguments that are required by means of a user-friendly method of the CLI, FLAP will parse the CLAs for you. It is worthy of note that FLAP, as <em>argparse</em>, also automatically generates help and usage messages and issues errors when users give the program invalid arguments.</p>
@@ -358,46 +358,24 @@ Examples:
 <p>For more details, see the provided <a href="https://github.com/szaghi/FLAP/blob/master/src/tests/test_nested.f90">example</a>.</p>
 <p>Go to <a href="#top">Top</a></p>
 <hr>
-<h2 id="download-and-compile"><a class="toclink" href="#download-and-compile">Download and Compile</a></h2>
+<h2 id="download-and-build"><a class="toclink" href="#download-and-build">Download and Build</a></h2>
 <p>FLAP is a Fortran library composed by several modules.</p>
+<blockquote>
 <p>Before download and compile the library you must check the <a href="https://github.com/szaghi/FLAP/wiki/Requirements">requirements</a>.</p>
+</blockquote>
+<ul>
+<li><a href="#download">Download</a></li>
+<li><a href="#build">Build</a></li>
+<li><a href="#install-script">Install script</a></li>
+</ul>
 <h3 id="download"><a class="toclink" href="#download">Download</a></h3>
-<p>The tree structure of the FLAP project is the following:</p>
-<div class="codehilite"><pre><span></span>.
-├── CONTRIBUTING.md
-├── fobos
-├── LICENSE.bsd-2.md
-├── LICENSE.bsd-3.md
-├── LICENSE.gpl3.md
-├── LICENSE.mit.md
-├── makedoc.sh
-├── makefile
-├── README.md
-└── src
-    ├── lib
-    │   ├── flap_command_line_arguments_group_t.f90
-    │   ├── flap_command_line_argument_t.F90
-    │   ├── flap_command_line_interface_t.F90
-    │   ├── flap.f90
-    │   ├── flap_object_t.f90
-    │   └── flap_utils_m.f90
-    ├── tests
-    │   ├── test_basic.f90
-    │   ├── test_choices_logical.f90
-    │   ├── test_nested.f90
-    │   └── test_string.f90
-    └── third_party
-        └── PENF
-</pre></div>
-
-
 <p>To download all the available releases and utilities (fobos, license, readme, etc&hellip;), it can be convenient to <em>clone</em> whole the project:</p>
 <div class="codehilite"><pre><span></span>git clone --recursive https://github.com/szaghi/FLAP
 </pre></div>
 
 
 <p>Alternatively, you can directly download a release from GitHub server, see the <a href="https://github.com/szaghi/FLAP/wiki/ChangeLog">ChangeLog</a>.</p>
-<h3 id="compile"><a class="toclink" href="#compile">Compile</a></h3>
+<h3 id="build"><a class="toclink" href="#build">Build</a></h3>
 <p>The most easy way to compile FLAP is to use <a href="https://github.com/szaghi/FoBiS">FoBiS.py</a> within the provided fobos file.</p>
 <p>Consequently, it is strongly encouraged to install <a href="https://github.com/szaghi/FoBiS#install">FoBiS.py</a>.</p>
 <p>| <a href="#build-by-means-of-fobis">Build by means of FoBiS</a> | <a href="#build-by-means-of-gnu-make">Build by means of GNU Make</a> | <a href="#build-by-means-of-cmake">Build by means of CMake</a> |</p>
@@ -506,14 +484,14 @@ Examples:
 <p>It is convenient to clone the whole FLAP repository and run a <em>standard</em> make:</p>
 <div class="codehilite"><pre><span></span>git clone --recursive https://github.com/szaghi/FLAP
 <span class="nb">cd</span> FLAP
-make
+make -j 1
 </pre></div>
 
 
 <p>This commands build all tests (executables are in <code>exe/</code> directory). To build only the library (statically linked) type:</p>
 <div class="codehilite"><pre><span></span>git clone --recursive https://github.com/szaghi/FLAP
 <span class="nb">cd</span> FLAP
-make <span class="nv">STATIC</span><span class="o">=</span>yes
+make -j <span class="m">1</span> <span class="nv">STATIC</span><span class="o">=</span>yes
 </pre></div>
 
 
@@ -539,6 +517,48 @@ ctest
 </pre></div>
 
 
+<h3 id="install-script"><a class="toclink" href="#install-script">Install script</a></h3>
+<p>FLAP ships a bash script that is able to automatize the download and build steps. The script, <code>install.sh</code> has the following usage:</p>
+<div class="codehilite"><pre><span></span>→ ./install.sh
+Install script of FLAP
+Usage:
+
+install.sh --help<span class="p">|</span>-?
+    Print this usage output and <span class="nb">exit</span>
+
+install.sh --download<span class="p">|</span>-d &lt;arg&gt; <span class="o">[</span>--verbose<span class="p">|</span>-v<span class="o">]</span>
+    Download the project
+
+    --download<span class="p">|</span>-d <span class="o">[</span>arg<span class="o">]</span>  Download the project, <span class="nv">arg</span><span class="o">=</span>git<span class="p">|</span>wget to download with git or wget respectively
+    --verbose<span class="p">|</span>-v         Output verbose mode activation
+
+install.sh --build<span class="p">|</span>-b &lt;arg&gt; <span class="o">[</span>--verbose<span class="p">|</span>-v<span class="o">]</span>
+    Build the project
+
+    --build<span class="p">|</span>-b <span class="o">[</span>arg<span class="o">]</span>  Build the project, <span class="nv">arg</span><span class="o">=</span>fobis<span class="p">|</span>make<span class="p">|</span>cmake to build with FoBiS.py, GNU Make or CMake respectively
+    --verbose<span class="p">|</span>-v      Output verbose mode activation
+
+Examples:
+
+install.sh --download git
+install.sh --build make
+install.sh --download wget --build cmake
+</pre></div>
+
+
+<blockquote>
+<p>The script does not cover all possibilities.</p>
+</blockquote>
+<p>The script is able to:</p>
+<ul>
+<li>download a new fresh-clone of the latest master-release by means of:</li>
+<li>git</li>
+<li>wget</li>
+<li>build a fresh-clone project as static-linked library by means of:</li>
+<li>FoBiS.py</li>
+<li>GNU Make</li>
+<li>CMake</li>
+</ul>
 <p>Go to <a href="#top">Top</a></p>
         </div>
 		  
