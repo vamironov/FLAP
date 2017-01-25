@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title="<p>27.7% of total for derived types.</p>Including implementation: 1470 statements, 30.5% of total for derived types.">53 statements</a>
+	  title="<p>28.1% of total for derived types.</p>Including implementation: 1513 statements, 31.1% of total for derived types.">54 statements</a>
      </li> 
      
      
@@ -315,6 +315,8 @@
       <a class="list-group-item" href="../type/command_line_argument.html#boundprocedure-get_cla_list">get_cla_list</a>
       
       <a class="list-group-item" href="../type/command_line_argument.html#boundprocedure-get_cla_list_from_buffer">get_cla_list_from_buffer</a>
+      
+      <a class="list-group-item" href="../type/command_line_argument.html#boundprocedure-get_cla_list_varying_r16p">get_cla_list_varying_R16P</a>
       
       <a class="list-group-item" href="../type/command_line_argument.html#boundprocedure-get_cla_list_varying_r8p">get_cla_list_varying_R8P</a>
       
@@ -717,6 +719,8 @@
       <a class="list-group-item" href="../type/command_line_argument.html#boundprocedure-get_cla_list">get_cla_list</a>
       
       <a class="list-group-item" href="../type/command_line_argument.html#boundprocedure-get_cla_list_from_buffer">get_cla_list_from_buffer</a>
+      
+      <a class="list-group-item" href="../type/command_line_argument.html#boundprocedure-get_cla_list_varying_r16p">get_cla_list_varying_R16P</a>
       
       <a class="list-group-item" href="../type/command_line_argument.html#boundprocedure-get_cla_list_varying_r8p">get_cla_list_varying_R8P</a>
       
@@ -4847,6 +4851,113 @@ private subroutine <a href='../proc/get_cla_list_from_buffer.html'>get_cla_list_
     
 	   
 <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-get_cla_list_varying_r16p"></span><h3>procedure, private :: <strong>get_cla_list_varying_R16P</strong>  
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+
+
+    <p>Get CLA multiple values, varying size, R16P.</p>
+  </div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+    
+    <h3>
+private subroutine <a href='../proc/get_cla_list_varying_r16p.html'>get_cla_list_varying_R16P</a>(self, val, pref)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>Get CLA (multiple) value with varying size, real(R16P).</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/command_line_argument.html'>command_line_argument</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td><p>CLA data.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R16P),</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>val</strong>(:)</td><td><p>CLA values.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>pref</strong></td><td><p>Prefixing string.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
   <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-get_cla_list_varying_r8p"></span><h3>procedure, private :: <strong>get_cla_list_varying_R8P</strong>  
     
   </h3></div>
@@ -5952,6 +6063,7 @@ private elemental subroutine <a href='../proc/cla_assign_cla.html'>cla_assign_cl
     <span class="k">procedure</span><span class="p">,</span> <span class="k">private</span> <span class="kd">::</span> <span class="n">get_cla_from_buffer</span>             <span class="c">!&lt; Get CLA (single) value from a buffer.</span>
     <span class="k">procedure</span><span class="p">,</span> <span class="k">private</span> <span class="kd">::</span> <span class="n">get_cla_list</span>                    <span class="c">!&lt; Get CLA multiple values.</span>
     <span class="k">procedure</span><span class="p">,</span> <span class="k">private</span> <span class="kd">::</span> <span class="n">get_cla_list_from_buffer</span>        <span class="c">!&lt; Get CLA (single) value from a buffer.</span>
+    <span class="k">procedure</span><span class="p">,</span> <span class="k">private</span> <span class="kd">::</span> <span class="n">get_cla_list_varying_R16P</span>       <span class="c">!&lt; Get CLA multiple values, varying size, R16P.</span>
     <span class="k">procedure</span><span class="p">,</span> <span class="k">private</span> <span class="kd">::</span> <span class="n">get_cla_list_varying_R8P</span>        <span class="c">!&lt; Get CLA multiple values, varying size, R8P.</span>
     <span class="k">procedure</span><span class="p">,</span> <span class="k">private</span> <span class="kd">::</span> <span class="n">get_cla_list_varying_R4P</span>        <span class="c">!&lt; Get CLA multiple values, varying size, R4P.</span>
     <span class="k">procedure</span><span class="p">,</span> <span class="k">private</span> <span class="kd">::</span> <span class="n">get_cla_list_varying_I8P</span>        <span class="c">!&lt; Get CLA multiple values, varying size, I8P.</span>
@@ -6003,7 +6115,7 @@ private elemental subroutine <a href='../proc/cla_assign_cla.html'>cla_assign_cl
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2016 </p></div>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">
             Documentation generated by 
