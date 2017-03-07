@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 0.9% of total for procedures.">36 statements</a>
+	  title=" 0.8% of total for procedures.">35 statements</a>
      </li> 
      
      
@@ -361,6 +361,12 @@
       
       <a class="list-group-item" href="../proc/cli_assign_cli.html">cli_assign_cli</a>
       
+      <a class="list-group-item" href="../proc/color_index.html">color_index</a>
+      
+      <a class="list-group-item" href="../proc/colorize.html">colorize</a>
+      
+      <a class="list-group-item" href="../proc/colors_samples.html">colors_samples</a>
+      
       <a class="list-group-item" href="../proc/compact_real_string.html">compact_real_string</a>
       
       <a class="list-group-item" href="../interface/count.html">count</a>
@@ -593,9 +599,15 @@
       
       <a class="list-group-item" href="../proc/strz_i8p.html">strz_I8P</a>
       
+      <a class="list-group-item" href="../proc/style_index.html">style_index</a>
+      
+      <a class="list-group-item" href="../proc/styles_samples.html">styles_samples</a>
+      
       <a class="list-group-item" href="../proc/tokenize.html">tokenize</a>
       
       <a class="list-group-item" href="../proc/unique.html">unique</a>
+      
+      <a class="list-group-item" href="../proc/upper.html">upper</a>
       
       <a class="list-group-item" href="../proc/upper_case.html">upper_case</a>
       
@@ -781,9 +793,7 @@ private subroutine add_group(self, help, description, exclude, group)
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
     <div class="highlight"><pre><span></span>  <span class="k">subroutine </span><span class="n">add_group</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">help</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">exclude</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="c">!&lt; Add CLAs group to CLI.</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="k">class</span><span class="p">(</span><span class="n">command_line_interface</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">self</span>              <span class="c">!&lt; CLI data.</span>
   <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>       <span class="kd">::</span> <span class="n">help</span>              <span class="c">!&lt; Help message.</span>
   <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>       <span class="kd">::</span> <span class="n">description</span>       <span class="c">!&lt; Detailed description.</span>
@@ -795,9 +805,7 @@ private subroutine add_group(self, help, description, exclude, group)
   <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span>                   <span class="kd">::</span> <span class="n">excluded</span>          <span class="c">!&lt; Group name of the mutually exclusive group.</span>
   <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                                    <span class="kd">::</span> <span class="n">Ng</span>                <span class="c">!&lt; Number of groups.</span>
   <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                                    <span class="kd">::</span> <span class="n">gi</span>                <span class="c">!&lt; Group index</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
 
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="k">if</span> <span class="p">(.</span><span class="nb">not</span><span class="p">.</span><span class="n">self</span><span class="p">%</span><span class="n">is_defined_group</span><span class="p">(</span><span class="n">group</span><span class="o">=</span><span class="n">group</span><span class="p">))</span> <span class="k">then</span>
 <span class="k">    </span><span class="n">helpd</span>        <span class="o">=</span> <span class="s1">&#39;usage: &#39;</span> <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">help</span>       <span class="p">))</span> <span class="n">helpd</span>        <span class="o">=</span> <span class="n">help</span>
     <span class="n">descriptiond</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>        <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">description</span><span class="p">))</span> <span class="n">descriptiond</span> <span class="o">=</span> <span class="n">description</span>
@@ -818,8 +826,6 @@ private subroutine add_group(self, help, description, exclude, group)
     <span class="n">self</span><span class="p">%</span><span class="n">clasg</span> <span class="o">=</span> <span class="n">clasg_list_new</span>
     <span class="k">deallocate</span><span class="p">(</span><span class="n">clasg_list_new</span><span class="p">)</span>
   <span class="n">endif</span>
-  <span class="k">return</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="n">endsubroutine</span> <span class="n">add_group</span>
 </pre></div>
 
@@ -1002,6 +1008,12 @@ private subroutine add_group(self, help, description, exclude, group)
       <a class="list-group-item" href="../proc/clasg_assign_clasg.html">clasg_assign_clasg</a>
       
       <a class="list-group-item" href="../proc/cli_assign_cli.html">cli_assign_cli</a>
+      
+      <a class="list-group-item" href="../proc/color_index.html">color_index</a>
+      
+      <a class="list-group-item" href="../proc/colorize.html">colorize</a>
+      
+      <a class="list-group-item" href="../proc/colors_samples.html">colors_samples</a>
       
       <a class="list-group-item" href="../proc/compact_real_string.html">compact_real_string</a>
       
@@ -1235,9 +1247,15 @@ private subroutine add_group(self, help, description, exclude, group)
       
       <a class="list-group-item" href="../proc/strz_i8p.html">strz_I8P</a>
       
+      <a class="list-group-item" href="../proc/style_index.html">style_index</a>
+      
+      <a class="list-group-item" href="../proc/styles_samples.html">styles_samples</a>
+      
       <a class="list-group-item" href="../proc/tokenize.html">tokenize</a>
       
       <a class="list-group-item" href="../proc/unique.html">unique</a>
+      
+      <a class="list-group-item" href="../proc/upper.html">upper</a>
       
       <a class="list-group-item" href="../proc/upper_case.html">upper_case</a>
       

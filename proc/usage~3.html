@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 1.4% of total for procedures.">57 statements</a>
+	  title=" 1.3% of total for procedures.">56 statements</a>
      </li> 
      
      
@@ -361,6 +361,12 @@
       
       <a class="list-group-item" href="../proc/cli_assign_cli.html">cli_assign_cli</a>
       
+      <a class="list-group-item" href="../proc/color_index.html">color_index</a>
+      
+      <a class="list-group-item" href="../proc/colorize.html">colorize</a>
+      
+      <a class="list-group-item" href="../proc/colors_samples.html">colors_samples</a>
+      
       <a class="list-group-item" href="../proc/compact_real_string.html">compact_real_string</a>
       
       <a class="list-group-item" href="../interface/count.html">count</a>
@@ -593,9 +599,15 @@
       
       <a class="list-group-item" href="../proc/strz_i8p.html">strz_I8P</a>
       
+      <a class="list-group-item" href="../proc/style_index.html">style_index</a>
+      
+      <a class="list-group-item" href="../proc/styles_samples.html">styles_samples</a>
+      
       <a class="list-group-item" href="../proc/tokenize.html">tokenize</a>
       
       <a class="list-group-item" href="../proc/unique.html">unique</a>
+      
+      <a class="list-group-item" href="../proc/upper.html">upper</a>
       
       <a class="list-group-item" href="../proc/upper_case.html">upper_case</a>
       
@@ -820,9 +832,7 @@ private function usage(self, g, pref, no_header, no_examples, no_epilog, markdow
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
     <div class="highlight"><pre><span></span>  <span class="k">function </span><span class="n">usage</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">pref</span><span class="p">,</span> <span class="n">no_header</span><span class="p">,</span> <span class="n">no_examples</span><span class="p">,</span> <span class="n">no_epilog</span><span class="p">,</span> <span class="n">markdown</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">usaged</span><span class="p">)</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="c">!&lt; Print correct usage of CLI.</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="k">class</span><span class="p">(</span><span class="n">command_line_interface</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">self</span>         <span class="c">!&lt; CLI data.</span>
   <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">),</span>                  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">g</span>            <span class="c">!&lt; Group index.</span>
   <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">pref</span>         <span class="c">!&lt; Prefixing string.</span>
@@ -838,9 +848,7 @@ private function usage(self, g, pref, no_header, no_examples, no_epilog, markdow
   <span class="kt">logical</span>                                   <span class="kd">::</span> <span class="n">markdownd</span>    <span class="c">!&lt; Format for markdown.</span>
   <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                              <span class="kd">::</span> <span class="n">gi</span>           <span class="c">!&lt; Counter.</span>
   <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                              <span class="kd">::</span> <span class="n">e</span>            <span class="c">!&lt; Counter.</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
 
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="n">no_headerd</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span> <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">no_header</span><span class="p">))</span> <span class="n">no_headerd</span> <span class="o">=</span> <span class="n">no_header</span>
   <span class="n">no_examplesd</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span> <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">no_examples</span><span class="p">))</span> <span class="n">no_examplesd</span> <span class="o">=</span> <span class="n">no_examples</span>
   <span class="n">no_epilogd</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span> <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">no_epilog</span><span class="p">))</span> <span class="n">no_epilogd</span> <span class="o">=</span> <span class="n">no_epilog</span>
@@ -875,8 +883,6 @@ private function usage(self, g, pref, no_header, no_examples, no_epilog, markdow
     <span class="n">enddo</span>
   <span class="n">endif</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">self</span><span class="p">%</span><span class="n">epilog</span><span class="o">/=</span><span class="s1">&#39;&#39;</span><span class="p">.</span><span class="nb">and</span><span class="p">.(.</span><span class="nb">not</span><span class="p">.</span><span class="n">no_epilogd</span><span class="p">))</span> <span class="n">usaged</span> <span class="o">=</span> <span class="n">usaged</span><span class="o">//</span><span class="nb">new_line</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">//</span><span class="n">prefd</span><span class="o">//</span><span class="n">self</span><span class="p">%</span><span class="n">epilog</span>
-  <span class="k">return</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="n">endfunction</span> <span class="n">usage</span>
 </pre></div>
 
@@ -1059,6 +1065,12 @@ private function usage(self, g, pref, no_header, no_examples, no_epilog, markdow
       <a class="list-group-item" href="../proc/clasg_assign_clasg.html">clasg_assign_clasg</a>
       
       <a class="list-group-item" href="../proc/cli_assign_cli.html">cli_assign_cli</a>
+      
+      <a class="list-group-item" href="../proc/color_index.html">color_index</a>
+      
+      <a class="list-group-item" href="../proc/colorize.html">colorize</a>
+      
+      <a class="list-group-item" href="../proc/colors_samples.html">colors_samples</a>
       
       <a class="list-group-item" href="../proc/compact_real_string.html">compact_real_string</a>
       
@@ -1292,9 +1304,15 @@ private function usage(self, g, pref, no_header, no_examples, no_epilog, markdow
       
       <a class="list-group-item" href="../proc/strz_i8p.html">strz_I8P</a>
       
+      <a class="list-group-item" href="../proc/style_index.html">style_index</a>
+      
+      <a class="list-group-item" href="../proc/styles_samples.html">styles_samples</a>
+      
       <a class="list-group-item" href="../proc/tokenize.html">tokenize</a>
       
       <a class="list-group-item" href="../proc/unique.html">unique</a>
+      
+      <a class="list-group-item" href="../proc/upper.html">upper</a>
       
       <a class="list-group-item" href="../proc/upper_case.html">upper_case</a>
       

@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 2.0% of total for procedures.">81 statements</a>
+	  title=" 2.1% of total for procedures.">86 statements</a>
      </li> 
      
      
@@ -360,6 +360,12 @@
       <a class="list-group-item" href="../proc/clasg_assign_clasg.html">clasg_assign_clasg</a>
       
       <a class="list-group-item" href="../proc/cli_assign_cli.html">cli_assign_cli</a>
+      
+      <a class="list-group-item" href="../proc/color_index.html">color_index</a>
+      
+      <a class="list-group-item" href="../proc/colorize.html">colorize</a>
+      
+      <a class="list-group-item" href="../proc/colors_samples.html">colors_samples</a>
       
       <a class="list-group-item" href="../proc/compact_real_string.html">compact_real_string</a>
       
@@ -593,9 +599,15 @@
       
       <a class="list-group-item" href="../proc/strz_i8p.html">strz_I8P</a>
       
+      <a class="list-group-item" href="../proc/style_index.html">style_index</a>
+      
+      <a class="list-group-item" href="../proc/styles_samples.html">styles_samples</a>
+      
       <a class="list-group-item" href="../proc/tokenize.html">tokenize</a>
       
       <a class="list-group-item" href="../proc/unique.html">unique</a>
+      
+      <a class="list-group-item" href="../proc/upper.html">upper</a>
       
       <a class="list-group-item" href="../proc/upper_case.html">upper_case</a>
       
@@ -618,7 +630,7 @@
     
     <div class="col-md-9" id='text'>
     <h2>
-private subroutine add(self, pref, group, group_index, switch, switch_ab, help, help_markdown, required, positional, position, hidden, act, def, nargs, choices, exclude, envvar, error)
+private subroutine add(self, pref, group, group_index, switch, switch_ab, help, help_markdown, help_color, help_style, required, positional, position, hidden, act, def, nargs, choices, exclude, envvar, error)
     
     
 	 
@@ -764,6 +776,36 @@ private subroutine add(self, pref, group, group_index, switch, switch_ab, help, 
   
   <td></td><td>::</td>
   <td><strong>help_markdown</strong></td><td><p>Longer help message, markdown formatted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-help_color%7E2"></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>help_color</strong></td><td><p>ANSI color of help messages.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-help_style%7E2"></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>help_style</strong></td><td><p>ANSI style of help messages.</p></td>
   
 </tr>
 
@@ -1095,9 +1137,8 @@ private subroutine add(self, pref, group, group_index, switch, switch_ab, help, 
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span>  <span class="k">subroutine </span><span class="n">add</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">pref</span><span class="p">,</span> <span class="n">group</span><span class="p">,</span> <span class="n">group_index</span><span class="p">,</span> <span class="n">switch</span><span class="p">,</span> <span class="n">switch_ab</span><span class="p">,</span> <span class="n">help</span><span class="p">,</span> <span class="n">help_markdown</span><span class="p">,</span> <span class="n">required</span><span class="p">,</span> <span class="p">&amp;</span>
-                 <span class="n">positional</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">hidden</span><span class="p">,</span> <span class="n">act</span><span class="p">,</span> <span class="n">def</span><span class="p">,</span> <span class="n">nargs</span><span class="p">,</span> <span class="n">choices</span><span class="p">,</span> <span class="n">exclude</span><span class="p">,</span> <span class="n">envvar</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+    <div class="highlight"><pre><span></span>  <span class="k">subroutine </span><span class="n">add</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">pref</span><span class="p">,</span> <span class="n">group</span><span class="p">,</span> <span class="n">group_index</span><span class="p">,</span> <span class="n">switch</span><span class="p">,</span> <span class="n">switch_ab</span><span class="p">,</span> <span class="n">help</span><span class="p">,</span> <span class="n">help_markdown</span><span class="p">,</span> <span class="n">help_color</span><span class="p">,</span> <span class="n">help_style</span><span class="p">,</span> <span class="p">&amp;</span>
+                 <span class="n">required</span><span class="p">,</span> <span class="n">positional</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">hidden</span><span class="p">,</span> <span class="n">act</span><span class="p">,</span> <span class="n">def</span><span class="p">,</span> <span class="n">nargs</span><span class="p">,</span> <span class="n">choices</span><span class="p">,</span> <span class="n">exclude</span><span class="p">,</span> <span class="n">envvar</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
   <span class="c">!&lt; Add CLA to CLI.</span>
   <span class="c">!&lt;</span>
   <span class="c">!&lt; @note If not otherwise declared the action on CLA value is set to &quot;store&quot; a value that must be passed after the switch name</span>
@@ -1106,7 +1147,6 @@ private subroutine add(self, pref, group, group_index, switch, switch_ab, help, 
   <span class="c">!&lt; @note If not otherwise speficied the CLA belongs to the default group &quot;zero&quot; that is the group of non-grouped CLAs.</span>
   <span class="c">!&lt;</span>
   <span class="c">!&lt; @note If CLA belongs to a not yet present group it is created on the fly.</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="k">class</span><span class="p">(</span><span class="n">command_line_interface</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">self</span>          <span class="c">!&lt; CLI data.</span>
   <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">pref</span>          <span class="c">!&lt; Prefixing string.</span>
   <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">group</span>         <span class="c">!&lt; Name of the grouped CLAs.</span>
@@ -1114,6 +1154,8 @@ private subroutine add(self, pref, group, group_index, switch, switch_ab, help, 
   <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">switch</span>        <span class="c">!&lt; Switch name.</span>
   <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">switch_ab</span>     <span class="c">!&lt; Abbreviated switch name.</span>
   <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">help</span>          <span class="c">!&lt; Help message describing the CLA.</span>
+  <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">help_color</span>    <span class="c">!&lt; ANSI color of help messages.</span>
+  <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">help_style</span>    <span class="c">!&lt; ANSI style of help messages.</span>
   <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">help_markdown</span> <span class="c">!&lt; Longer help message, markdown formatted.</span>
   <span class="kt">logical</span><span class="p">,</span>      <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">required</span>      <span class="c">!&lt; Flag for set required argument.</span>
   <span class="kt">logical</span><span class="p">,</span>      <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">positional</span>    <span class="c">!&lt; Flag for checking if CLA is a positional or a named CLA.</span>
@@ -1128,9 +1170,7 @@ private subroutine add(self, pref, group, group_index, switch, switch_ab, help, 
   <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">error</span>         <span class="c">!&lt; Error trapping flag.</span>
   <span class="k">type</span><span class="p">(</span><span class="n">command_line_argument</span><span class="p">)</span>                  <span class="kd">::</span> <span class="n">cla</span>           <span class="c">!&lt; CLA data.</span>
   <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                                 <span class="kd">::</span> <span class="n">g</span>             <span class="c">!&lt; Counter.</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
 
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="c">! initialize CLA</span>
   <span class="k">call </span><span class="n">cla</span><span class="p">%</span><span class="n">assign_object</span><span class="p">(</span><span class="n">self</span><span class="p">)</span>
   <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">switch</span><span class="p">))</span> <span class="k">then</span>
@@ -1142,20 +1182,22 @@ private subroutine add(self, pref, group, group_index, switch, switch_ab, help, 
       <span class="n">cla</span><span class="p">%</span><span class="n">switch_ab</span> <span class="o">=</span> <span class="n">switch_ab</span>
     <span class="n">endif</span>
   <span class="n">endif</span>
-                                                <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">switch_ab</span> <span class="p">))</span>    <span class="n">cla</span><span class="p">%</span><span class="n">switch_ab</span>     <span class="o">=</span> <span class="n">switch_ab</span>
-  <span class="n">cla</span><span class="p">%</span><span class="n">help</span>          <span class="o">=</span> <span class="s1">&#39;Undocumented argument&#39;</span> <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">help</span>      <span class="p">))</span>    <span class="n">cla</span><span class="p">%</span><span class="n">help</span>          <span class="o">=</span> <span class="n">help</span>
+                                                <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">switch_ab</span>    <span class="p">))</span> <span class="n">cla</span><span class="p">%</span><span class="n">switch_ab</span>     <span class="o">=</span> <span class="n">switch_ab</span>
+  <span class="n">cla</span><span class="p">%</span><span class="n">help</span>          <span class="o">=</span> <span class="s1">&#39;Undocumented argument&#39;</span> <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">help</span>         <span class="p">))</span> <span class="n">cla</span><span class="p">%</span><span class="n">help</span>          <span class="o">=</span> <span class="n">help</span>
+  <span class="n">cla</span><span class="p">%</span><span class="n">help_color</span>    <span class="o">=</span> <span class="s1">&#39;&#39;</span>                      <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">help_color</span>   <span class="p">))</span> <span class="n">cla</span><span class="p">%</span><span class="n">help_color</span>    <span class="o">=</span> <span class="n">help_color</span>
+  <span class="n">cla</span><span class="p">%</span><span class="n">help_style</span>    <span class="o">=</span> <span class="s1">&#39;&#39;</span>                      <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">help_style</span>   <span class="p">))</span> <span class="n">cla</span><span class="p">%</span><span class="n">help_style</span>    <span class="o">=</span> <span class="n">help_style</span>
   <span class="n">cla</span><span class="p">%</span><span class="n">help_markdown</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>                      <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">help_markdown</span><span class="p">))</span> <span class="n">cla</span><span class="p">%</span><span class="n">help_markdown</span> <span class="o">=</span> <span class="n">help_markdown</span>
-  <span class="n">cla</span><span class="p">%</span><span class="n">is_required</span>   <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>                 <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">required</span>  <span class="p">))</span>    <span class="n">cla</span><span class="p">%</span><span class="n">is_required</span>   <span class="o">=</span> <span class="n">required</span>
-  <span class="n">cla</span><span class="p">%</span><span class="n">is_positional</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>                 <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">positional</span><span class="p">))</span>    <span class="n">cla</span><span class="p">%</span><span class="n">is_positional</span> <span class="o">=</span> <span class="n">positional</span>
-  <span class="n">cla</span><span class="p">%</span><span class="n">position</span>      <span class="o">=</span> <span class="mi">0_I4P</span>                   <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">position</span>  <span class="p">))</span>    <span class="n">cla</span><span class="p">%</span><span class="n">position</span>      <span class="o">=</span> <span class="n">position</span>
-  <span class="n">cla</span><span class="p">%</span><span class="n">is_hidden</span>     <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>                 <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">hidden</span>    <span class="p">))</span>    <span class="n">cla</span><span class="p">%</span><span class="n">is_hidden</span>     <span class="o">=</span> <span class="n">hidden</span>
-  <span class="n">cla</span><span class="p">%</span><span class="n">act</span>           <span class="o">=</span> <span class="n">action_store</span>            <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">act</span>       <span class="p">))</span>    <span class="n">cla</span><span class="p">%</span><span class="n">act</span>           <span class="o">=</span> <span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">Upper_Case</span><span class="p">(</span><span class="n">act</span><span class="p">)))</span>
-                                                <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">def</span>       <span class="p">))</span>    <span class="n">cla</span><span class="p">%</span><span class="n">def</span>           <span class="o">=</span> <span class="n">def</span>
-                                                <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">def</span>       <span class="p">))</span>    <span class="n">cla</span><span class="p">%</span><span class="n">val</span>           <span class="o">=</span> <span class="n">def</span>
-                                                <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">nargs</span>     <span class="p">))</span>    <span class="n">cla</span><span class="p">%</span><span class="n">nargs</span>         <span class="o">=</span> <span class="n">nargs</span>
-                                                <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">choices</span>   <span class="p">))</span>    <span class="n">cla</span><span class="p">%</span><span class="n">choices</span>       <span class="o">=</span> <span class="n">choices</span>
-  <span class="n">cla</span><span class="p">%</span><span class="n">m_exclude</span>     <span class="o">=</span> <span class="s1">&#39;&#39;</span>                      <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">exclude</span>   <span class="p">))</span>    <span class="n">cla</span><span class="p">%</span><span class="n">m_exclude</span>     <span class="o">=</span> <span class="n">exclude</span>
-                                                <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">envvar</span>    <span class="p">))</span>    <span class="n">cla</span><span class="p">%</span><span class="n">envvar</span>        <span class="o">=</span> <span class="n">envvar</span>
+  <span class="n">cla</span><span class="p">%</span><span class="n">is_required</span>   <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>                 <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">required</span>     <span class="p">))</span> <span class="n">cla</span><span class="p">%</span><span class="n">is_required</span>   <span class="o">=</span> <span class="n">required</span>
+  <span class="n">cla</span><span class="p">%</span><span class="n">is_positional</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>                 <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">positional</span>   <span class="p">))</span> <span class="n">cla</span><span class="p">%</span><span class="n">is_positional</span> <span class="o">=</span> <span class="n">positional</span>
+  <span class="n">cla</span><span class="p">%</span><span class="n">position</span>      <span class="o">=</span> <span class="mi">0_I4P</span>                   <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">position</span>     <span class="p">))</span> <span class="n">cla</span><span class="p">%</span><span class="n">position</span>      <span class="o">=</span> <span class="n">position</span>
+  <span class="n">cla</span><span class="p">%</span><span class="n">is_hidden</span>     <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>                 <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">hidden</span>       <span class="p">))</span> <span class="n">cla</span><span class="p">%</span><span class="n">is_hidden</span>     <span class="o">=</span> <span class="n">hidden</span>
+  <span class="n">cla</span><span class="p">%</span><span class="n">act</span>           <span class="o">=</span> <span class="n">action_store</span>            <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">act</span>          <span class="p">))</span> <span class="n">cla</span><span class="p">%</span><span class="n">act</span>           <span class="o">=</span> <span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">Upper_Case</span><span class="p">(</span><span class="n">act</span><span class="p">)))</span>
+                                                <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">def</span>          <span class="p">))</span> <span class="n">cla</span><span class="p">%</span><span class="n">def</span>           <span class="o">=</span> <span class="n">def</span>
+                                                <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">def</span>          <span class="p">))</span> <span class="n">cla</span><span class="p">%</span><span class="n">val</span>           <span class="o">=</span> <span class="n">def</span>
+                                                <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">nargs</span>        <span class="p">))</span> <span class="n">cla</span><span class="p">%</span><span class="n">nargs</span>         <span class="o">=</span> <span class="n">nargs</span>
+                                                <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">choices</span>      <span class="p">))</span> <span class="n">cla</span><span class="p">%</span><span class="n">choices</span>       <span class="o">=</span> <span class="n">choices</span>
+  <span class="n">cla</span><span class="p">%</span><span class="n">m_exclude</span>     <span class="o">=</span> <span class="s1">&#39;&#39;</span>                      <span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">exclude</span>      <span class="p">))</span> <span class="n">cla</span><span class="p">%</span><span class="n">m_exclude</span>     <span class="o">=</span> <span class="n">exclude</span>
+                                                <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">envvar</span>       <span class="p">))</span> <span class="n">cla</span><span class="p">%</span><span class="n">envvar</span>        <span class="o">=</span> <span class="n">envvar</span>
   <span class="k">call </span><span class="n">cla</span><span class="p">%</span><span class="n">check</span><span class="p">(</span><span class="n">pref</span><span class="o">=</span><span class="n">pref</span><span class="p">)</span> <span class="p">;</span> <span class="n">self</span><span class="p">%</span><span class="n">error</span> <span class="o">=</span> <span class="n">cla</span><span class="p">%</span><span class="n">error</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">self</span><span class="p">%</span><span class="n">error</span><span class="o">/=</span><span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
 <span class="k">    if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">error</span><span class="p">))</span> <span class="n">error</span> <span class="o">=</span> <span class="n">self</span><span class="p">%</span><span class="n">error</span>
@@ -1177,8 +1219,6 @@ private subroutine add(self, pref, group, group_index, switch, switch_ab, help, 
     <span class="n">endif</span>
   <span class="n">endif</span>
   <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">error</span><span class="p">))</span> <span class="n">error</span> <span class="o">=</span> <span class="n">self</span><span class="p">%</span><span class="n">error</span>
-  <span class="k">return</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="n">endsubroutine</span> <span class="n">add</span>
 </pre></div>
 
@@ -1361,6 +1401,12 @@ private subroutine add(self, pref, group, group_index, switch, switch_ab, help, 
       <a class="list-group-item" href="../proc/clasg_assign_clasg.html">clasg_assign_clasg</a>
       
       <a class="list-group-item" href="../proc/cli_assign_cli.html">cli_assign_cli</a>
+      
+      <a class="list-group-item" href="../proc/color_index.html">color_index</a>
+      
+      <a class="list-group-item" href="../proc/colorize.html">colorize</a>
+      
+      <a class="list-group-item" href="../proc/colors_samples.html">colors_samples</a>
       
       <a class="list-group-item" href="../proc/compact_real_string.html">compact_real_string</a>
       
@@ -1594,9 +1640,15 @@ private subroutine add(self, pref, group, group_index, switch, switch_ab, help, 
       
       <a class="list-group-item" href="../proc/strz_i8p.html">strz_I8P</a>
       
+      <a class="list-group-item" href="../proc/style_index.html">style_index</a>
+      
+      <a class="list-group-item" href="../proc/styles_samples.html">styles_samples</a>
+      
       <a class="list-group-item" href="../proc/tokenize.html">tokenize</a>
       
       <a class="list-group-item" href="../proc/unique.html">unique</a>
+      
+      <a class="list-group-item" href="../proc/upper.html">upper</a>
       
       <a class="list-group-item" href="../proc/upper_case.html">upper_case</a>
       

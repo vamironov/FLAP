@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title="<p>11.5% of total for derived types.</p>Including implementation: 70 statements,  1.4% of total for derived types.">22 statements</a>
+	  title="<p>12.8% of total for derived types.</p>Including implementation: 87 statements,  1.8% of total for derived types.">25 statements</a>
      </li> 
      
      
@@ -174,6 +174,10 @@
       
       <a class="list-group-item" href="../type/object.html#variable-help">help</a>
       
+      <a class="list-group-item" href="../type/object.html#variable-help_color">help_color</a>
+      
+      <a class="list-group-item" href="../type/object.html#variable-help_style">help_style</a>
+      
       <a class="list-group-item" href="../type/object.html#variable-help_markdown">help_markdown</a>
       
       <a class="list-group-item" href="../type/object.html#variable-description">description</a>
@@ -187,6 +191,10 @@
       <a class="list-group-item" href="../type/object.html#variable-m_exclude">m_exclude</a>
       
       <a class="list-group-item" href="../type/object.html#variable-error_message">error_message</a>
+      
+      <a class="list-group-item" href="../type/object.html#variable-error_color">error_color</a>
+      
+      <a class="list-group-item" href="../type/object.html#variable-error_style">error_style</a>
       
       <a class="list-group-item" href="../type/object.html#variable-error">error</a>
       
@@ -416,6 +424,10 @@
       
       <a class="list-group-item" href="../type/object.html#variable-help">help</a>
       
+      <a class="list-group-item" href="../type/object.html#variable-help_color">help_color</a>
+      
+      <a class="list-group-item" href="../type/object.html#variable-help_style">help_style</a>
+      
       <a class="list-group-item" href="../type/object.html#variable-help_markdown">help_markdown</a>
       
       <a class="list-group-item" href="../type/object.html#variable-description">description</a>
@@ -429,6 +441,10 @@
       <a class="list-group-item" href="../type/object.html#variable-m_exclude">m_exclude</a>
       
       <a class="list-group-item" href="../type/object.html#variable-error_message">error_message</a>
+      
+      <a class="list-group-item" href="../type/object.html#variable-error_color">error_color</a>
+      
+      <a class="list-group-item" href="../type/object.html#variable-error_style">error_style</a>
       
       <a class="list-group-item" href="../type/object.html#variable-error">error</a>
       
@@ -549,6 +565,34 @@
   
 <tr>
   
+  <td><span class="anchor" id="variable-help_color"></span>character(len=:),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>help_color</strong></td><td></td><td></td><td><p>ANSI color of help messages.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-help_style"></span>character(len=:),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>help_style</strong></td><td></td><td></td><td><p>ANSI style of help messages.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
   <td><span class="anchor" id="variable-help_markdown"></span>character(len=:),</td>
   
   <td>public,</td>
@@ -647,6 +691,34 @@
   
 <tr>
   
+  <td><span class="anchor" id="variable-error_color"></span>character(len=:),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>error_color</strong></td><td></td><td></td><td><p>ANSI color of error messages.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-error_style"></span>character(len=:),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>error_style</strong></td><td></td><td></td><td><p>ANSI style of error messages.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
   <td><span class="anchor" id="variable-error"></span>integer(kind=I4P),</td>
   
   <td>public</td>
@@ -714,7 +786,7 @@
     
 	   
 <div class="panel panel-default">
-  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-free_object"></span><h3>procedure, public :: <strong>free_object</strong>  
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-free_object"></span><h3>procedure, public, pass(self) :: <strong>free_object</strong>  
     
   </h3></div>
   
@@ -791,7 +863,7 @@ private elemental subroutine <a href='../proc/free_object.html'>free_object</a>(
     
 	   
 <div class="panel panel-default">
-  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-print_version"></span><h3>procedure, public :: <strong>print_version</strong>  
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-print_version"></span><h3>procedure, public, pass(self) :: <strong>print_version</strong>  
     
   </h3></div>
   
@@ -883,7 +955,7 @@ private subroutine <a href='../proc/print_version.html'>print_version</a>(self, 
     
 	   
 <div class="panel panel-default">
-  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-print_error_message"></span><h3>procedure, public :: <strong>print_error_message</strong>  
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-print_error_message"></span><h3>procedure, public, pass(self) :: <strong>print_error_message</strong>  
     
   </h3></div>
   
@@ -960,7 +1032,7 @@ private subroutine <a href='../proc/print_error_message.html'>print_error_messag
     
 	   
 <div class="panel panel-default">
-  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-assign_object"></span><h3>procedure, public :: <strong>assign_object</strong>  
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-assign_object"></span><h3>procedure, public, pass(lhs ) :: <strong>assign_object</strong>  
     
   </h3></div>
   
@@ -1058,26 +1130,30 @@ private elemental subroutine <a href='../proc/assign_object.html'>assign_object<
     <h2><span class="anchor" id="src"></span>Source Code</h2>
     <div class="highlight"><pre><span></span><span class="k">type</span><span class="p">,</span> <span class="k">abstract</span><span class="p">,</span> <span class="k">public</span> <span class="kd">::</span> <span class="n">object</span>
   <span class="c">!&lt; Base (abstract) class upon which FLAP&#39;s concrete classes are built.</span>
-  <span class="k">private</span>
-<span class="k">  </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">public</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">progname</span>           <span class="c">!&lt; Program name.</span>
-  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">public</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">version</span>            <span class="c">!&lt; Program version.</span>
-  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">public</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">help</span>               <span class="c">!&lt; Help message.</span>
-  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">public</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">help_markdown</span>      <span class="c">!&lt; Longer help message, markdown formatted.</span>
-  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">public</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">description</span>        <span class="c">!&lt; Detailed description.</span>
-  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">public</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">license</span>            <span class="c">!&lt; License description.</span>
-  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">public</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">authors</span>            <span class="c">!&lt; Authors list.</span>
-  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">public</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">epilog</span>             <span class="c">!&lt; Epilogue message.</span>
-  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">public</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">m_exclude</span>          <span class="c">!&lt; Mutually exclude other CLA(s group).</span>
-  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">public</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">error_message</span>      <span class="c">!&lt; Meaningful error message to standard-error.</span>
-  <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">),</span>     <span class="k">public</span>              <span class="kd">::</span> <span class="n">error</span><span class="o">=</span><span class="mi">0_I4P</span>        <span class="c">!&lt; Error trapping flag.</span>
-  <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">),</span>     <span class="k">public</span>              <span class="kd">::</span> <span class="n">usage_lun</span><span class="o">=</span><span class="n">stderr</span>   <span class="c">!&lt; Output unit to print help/usage messages</span>
-  <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">),</span>     <span class="k">public</span>              <span class="kd">::</span> <span class="n">version_lun</span><span class="o">=</span><span class="n">stdout</span> <span class="c">!&lt; Output unit to print version message</span>
-  <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">),</span>     <span class="k">public</span>              <span class="kd">::</span> <span class="n">error_lun</span><span class="o">=</span><span class="n">stderr</span>   <span class="c">!&lt; Error unit to print error messages</span>
+  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">progname</span>           <span class="c">!&lt; Program name.</span>
+  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">version</span>            <span class="c">!&lt; Program version.</span>
+  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">help</span>               <span class="c">!&lt; Help message.</span>
+  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">help_color</span>         <span class="c">!&lt; ANSI color of help messages.</span>
+  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">help_style</span>         <span class="c">!&lt; ANSI style of help messages.</span>
+  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">help_markdown</span>      <span class="c">!&lt; Longer help message, markdown formatted.</span>
+  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">description</span>        <span class="c">!&lt; Detailed description.</span>
+  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">license</span>            <span class="c">!&lt; License description.</span>
+  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">authors</span>            <span class="c">!&lt; Authors list.</span>
+  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">epilog</span>             <span class="c">!&lt; Epilogue message.</span>
+  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">m_exclude</span>          <span class="c">!&lt; Mutually exclude other CLA(s group).</span>
+  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">error_message</span>      <span class="c">!&lt; Meaningful error message to standard-error.</span>
+  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">error_color</span>        <span class="c">!&lt; ANSI color of error messages.</span>
+  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">error_style</span>        <span class="c">!&lt; ANSI style of error messages.</span>
+  <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                  <span class="kd">::</span> <span class="n">error</span><span class="o">=</span><span class="mi">0_I4P</span>        <span class="c">!&lt; Error trapping flag.</span>
+  <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                  <span class="kd">::</span> <span class="n">usage_lun</span><span class="o">=</span><span class="n">stderr</span>   <span class="c">!&lt; Output unit to print help/usage messages</span>
+  <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                  <span class="kd">::</span> <span class="n">version_lun</span><span class="o">=</span><span class="n">stdout</span> <span class="c">!&lt; Output unit to print version message</span>
+  <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                  <span class="kd">::</span> <span class="n">error_lun</span><span class="o">=</span><span class="n">stderr</span>   <span class="c">!&lt; Error unit to print error messages</span>
   <span class="k">contains</span>
-<span class="k">    procedure</span> <span class="kd">::</span> <span class="n">free_object</span>         <span class="c">!&lt; Free dynamic memory.</span>
-    <span class="k">procedure</span> <span class="kd">::</span> <span class="n">print_version</span>       <span class="c">!&lt; Print version.</span>
-    <span class="k">procedure</span> <span class="kd">::</span> <span class="n">print_error_message</span> <span class="c">!&lt; Print meaningful error message.</span>
-    <span class="k">procedure</span> <span class="kd">::</span> <span class="n">assign_object</span>       <span class="c">!&lt; Assignment overloading.</span>
+    <span class="c">! public methods</span>
+    <span class="k">procedure</span><span class="p">,</span> <span class="k">pass</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="kd">::</span> <span class="n">free_object</span>         <span class="c">!&lt; Free dynamic memory.</span>
+    <span class="k">procedure</span><span class="p">,</span> <span class="k">pass</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="kd">::</span> <span class="n">print_version</span>       <span class="c">!&lt; Print version.</span>
+    <span class="k">procedure</span><span class="p">,</span> <span class="k">pass</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="kd">::</span> <span class="n">print_error_message</span> <span class="c">!&lt; Print meaningful error message.</span>
+    <span class="k">procedure</span><span class="p">,</span> <span class="k">pass</span><span class="p">(</span><span class="n">lhs</span> <span class="p">)</span> <span class="kd">::</span> <span class="n">assign_object</span>       <span class="c">!&lt; Assignment overloading.</span>
 <span class="n">endtype</span> <span class="n">object</span>
 </pre></div>
 

@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 0.8% of total for procedures.">31 statements</a>
+	  title=" 0.7% of total for procedures.">30 statements</a>
      </li> 
      
      
@@ -361,6 +361,12 @@
       
       <a class="list-group-item" href="../proc/cli_assign_cli.html">cli_assign_cli</a>
       
+      <a class="list-group-item" href="../proc/color_index.html">color_index</a>
+      
+      <a class="list-group-item" href="../proc/colorize.html">colorize</a>
+      
+      <a class="list-group-item" href="../proc/colors_samples.html">colors_samples</a>
+      
       <a class="list-group-item" href="../proc/compact_real_string.html">compact_real_string</a>
       
       <a class="list-group-item" href="../interface/count.html">count</a>
@@ -593,9 +599,15 @@
       
       <a class="list-group-item" href="../proc/strz_i8p.html">strz_I8P</a>
       
+      <a class="list-group-item" href="../proc/style_index.html">style_index</a>
+      
+      <a class="list-group-item" href="../proc/styles_samples.html">styles_samples</a>
+      
       <a class="list-group-item" href="../proc/tokenize.html">tokenize</a>
       
       <a class="list-group-item" href="../proc/unique.html">unique</a>
+      
+      <a class="list-group-item" href="../proc/upper.html">upper</a>
       
       <a class="list-group-item" href="../proc/upper_case.html">upper_case</a>
       
@@ -751,9 +763,7 @@ private subroutine save_usage_to_markdown(self, markdown_file, error)
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
     <div class="highlight"><pre><span></span>  <span class="k">subroutine </span><span class="n">save_usage_to_markdown</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">markdown_file</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="c">!&lt; Save the CLI as a markdown page, for inclusion into the documentation.</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="k">class</span><span class="p">(</span><span class="n">command_line_interface</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">self</span>               <span class="c">!&lt; CLI data.</span>
   <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span>                  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">markdown_file</span>      <span class="c">!&lt; Output file name for saving man page.</span>
   <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">error</span>              <span class="c">!&lt; Error trapping flag.</span>
@@ -773,9 +783,7 @@ private subroutine save_usage_to_markdown(self, markdown_file, error)
                                                            <span class="s2">&quot;Oct&quot;</span><span class="p">,&amp;</span>
                                                            <span class="s2">&quot;Nov&quot;</span><span class="p">,&amp;</span>
                                                            <span class="s2">&quot;Dec&quot;</span><span class="p">]</span>  <span class="c">!&lt; Months list.</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
 
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="c">! add the other tags here.</span>
   <span class="n">man</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
   <span class="c">! add the short description</span>
@@ -798,8 +806,6 @@ private subroutine save_usage_to_markdown(self, markdown_file, error)
 <span class="k">    write</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="s2">&quot;(A)&quot;</span><span class="p">)</span><span class="n">man</span>
   <span class="n">endif</span>
   <span class="k">close</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
-  <span class="k">return</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="n">endsubroutine</span> <span class="n">save_usage_to_markdown</span>
 </pre></div>
 
@@ -983,6 +989,12 @@ private subroutine save_usage_to_markdown(self, markdown_file, error)
       
       <a class="list-group-item" href="../proc/cli_assign_cli.html">cli_assign_cli</a>
       
+      <a class="list-group-item" href="../proc/color_index.html">color_index</a>
+      
+      <a class="list-group-item" href="../proc/colorize.html">colorize</a>
+      
+      <a class="list-group-item" href="../proc/colors_samples.html">colors_samples</a>
+      
       <a class="list-group-item" href="../proc/compact_real_string.html">compact_real_string</a>
       
       <a class="list-group-item" href="../interface/count.html">count</a>
@@ -1215,9 +1227,15 @@ private subroutine save_usage_to_markdown(self, markdown_file, error)
       
       <a class="list-group-item" href="../proc/strz_i8p.html">strz_I8P</a>
       
+      <a class="list-group-item" href="../proc/style_index.html">style_index</a>
+      
+      <a class="list-group-item" href="../proc/styles_samples.html">styles_samples</a>
+      
       <a class="list-group-item" href="../proc/tokenize.html">tokenize</a>
       
       <a class="list-group-item" href="../proc/unique.html">unique</a>
+      
+      <a class="list-group-item" href="../proc/upper.html">upper</a>
       
       <a class="list-group-item" href="../proc/upper_case.html">upper_case</a>
       

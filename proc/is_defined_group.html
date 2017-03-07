@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 0.4% of total for procedures.">16 statements</a>
+	  title=" 0.4% of total for procedures.">15 statements</a>
      </li> 
      
      
@@ -361,6 +361,12 @@
       
       <a class="list-group-item" href="../proc/cli_assign_cli.html">cli_assign_cli</a>
       
+      <a class="list-group-item" href="../proc/color_index.html">color_index</a>
+      
+      <a class="list-group-item" href="../proc/colorize.html">colorize</a>
+      
+      <a class="list-group-item" href="../proc/colors_samples.html">colors_samples</a>
+      
       <a class="list-group-item" href="../proc/compact_real_string.html">compact_real_string</a>
       
       <a class="list-group-item" href="../interface/count.html">count</a>
@@ -593,9 +599,15 @@
       
       <a class="list-group-item" href="../proc/strz_i8p.html">strz_I8P</a>
       
+      <a class="list-group-item" href="../proc/style_index.html">style_index</a>
+      
+      <a class="list-group-item" href="../proc/styles_samples.html">styles_samples</a>
+      
       <a class="list-group-item" href="../proc/tokenize.html">tokenize</a>
       
       <a class="list-group-item" href="../proc/unique.html">unique</a>
+      
+      <a class="list-group-item" href="../proc/upper.html">upper</a>
       
       <a class="list-group-item" href="../proc/upper_case.html">upper_case</a>
       
@@ -760,18 +772,14 @@ private function is_defined_group(self, group, g) result(defined)
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
     <div class="highlight"><pre><span></span>  <span class="k">function </span><span class="n">is_defined_group</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">group</span><span class="p">,</span> <span class="n">g</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">defined</span><span class="p">)</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="c">!&lt; Check if a CLAs group has been defined.</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="k">class</span><span class="p">(</span><span class="n">command_line_interface</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">self</span>    <span class="c">!&lt; CLI data.</span>
   <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span>                  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">group</span>   <span class="c">!&lt; Name of group (command) of CLAs.</span>
   <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">g</span>       <span class="c">!&lt; Index of group.</span>
   <span class="kt">logical</span>                                    <span class="kd">::</span> <span class="n">defined</span> <span class="c">!&lt; Check if a CLAs group has been defined.</span>
   <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                               <span class="kd">::</span> <span class="n">gg</span>      <span class="c">!&lt; Counter.</span>
   <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                               <span class="kd">::</span> <span class="n">ggg</span>     <span class="c">!&lt; Counter.</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
 
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="n">defined</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
   <span class="k">do </span><span class="n">gg</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">size</span><span class="p">(</span><span class="n">self</span><span class="p">%</span><span class="n">clasg</span><span class="p">,</span><span class="nb">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
     <span class="n">ggg</span> <span class="o">=</span> <span class="n">gg</span>
@@ -779,8 +787,6 @@ private function is_defined_group(self, group, g) result(defined)
     <span class="k">if</span> <span class="p">(</span><span class="n">defined</span><span class="p">)</span> <span class="k">exit</span>
 <span class="k">  </span><span class="n">enddo</span>
   <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">g</span><span class="p">))</span> <span class="n">g</span> <span class="o">=</span> <span class="n">ggg</span>
-  <span class="k">return</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="n">endfunction</span> <span class="n">is_defined_group</span>
 </pre></div>
 
@@ -964,6 +970,12 @@ private function is_defined_group(self, group, g) result(defined)
       
       <a class="list-group-item" href="../proc/cli_assign_cli.html">cli_assign_cli</a>
       
+      <a class="list-group-item" href="../proc/color_index.html">color_index</a>
+      
+      <a class="list-group-item" href="../proc/colorize.html">colorize</a>
+      
+      <a class="list-group-item" href="../proc/colors_samples.html">colors_samples</a>
+      
       <a class="list-group-item" href="../proc/compact_real_string.html">compact_real_string</a>
       
       <a class="list-group-item" href="../interface/count.html">count</a>
@@ -1196,9 +1208,15 @@ private function is_defined_group(self, group, g) result(defined)
       
       <a class="list-group-item" href="../proc/strz_i8p.html">strz_I8P</a>
       
+      <a class="list-group-item" href="../proc/style_index.html">style_index</a>
+      
+      <a class="list-group-item" href="../proc/styles_samples.html">styles_samples</a>
+      
       <a class="list-group-item" href="../proc/tokenize.html">tokenize</a>
       
       <a class="list-group-item" href="../proc/unique.html">unique</a>
+      
+      <a class="list-group-item" href="../proc/upper.html">upper</a>
       
       <a class="list-group-item" href="../proc/upper_case.html">upper_case</a>
       

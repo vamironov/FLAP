@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 1.5% of total for procedures.">63 statements</a>
+	  title=" 1.5% of total for procedures.">61 statements</a>
      </li> 
      
      
@@ -360,6 +360,12 @@
       <a class="list-group-item" href="../proc/clasg_assign_clasg.html">clasg_assign_clasg</a>
       
       <a class="list-group-item" href="../proc/cli_assign_cli.html">cli_assign_cli</a>
+      
+      <a class="list-group-item" href="../proc/color_index.html">color_index</a>
+      
+      <a class="list-group-item" href="../proc/colorize.html">colorize</a>
+      
+      <a class="list-group-item" href="../proc/colors_samples.html">colors_samples</a>
       
       <a class="list-group-item" href="../proc/compact_real_string.html">compact_real_string</a>
       
@@ -593,9 +599,15 @@
       
       <a class="list-group-item" href="../proc/strz_i8p.html">strz_I8P</a>
       
+      <a class="list-group-item" href="../proc/style_index.html">style_index</a>
+      
+      <a class="list-group-item" href="../proc/styles_samples.html">styles_samples</a>
+      
       <a class="list-group-item" href="../proc/tokenize.html">tokenize</a>
       
       <a class="list-group-item" href="../proc/unique.html">unique</a>
+      
+      <a class="list-group-item" href="../proc/upper.html">upper</a>
       
       <a class="list-group-item" href="../proc/upper_case.html">upper_case</a>
       
@@ -852,9 +864,7 @@ private subroutine get_args_from_string(self, args, ai)
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
     <div class="highlight"><pre><span></span>  <span class="k">subroutine </span><span class="n">get_args_from_string</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">ai</span><span class="p">)</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="c">!&lt; Get CLAs from string.</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="k">class</span><span class="p">(</span><span class="n">command_line_interface</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">self</span>   <span class="c">!&lt; CLI data.</span>
   <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span>                  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">args</span>   <span class="c">!&lt; String containing command line arguments.</span>
   <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">),</span> <span class="k">allocatable</span><span class="p">,</span>     <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">ai</span><span class="p">(:,:)</span><span class="c">!&lt; CLAs grouped indexes.</span>
@@ -868,9 +878,7 @@ private subroutine get_args_from_string(self, args, ai)
 <span class="cp">#ifndef __GFORTRAN__</span>
   <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                                 <span class="kd">::</span> <span class="n">length</span> <span class="c">!&lt; Maxium lenght of arguments string.</span>
 <span class="cp">#endif</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
 
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="c">! prepare CLI arguments list</span>
   <span class="k">if</span> <span class="p">(</span><span class="nb">allocated</span><span class="p">(</span><span class="n">self</span><span class="p">%</span><span class="n">args</span><span class="p">))</span> <span class="k">deallocate</span><span class="p">(</span><span class="n">self</span><span class="p">%</span><span class="n">args</span><span class="p">)</span>
 
@@ -917,11 +925,8 @@ private subroutine get_args_from_string(self, args, ai)
   <span class="n">endif</span>
 
   <span class="k">call </span><span class="n">self</span><span class="p">%</span><span class="n">get_clasg_indexes</span><span class="p">(</span><span class="n">ai</span><span class="o">=</span><span class="n">ai</span><span class="p">)</span>
-  <span class="k">return</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="k">contains</span>
 <span class="k">    function </span><span class="n">sanitize_args</span><span class="p">(</span><span class="n">argsin</span><span class="p">,</span> <span class="n">delimiter</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">sanitized</span><span class="p">)</span>
-    <span class="c">!-------------------------------------------------------------------------------------------------------------------------------</span>
     <span class="c">!&lt; Sanitize arguments string.</span>
     <span class="c">!&lt;</span>
     <span class="c">!&lt; Substitute white spaces enclosed into string-arguments, i.e. &#39;string argument with spaces...&#39; or</span>
@@ -929,7 +934,6 @@ private subroutine get_args_from_string(self, args, ai)
     <span class="c">!&lt; string is string&#39;argument&#39;with&#39;spaces...</span>
     <span class="c">!&lt;</span>
     <span class="c">!&lt; @note The white spaces are reintroduce later.</span>
-    <span class="c">!-------------------------------------------------------------------------------------------------------------------------------</span>
     <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                     <span class="kd">::</span> <span class="n">argsin</span>    <span class="c">!&lt; Arguments string.</span>
     <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                     <span class="kd">::</span> <span class="n">delimiter</span> <span class="c">!&lt; Delimiter enclosing string argument.</span>
     <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="nb">len_trim</span><span class="p">(</span><span class="n">argsin</span><span class="p">))</span>              <span class="kd">::</span> <span class="n">sanitized</span> <span class="c">!&lt; Arguments string sanitized.</span>
@@ -937,9 +941,7 @@ private subroutine get_args_from_string(self, args, ai)
     <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                                 <span class="kd">::</span> <span class="n">Nt</span>        <span class="c">!&lt; Number of command line arguments passed.</span>
     <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                                 <span class="kd">::</span> <span class="n">t</span>         <span class="c">!&lt; Counter.</span>
     <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                                 <span class="kd">::</span> <span class="n">tt</span>        <span class="c">!&lt; Counter.</span>
-    <span class="c">!-------------------------------------------------------------------------------------------------------------------------------</span>
 
-    <span class="c">!-------------------------------------------------------------------------------------------------------------------------------</span>
     <span class="k">call </span><span class="n">tokenize</span><span class="p">(</span><span class="n">strin</span><span class="o">=</span><span class="nb">trim</span><span class="p">(</span><span class="n">argsin</span><span class="p">),</span> <span class="n">delimiter</span><span class="o">=</span><span class="n">delimiter</span><span class="p">,</span> <span class="n">toks</span><span class="o">=</span><span class="n">tok</span><span class="p">,</span> <span class="n">Nt</span><span class="o">=</span><span class="n">Nt</span><span class="p">)</span>
     <span class="k">do </span><span class="n">t</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">Nt</span><span class="p">,</span> <span class="mi">2</span>
       <span class="k">do </span><span class="n">tt</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="nb">len_trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">tok</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
@@ -951,8 +953,6 @@ private subroutine get_args_from_string(self, args, ai)
       <span class="n">sanitized</span> <span class="o">=</span> <span class="nb">trim</span><span class="p">(</span><span class="n">sanitized</span><span class="p">)</span><span class="o">//</span><span class="s2">&quot; &quot;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">tok</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
     <span class="n">enddo</span>
     <span class="n">sanitized</span> <span class="o">=</span> <span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">sanitized</span><span class="p">))</span>
-    <span class="k">return</span>
-    <span class="c">!-------------------------------------------------------------------------------------------------------------------------------</span>
     <span class="n">endfunction</span> <span class="n">sanitize_args</span>
   <span class="n">endsubroutine</span> <span class="n">get_args_from_string</span>
 </pre></div>
@@ -1136,6 +1136,12 @@ private subroutine get_args_from_string(self, args, ai)
       <a class="list-group-item" href="../proc/clasg_assign_clasg.html">clasg_assign_clasg</a>
       
       <a class="list-group-item" href="../proc/cli_assign_cli.html">cli_assign_cli</a>
+      
+      <a class="list-group-item" href="../proc/color_index.html">color_index</a>
+      
+      <a class="list-group-item" href="../proc/colorize.html">colorize</a>
+      
+      <a class="list-group-item" href="../proc/colors_samples.html">colors_samples</a>
       
       <a class="list-group-item" href="../proc/compact_real_string.html">compact_real_string</a>
       
@@ -1369,9 +1375,15 @@ private subroutine get_args_from_string(self, args, ai)
       
       <a class="list-group-item" href="../proc/strz_i8p.html">strz_I8P</a>
       
+      <a class="list-group-item" href="../proc/style_index.html">style_index</a>
+      
+      <a class="list-group-item" href="../proc/styles_samples.html">styles_samples</a>
+      
       <a class="list-group-item" href="../proc/tokenize.html">tokenize</a>
       
       <a class="list-group-item" href="../proc/unique.html">unique</a>
+      
+      <a class="list-group-item" href="../proc/upper.html">upper</a>
       
       <a class="list-group-item" href="../proc/upper_case.html">upper_case</a>
       

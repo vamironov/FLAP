@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title="<p>13.5% of total for derived types.</p>Including implementation: 499 statements, 10.3% of total for derived types.">26 statements</a>
+	  title="<p>13.3% of total for derived types.</p>Including implementation: 513 statements, 10.5% of total for derived types.">26 statements</a>
      </li> 
      
      
@@ -174,6 +174,10 @@
       
       <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-help">help</a>
       
+      <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-help_color">help_color</a>
+      
+      <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-help_style">help_style</a>
+      
       <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-help_markdown">help_markdown</a>
       
       <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-description">description</a>
@@ -187,6 +191,10 @@
       <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-m_exclude">m_exclude</a>
       
       <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-error_message">error_message</a>
+      
+      <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-error_color">error_color</a>
+      
+      <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-error_style">error_style</a>
       
       <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-error">error</a>
       
@@ -528,6 +536,10 @@
       
       <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-help">help</a>
       
+      <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-help_color">help_color</a>
+      
+      <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-help_style">help_style</a>
+      
       <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-help_markdown">help_markdown</a>
       
       <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-description">description</a>
@@ -541,6 +553,10 @@
       <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-m_exclude">m_exclude</a>
       
       <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-error_message">error_message</a>
+      
+      <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-error_color">error_color</a>
+      
+      <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-error_style">error_style</a>
       
       <a class="list-group-item" href="../type/command_line_arguments_group.html#variable-error">error</a>
       
@@ -714,6 +730,34 @@
   
 <tr>
   
+  <td><span class="anchor" id="variable-help_color"></span>character(len=:),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>help_color</strong></td><td></td><td></td><td><p>ANSI color of help messages.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-help_style"></span>character(len=:),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>help_style</strong></td><td></td><td></td><td><p>ANSI style of help messages.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
   <td><span class="anchor" id="variable-help_markdown"></span>character(len=:),</td>
   
   <td>public,</td>
@@ -803,6 +847,34 @@
   <td>public,</td>
   <td>allocatable</td><td>::</td>
   <td><strong>error_message</strong></td><td></td><td></td><td><p>Meaningful error message to standard-error.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-error_color"></span>character(len=:),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>error_color</strong></td><td></td><td></td><td><p>ANSI color of error messages.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-error_style"></span>character(len=:),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>error_style</strong></td><td></td><td></td><td><p>ANSI style of error messages.</p></td>
   
 </tr>
 
@@ -1039,7 +1111,7 @@ private elemental subroutine <a href='../proc/finalize%7E2.html'>finalize</a>(se
     
 	   
 <div class="panel panel-default">
-  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-free_object"></span><h3>procedure, public :: <strong>free_object</strong>  
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-free_object"></span><h3>procedure, public, pass(self) :: <strong>free_object</strong>  
     
   </h3></div>
   
@@ -1116,7 +1188,7 @@ private elemental subroutine <a href='../proc/free_object.html'>free_object</a>(
     
 	   
 <div class="panel panel-default">
-  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-print_version"></span><h3>procedure, public :: <strong>print_version</strong>  
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-print_version"></span><h3>procedure, public, pass(self) :: <strong>print_version</strong>  
     
   </h3></div>
   
@@ -1208,7 +1280,7 @@ private subroutine <a href='../proc/print_version.html'>print_version</a>(self, 
     
 	   
 <div class="panel panel-default">
-  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-print_error_message"></span><h3>procedure, public :: <strong>print_error_message</strong>  
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-print_error_message"></span><h3>procedure, public, pass(self) :: <strong>print_error_message</strong>  
     
   </h3></div>
   
@@ -1285,7 +1357,7 @@ private subroutine <a href='../proc/print_error_message.html'>print_error_messag
     
 	   
 <div class="panel panel-default">
-  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-assign_object"></span><h3>procedure, public :: <strong>assign_object</strong>  
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-assign_object"></span><h3>procedure, public, pass(lhs ) :: <strong>assign_object</strong>  
     
   </h3></div>
   

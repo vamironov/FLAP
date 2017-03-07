@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 1.3% of total for procedures.">52 statements</a>
+	  title=" 1.2% of total for procedures.">51 statements</a>
      </li> 
      
      
@@ -360,6 +360,12 @@
       <a class="list-group-item" href="../proc/clasg_assign_clasg.html">clasg_assign_clasg</a>
       
       <a class="list-group-item" href="../proc/cli_assign_cli.html">cli_assign_cli</a>
+      
+      <a class="list-group-item" href="../proc/color_index.html">color_index</a>
+      
+      <a class="list-group-item" href="../proc/colorize.html">colorize</a>
+      
+      <a class="list-group-item" href="../proc/colors_samples.html">colors_samples</a>
       
       <a class="list-group-item" href="../proc/compact_real_string.html">compact_real_string</a>
       
@@ -593,9 +599,15 @@
       
       <a class="list-group-item" href="../proc/strz_i8p.html">strz_I8P</a>
       
+      <a class="list-group-item" href="../proc/style_index.html">style_index</a>
+      
+      <a class="list-group-item" href="../proc/styles_samples.html">styles_samples</a>
+      
       <a class="list-group-item" href="../proc/tokenize.html">tokenize</a>
       
       <a class="list-group-item" href="../proc/unique.html">unique</a>
+      
+      <a class="list-group-item" href="../proc/upper.html">upper</a>
       
       <a class="list-group-item" href="../proc/upper_case.html">upper_case</a>
       
@@ -827,11 +839,9 @@ private subroutine get_cla(self, val, pref, args, group, switch, position, error
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
     <div class="highlight"><pre><span></span>  <span class="k">subroutine </span><span class="n">get_cla</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">pref</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">group</span><span class="p">,</span> <span class="n">switch</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="c">!&lt; Get CLA (single) value from CLAs list parsed.</span>
   <span class="c">!&lt;</span>
   <span class="c">!&lt; @note For logical type CLA the value is directly read without any robust error trapping.</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="k">class</span><span class="p">(</span><span class="n">command_line_interface</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">self</span>     <span class="c">!&lt; CLI data.</span>
   <span class="k">class</span><span class="p">(</span><span class="o">*</span><span class="p">),</span>                      <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">val</span>      <span class="c">!&lt; CLA value.</span>
   <span class="kt">character</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">pref</span>     <span class="c">!&lt; Prefixing string.</span>
@@ -843,9 +853,7 @@ private subroutine get_cla(self, val, pref, args, group, switch, position, error
   <span class="kt">logical</span>                                      <span class="kd">::</span> <span class="n">found</span>    <span class="c">!&lt; Flag for checking if CLA containing switch has been found.</span>
   <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                                 <span class="kd">::</span> <span class="n">g</span>        <span class="c">!&lt; Group counter.</span>
   <span class="kt">integer</span><span class="p">(</span><span class="n">I4P</span><span class="p">)</span>                                 <span class="kd">::</span> <span class="n">a</span>        <span class="c">!&lt; Argument counter.</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
 
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="k">if</span> <span class="p">(.</span><span class="nb">not</span><span class="p">.</span><span class="n">self</span><span class="p">%</span><span class="n">is_parsed_</span><span class="p">)</span> <span class="k">then</span>
 <span class="k">    call </span><span class="n">self</span><span class="p">%</span><span class="n">parse</span><span class="p">(</span><span class="n">pref</span><span class="o">=</span><span class="n">pref</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">error</span><span class="p">)</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">self</span><span class="p">%</span><span class="n">error</span><span class="o">/=</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span>
@@ -884,8 +892,6 @@ private subroutine get_cla(self, val, pref, args, group, switch, position, error
     <span class="c">! TODO warn (if liked) for non invoked group querying</span>
   <span class="n">endif</span>
   <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">error</span><span class="p">))</span> <span class="n">error</span> <span class="o">=</span> <span class="n">self</span><span class="p">%</span><span class="n">error</span>
-  <span class="k">return</span>
-  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
   <span class="n">endsubroutine</span> <span class="n">get_cla</span>
 </pre></div>
 
@@ -1068,6 +1074,12 @@ private subroutine get_cla(self, val, pref, args, group, switch, position, error
       <a class="list-group-item" href="../proc/clasg_assign_clasg.html">clasg_assign_clasg</a>
       
       <a class="list-group-item" href="../proc/cli_assign_cli.html">cli_assign_cli</a>
+      
+      <a class="list-group-item" href="../proc/color_index.html">color_index</a>
+      
+      <a class="list-group-item" href="../proc/colorize.html">colorize</a>
+      
+      <a class="list-group-item" href="../proc/colors_samples.html">colors_samples</a>
       
       <a class="list-group-item" href="../proc/compact_real_string.html">compact_real_string</a>
       
@@ -1301,9 +1313,15 @@ private subroutine get_cla(self, val, pref, args, group, switch, position, error
       
       <a class="list-group-item" href="../proc/strz_i8p.html">strz_I8P</a>
       
+      <a class="list-group-item" href="../proc/style_index.html">style_index</a>
+      
+      <a class="list-group-item" href="../proc/styles_samples.html">styles_samples</a>
+      
       <a class="list-group-item" href="../proc/tokenize.html">tokenize</a>
       
       <a class="list-group-item" href="../proc/unique.html">unique</a>
+      
+      <a class="list-group-item" href="../proc/upper.html">upper</a>
       
       <a class="list-group-item" href="../proc/upper_case.html">upper_case</a>
       
