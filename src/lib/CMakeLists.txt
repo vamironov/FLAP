@@ -8,12 +8,12 @@ SET(CMAKE_Fortran_MODULE_DIRECTORY "${PROJECT_BINARY_DIR}/modules")
 
 set(LIB FLAP)
 add_library(${LIB}
-        flap.f90
+        flap.F90
         flap_command_line_argument_t.F90
-        flap_command_line_arguments_group_t.f90
+        flap_command_line_arguments_group_t.F90
         flap_command_line_interface_t.F90
-        flap_object_t.f90
-        flap_utils_m.f90
+        flap_object_t.F90
+        flap_utils_m.F90
 )
 add_library(${NAMESPACE}${LIB} ALIAS ${LIB})
 target_link_libraries(${LIB} FACE::FACE PENF::PENF fortran_tester::fortran_tester)
